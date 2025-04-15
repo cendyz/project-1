@@ -1,0 +1,55 @@
+<template>
+	<section
+		class="bg-neutral-2 py-[7rem] px-[2.2rem] text-center text-neutral-1 text-[1.5rem] md:text-[1.6rem] lg:text-left lg:z-[9] lg:relative lg:px-0">
+		<div class="container lg:px-[3.5rem] xl:px-0">
+			<h2 class="text-[3rem] leading-[1.2] mb-[2.2rem] px-[1rem] text-primary-1 md:text-[3.5rem] lg:px-0">
+				Why choose mWallet?
+			</h2>
+			<p class="md:w-[38rem] md:mx-auto lg:w-[57rem] lg:mx-0">
+				With seamless digital integration, BlueWallet transforms your phone into a smart financial command center. Manage money intuitively and securely.
+			</p>
+			<div class="mt-[7rem] grid gap-y-[3rem] lg:grid lg:grid-cols-2 lg:place-items-center lg:gap-y-[6rem] xl:flex xl:gap-x-[5%]">
+				<div v-for="(item, index) in profitsData" :key="index" class="xl:w-[23%]">
+					<img :src="item.img" :alt="item.title" class="block mx-auto w-[7rem] h-[7rem] md:w-[8rem] md:h-[8rem] lg:mx-0" />
+					<h3 class="text-primary-1 text-[2rem] my-[2rem] md:text-[2.2rem]">{{ item.title }}</h3>
+					<p class="md:w-[38rem] md:mx-auto lg:w-[26.5rem] lg:mx-0">
+						{{ item.desc }}
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</template>
+
+<script setup lang="ts">
+import img1 from 'assets/images/icon-online.svg'
+import img2 from 'assets/images/icon-budgeting.svg'
+import img3 from 'assets/images/icon-onboarding.svg'
+import img4 from 'assets/images/icon-api.svg'
+import { ref } from 'vue'
+
+const profitsData = ref([
+	{
+		img: img1,
+		title: 'All-in-one Banking',
+		desc: 'Access your funds anytime, anywhere. Our responsive platform works smoothly across both web and mobile.',
+	},
+	{
+		img: img2,
+		title: 'Smart Budgeting',
+		desc: 'Stay on top of your spending with real-time insights and instant alerts when you approach your budget goals.',
+	},
+	{
+		img: img3,
+		title: 'Instant Setup',
+		desc: 'Get started in just a few clicks. No paperwork, no queues—your wallet is ready when you are.',
+	},
+	{
+		img: img4,
+		title: 'Connected Tools',
+		desc: 'Sync savings, payments, crypto, and more—all in one place. Managing your finances has never been this connected.',
+	},
+])
+</script>
+
+<style scoped></style>
