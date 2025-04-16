@@ -1,6 +1,6 @@
 <template>
-	<nav class="px-[3rem] py-[2rem] own_bg bg-white w-full relative z-[1000] lg:px-[3.5rem]" ref="navMenu">
-		<div class="flex justify-between relative container lg:items-center lg:justify-between lg:px-[2rem] xl:px-0">
+	<nav class="px-[3rem] py-[2rem] bg-white w-full relative z-[1000]" ref="navMenu">
+		<div class="flex justify-between relative container lg:items-center lg:justify-between lg:px-[3.5rem] xl:px-[7rem]">
 			<img :src="logo" class="w-[5rem] h-[5rem] z-[50]" alt="logo easybank" />
 			<button
 				type="button"
@@ -75,8 +75,6 @@ watch(
 </script>
 
 <style scoped lang="scss">
-
-
 .v-enter-active,
 .v-leave-active {
 	transition: opacity 0.1s ease;

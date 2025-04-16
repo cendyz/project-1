@@ -1,9 +1,12 @@
 <template>
-	<section class="bg-neutral-3 py-[7rem] px-[2.2rem]">
-		<div class="text-center container">
+	<section class="bg-neutral-3 py-[7rem]">
+		<div class="text-center container px-[2.2rem] lg:px-[3.5rem] xl:px-[7rem]">
 			<h2 class="capitalize text-[3rem] md:text-[3.5rem]">latest articles</h2>
-			<div class="mt-[3rem] grid gap-y-[3rem] md:grid-cols-2 md:gap-[2rem] xl:grid-cols-4">
-				<div class="rounded-lg overflow-hidden" v-for="(item, index) in articlesData" :key="index">
+			<div class="mt-[3rem] grid gap-y-[3rem] md:grid-cols-2 md:gap-[2rem] xl:grid-cols-4 lg:gap-[5rem] xl:gap-[2rem]">
+				<div
+					class="rounded-lg overflow-hidden sm:w-[45rem] sm:mx-auto md:w-auto lg:h-[40.4rem] xl:h-auto"
+					v-for="(item, index) in articlesData"
+					:key="index">
 					<NuxtImg :src="item.img" :alt="item.alt" class="block h-[27rem] w-full z-[10]" />
 					<div
 						class="p-[3rem] pb-[3.9rem mt-[-2.5rem] bg-neutral-4 z-[20] relative text-neutral-1 text-left grid gap-y-[1rem]">

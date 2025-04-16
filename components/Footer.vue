@@ -1,8 +1,7 @@
 <template>
 	<footer class="py-[4rem] bg-primary-1 xl:py-[6rem]">
-		<div class="text-center lg:grid lg:grid-cols-3 lg:items-center container">
-			<div class="xl:flex xl:flex-col xl:gap-y-[2rem] xl:items-start">
-				<img :src="logo" alt="easybank logo" class="block mx-auto xl:mx-0 w-[5rem] h-[5rem]" />
+		<div class="text-center lg:grid lg:grid-cols-3 lg:items-center container xl:px-[7rem]">
+			<div class="xl:flex xl:flex-col xl:gap-y-[2rem] xl:items-start lg:mr-auto">
 				<div class="flex justify-center gap-x-[1.5rem] my-[3.5rem] lg:mb-0">
 					<a href="#" v-for="(item, index) in socialsData" :key="index" class="hoverIcon">
 						<img :src="item.img" :alt="`${item.alt} icon`" class="w-[2.3rem] lg:brightness-15" />
@@ -20,9 +19,8 @@
 				>
 			</div>
 			<div class="xl:flex xl:flex-col xl:justify-between">
-				
 				<p class="text-neutral-1 text-[1.4rem] mt-[3rem] xl:ml-auto">
-					© Easybank. All Rights Reserved {{ new Date().getFullYear() }}
+					© mWallet. All Rights Reserved {{ new Date().getFullYear() }}
 				</p>
 			</div>
 		</div>
@@ -102,5 +100,4 @@ const socialsData = ref([
 		}
 	}
 }
-
 </style>
