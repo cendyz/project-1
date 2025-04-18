@@ -3,6 +3,14 @@
 		<div class="text-center container px-[2.2rem] lg:px-[3.5rem] xl:px-[7rem]">
 			<h2 class="capitalize text-[3rem] md:text-[3.5rem]">latest articles</h2>
 			<div class="mt-[3rem] grid gap-y-[3rem] md:grid-cols-2 md:gap-[2rem] xl:grid-cols-4 lg:gap-[5rem] xl:gap-[2rem]">
+				<Carousel v-bind="carouselConfig">
+					<Slide v-for="slide in 3" :key="slide"> </Slide>
+
+					<template #addons>
+						<Navigation />
+						<Pagination />
+					</template>
+				</Carousel>
 				<div
 					class="rounded-lg overflow-hidden sm:w-[45rem] sm:mx-auto md:w-auto lg:h-[40.4rem] xl:h-auto"
 					v-for="(item, index) in articlesData"
@@ -24,11 +32,17 @@
 </template>
 
 <script setup lang="ts">
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 import { ref } from 'vue'
 import img1 from '/img/image-currency.jpg'
 import img2 from '/img/image-restaurant.jpg'
 import img3 from '/img/image-plane.jpg'
 import img4 from '/img/image-confetti.jpg'
+
+const carouselConfig = {
+	itemsToShow: 3,
+	wrapAround: true,
+}
 
 const articlesData = ref([
 	{

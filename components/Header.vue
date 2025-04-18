@@ -12,9 +12,9 @@
 			<NuxtImg
 				:src="wallet"
 				alt="phone and wallet"
-				class="block w-[calc(100%-3rem)] mx-auto lg:absolute top-0 z-[30] relative md:w-[70%] md:top-[5rem] lg:w-[47rem] xl:w-[55rem] lg:left-[78.5rem] xl:left-[100rem] lg:top-1/2 lg:translate-x-[-50%] lg:translate-y-[-50%] lg:z-[20] 2xl:left-[126.5rem]" />
+				class="block w-[calc(100%-3rem)] mx-auto lg:absolute top-0 z-[30] relative md:w-[70%] md:top-[5rem] lg:w-[47rem] xl:w-[55rem] lg:left-[78.5rem] xl:left-[99.5rem] lg:top-1/2 lg:translate-x-[-50%] lg:translate-y-[-50%] lg:z-[20] 2xl:left-[125rem]" />
 			<div
-				class="lg:py-[12rem] lg:text-left px-[2rem] sm:w-[50rem] sm:mx-auto lg:mx-0 sm:flex sm:flex-col sm:justify-center sm:items-center sm:h-[40rem] md:h-[70rem] lg:h-auto lg:items-start xl:px-0">
+				class="lg:py-[12rem] lg:text-left px-[2rem] lg:px-0 sm:w-[50rem] sm:mx-auto lg:mx-0 flex flex-col justify-center items-center h-[40rem] md:h-[70rem] lg:h-auto lg:items-start xl:px-0">
 				<h1
 					class="text-[4rem] leading-[1.1] mt-[-3rem] sm:mt-0 mb-[3rem] text-primary-1 md:text-[5rem] md:mx-auto lg:mt-0 lg:mx-0 lg:text-[6.5rem] lg:w-[50rem] sm:px-[2rem] md:w-auto md:px-0">
 					Next generation digital wallet
@@ -27,7 +27,7 @@
 				<button
 					type="button"
 					class="mt-[4rem] bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] md:text-[1.6rem] lg:hover:opacity-60 lg:transition-opacity">
-					Sign up now!
+					Sign up
 				</button>
 			</div>
 		</div>

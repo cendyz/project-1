@@ -1,7 +1,10 @@
 <template>
-	<nav class="px-[3rem] py-[2rem] bg-white w-full relative z-[1000]" ref="navMenu">
+	<nav class="px-[3rem] lg:px-0 py-[2rem] bg-white w-full relative z-[1000]" ref="navMenu">
 		<div class="flex justify-between relative container lg:items-center lg:justify-between lg:px-[3.5rem] xl:px-[7rem]">
-			<img :src="logo" class="w-[5rem] h-[5rem] z-[50]" alt="logo easybank" />
+			<div class="flex items-center gap-x-[1rem] ">
+				<img :src="logo" class="w-[5rem] h-[5rem] z-[50]" alt="logo easybank" />
+				<p class="font-w700 text-[2rem] hidden sm:block text-[#2d314d]">mWallet</p>
+			</div>
 			<button
 				type="button"
 				@click="store.isOpenMenu = !store.isOpenMenu"
@@ -94,7 +97,7 @@ watch(
 			transform: translateX(-50%);
 			width: 0%;
 			height: 3px;
-			background-color: hsl(136, 65%, 51%);
+			background-color: #3790d0;
 			transition: width 0.2s;
 			transform-origin: center;
 		}

@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
 	compatibilityDate: '2024-11-01',
 	devtools: { enabled: true },
-	modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', '@nuxt/image', '@vueuse/nuxt'],
+	modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', '@nuxt/image', '@vueuse/nuxt', 'nuxt-aos', 'vue3-carousel-nuxt'],
 	app: {
 		head: {
 			title: 'mWallet',
@@ -15,8 +15,8 @@ export default defineNuxtConfig({
 			],
 			link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.png?v2' }],
 			htmlAttrs: {
-				lang: 'en'
-			  }
+				lang: 'en',
+			},
 		},
 	},
 })
