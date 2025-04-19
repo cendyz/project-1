@@ -13,7 +13,7 @@
 				class="mt-[7rem] grid gap-y-[3rem] lg:grid lg:grid-cols-2 lg:gap-y-[6rem] xl:flex xl:justify-items-center xl:flex-wrap lg:w-[90rem] lg:mx-auto">
 				<div data-aos="zoom-in" data-aos-once="true" data-aos-duration="700"
 					v-for="(item, index) in profitsData"
-					class="p-[2rem] border-[2px] rounded-xl border-primary-2 max-w-[45rem] mx-auto lg:w-auto"
+					class="bg-neutral-3 p-[2rem] border-[2px] rounded-xl border-primary-2 max-w-[45rem] mx-auto lg:w-auto"
 					:key="index">
 					<div class="p-[2rem]">
 						<img :src="item.img" :alt="item.title" class="block mx-auto w-[7rem] h-[7rem] md:w-[8rem] md:h-[8rem]" />

@@ -1,11 +1,17 @@
 <template>
 	<footer class="py-[4rem] bg-primary-1 xl:py-[6rem]">
 		<div class="text-center lg:grid lg:grid-cols-3 lg:items-center container xl:px-[7rem]">
-			<div class="xl:flex xl:flex-col xl:gap-y-[2rem] xl:items-start lg:mr-auto">
-				<div class="flex justify-center gap-x-[1.5rem] my-[3.5rem] lg:mb-0">
-					<a href="#" v-for="(item, index) in socialsData" :key="index" class="hoverIcon">
-						<img :src="item.img" :alt="`${item.alt} icon`" class="w-[2.3rem] lg:brightness-15" />
-					</a>
+			<div class="flex flex-col items-center lg:items-start">
+				<div class="flex items-center gap-x-[2rem]">
+					<img :src="logo" alt="wallet" class="wallet w-[5rem] h-[5rem]" />
+					<p class="font-w700 text-[2rem] sm:block text-white">mWallet</p>
+				</div>
+				<div class="xl:flex xl:flex-col xl:gap-y-[2rem] xl:items-start lg:mr-auto">
+					<div class="flex justify-center gap-x-[1.5rem] my-[3.5rem] lg:mb-0">
+						<a href="#" v-for="(item, index) in socialsData" :key="index" class="hoverIcon">
+							<img :src="item.img" :alt="`${item.alt} icon`" class="w-[2.3rem] lg:brightness-15" />
+						</a>
+					</div>
 				</div>
 			</div>
 			<div

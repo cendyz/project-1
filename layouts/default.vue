@@ -1,10 +1,10 @@
 <template>
 	<nav class="px-[3rem] lg:px-0 py-[2rem] bg-white w-full relative z-[1000]" ref="navMenu">
 		<div class="flex justify-between relative container lg:items-center lg:justify-between lg:px-[3.5rem] xl:px-[7rem]">
-			<div class="flex items-center gap-x-[1rem] ">
+			<NuxtLink to="/" class="flex items-center gap-x-[1rem] select-none hover:cursor-pointer">
 				<img :src="logo" class="w-[5rem] h-[5rem] z-[50]" alt="logo easybank" />
 				<p class="font-w700 text-[2rem] hidden sm:block text-[#2d314d]">mWallet</p>
-			</div>
+			</NuxtLink>
 			<button
 				type="button"
 				@click="store.isOpenMenu = !store.isOpenMenu"
@@ -21,7 +21,7 @@
 					v-if="store.isOpenMenu"
 					class="absolute top-[9.5rem] w-[calc(100%-4.4rem)] left-1/2 translate-x-[-50%] justify-items-center bg-neutral-4 grid gap-y-[1.5rem] py-[3rem] rounded-md lg:none">
 					<NuxtLink
-						to="/"
+						:to="`/${store.pages[index]}`"
 						v-for="(item, index) in linksData"
 						:key="index"
 						class="first-letter:uppercase text-[1.8rem] w-fit"
@@ -31,7 +31,8 @@
 			</Transition>
 			<div class="hidden lg:flex gap-x-[3.5rem]">
 				<NuxtLink
-					to="/"
+					:active-class="store.pages[index] ? 'styleLink' : ''"
+					:to="store.pages[index]"
 					v-for="(item, index) in linksData"
 					:key="index"
 					class="first-letter:uppercase text-[1.5rem] text-neutral-1 lg:hover:text-black lg:transition-colors lg:relative lineHover"
@@ -54,6 +55,7 @@ import logo from '~/assets/images/logo.png'
 import hamburger from '~/assets/images/icon-hamburger.svg'
 import closeMenu from '~/assets/images/icon-close.svg'
 
+const route = useRoute()
 const store = useBankStore()
 const navMenu = ref()
 
@@ -106,6 +108,12 @@ watch(
 			&::before {
 				width: 100%;
 			}
+		}
+	}
+
+	.styleLink {
+		&::before {
+			width: 100%;
 		}
 	}
 }
