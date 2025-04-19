@@ -1,6 +1,6 @@
 <template>
 	<section
-		class="bg-neutral-2 py-[11rem] px-[2.2rem] text-center text-neutral-1 text-[1.5rem] md:text-[1.6rem] lg:z-[9] lg:relative">
+		class="bg-neutral-2 py-[11rem] px-[2.2rem] text-center text-neutral-1 text-[1.5rem] md:text-[1.6rem] lg:z-[9] md:relative">
 		<div class="container lg:px-[3.5rem] xl:px-0">
 			<h2 class="text-[3rem] font-w700 leading-[1.2] mb-[2.2rem] px-[1rem] text-primary-1 md:text-[3.5rem] lg:px-0">
 				Why choose mWallet?
@@ -11,9 +11,12 @@
 			</p>
 			<div
 				class="mt-[7rem] grid gap-y-[3rem] lg:grid lg:grid-cols-2 lg:gap-y-[6rem] xl:flex xl:justify-items-center xl:flex-wrap lg:w-[90rem] lg:mx-auto">
-				<div data-aos="zoom-in" data-aos-once="true" data-aos-duration="700"
+				<div
+					data-aos="zoom-in"
+					data-aos-once="true"
+					data-aos-duration="700"
 					v-for="(item, index) in profitsData"
-					class="bg-neutral-3 p-[2rem] border-[2px] rounded-xl border-primary-2 max-w-[45rem] mx-auto lg:w-auto"
+					class="bg-neutral-3 p-[2rem] border-[2px] rounded-xl border-primary-2 max-w-[45rem] mx-auto lg:w-auto z-[10]"
 					:key="index">
 					<div class="p-[2rem]">
 						<img :src="item.img" :alt="item.title" class="block mx-auto w-[7rem] h-[7rem] md:w-[8rem] md:h-[8rem]" />
@@ -39,6 +42,19 @@
 				</div>
 			</div>
 		</div>
+		<img :src="icon1" alt="" aria-hidden="true" :class="iconStyles" class="top-[10%] left-[10%] rotate-12 animeSpin" />
+		<img
+			:src="icon2"
+			alt=""
+			aria-hidden="true"
+			:class="iconStyles"
+			class="right-0 top-1/2 rotate-45 animeSpin 2xl:right-[12%]" />
+		<img
+			:src="icon3"
+			alt=""
+			aria-hidden="true"
+			:class="iconStyles"
+			class="bottom-[2%] left-[-2%] rotate-6 animeSpinRight xl:left-2 2xl:left-[7%] 2xl:bottom-[13%]" />
 	</section>
 </template>
 
@@ -47,6 +63,9 @@ import img1 from 'assets/images/icon-online.svg'
 import img2 from 'assets/images/icon-budgeting.svg'
 import img3 from 'assets/images/icon-onboarding.svg'
 import img4 from 'assets/images/icon-api.svg'
+import icon1 from 'assets/images/icon1.svg'
+import icon2 from 'assets/images/icon2.svg'
+import icon3 from 'assets/images/icon3.svg'
 import { ref } from 'vue'
 
 const profitsData = ref([
@@ -71,6 +90,8 @@ const profitsData = ref([
 		// desc: 'Sync savings, payments, crypto, and more—all in one place. Managing your finances has never been this connected.',
 	},
 ])
+
+const iconStyles = 'absolute block opacity-[10%] w-[20rem] z-[1] 2xl:w-[30rem]'
 </script>
 
 <style scoped lang="scss">
@@ -100,6 +121,26 @@ const profitsData = ref([
 			opacity: 1;
 			z-index: 1;
 		}
+	}
+}
+
+.animeSpin {
+	animation: spin 90s infinite;
+}
+
+.animeSpinRight {
+	animation: spinRight 90s infinite;
+}
+
+@keyframes spin {
+	to {
+		rotate: 360deg;
+	}
+}
+
+@keyframes spinRight {
+	to {
+		rotate: -360deg;
 	}
 }
 </style>
