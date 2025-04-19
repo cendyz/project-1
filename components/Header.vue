@@ -1,6 +1,6 @@
 <template>
 	<header class="bg-neutral-3 lg:overflow-x-clip lg:pb-0">
-		<div class="container relative text-center lg:flex lg:px-[3.5rem] xl:px-[7rem]">
+		<div class="container relative text-center lg:flex lg:px-[3.5rem] xl:px-[7rem] lg:mt-[8rem]">
 			<picture>
 				<source :srcset="desktopIntro" media="(min-width: 640px)" />
 				<NuxtImg
@@ -12,7 +12,7 @@
 			<NuxtImg
 				:src="wallet"
 				alt="phone and wallet"
-				class="block w-[calc(100%-3rem)] mx-auto lg:absolute top-0 z-[30] relative md:w-[70%] md:top-[5rem] lg:w-[47rem] xl:w-[55rem] lg:left-[78.5rem] xl:left-[99.5rem] lg:top-1/2 lg:translate-x-[-50%] lg:translate-y-[-50%] lg:z-[20] 2xl:left-[125rem]" />
+				class="block w-[calc(100%-3rem)] mx-auto lg:absolute top-0 z-[30] relative md:w-[70%] md:top-[5rem] lg:w-[47rem] xl:w-[55rem] lg:left-[80.5rem] xl:left-[99.5rem] lg`:top-1/2 lg:translate-x-[-50%] lg:translate-y-[-50%] lg:z-[20] 2xl:left-[125rem]" />
 			<div
 				class="lg:py-[12rem] lg:text-left px-[2rem] lg:px-0 sm:w-[50rem] sm:mx-auto lg:mx-0 flex flex-col justify-center items-center h-[40rem] md:h-[70rem] lg:h-auto lg:items-start xl:px-0">
 				<h1

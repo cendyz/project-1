@@ -91,7 +91,7 @@ const profitsData = ref([
 	},
 ])
 
-const iconStyles = 'absolute block opacity-[10%] w-[20rem] z-[1] 2xl:w-[30rem]'
+const iconStyles = 'hidden absolute lg:block opacity-[10%] w-[20rem] z-[1] 2xl:w-[30rem]'
 </script>
 
 <style scoped lang="scss">

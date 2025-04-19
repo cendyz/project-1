@@ -1,5 +1,7 @@
 <template>
-	<nav class="px-[3rem] lg:px-0 py-[2rem] bg-white w-full relative z-[1000]" ref="navMenu">
+	<nav
+		class="px-[3rem] lg:px-0 py-[2rem] bg-white w-full relative z-[1000] lg:fixed lg:top-0 lg:left-0 lg:w-full"
+		ref="navMenu">
 		<div class="flex justify-between relative container lg:items-center lg:justify-between lg:px-[3.5rem] xl:px-[7rem]">
 			<NuxtLink to="/" class="flex items-center gap-x-[1rem] select-none hover:cursor-pointer">
 				<img :src="logo" class="w-[5rem] h-[5rem] z-[50]" alt="logo easybank" />
@@ -21,21 +23,24 @@
 					v-if="store.isOpenMenu"
 					class="absolute top-[9.5rem] w-[calc(100%-4.4rem)] left-1/2 translate-x-[-50%] justify-items-center bg-neutral-4 grid gap-y-[1.5rem] py-[3rem] rounded-md lg:none">
 					<NuxtLink
-						:to="`/${store.pages[index]}`"
+						:to="store.pages[index]"
 						v-for="(item, index) in linksData"
+						@click="store.isOpenMenu = false"
 						:key="index"
 						class="first-letter:uppercase text-[1.8rem] w-fit"
 						>{{ item }}</NuxtLink
+						
 					>
 				</div>
 			</Transition>
 			<div class="hidden lg:flex gap-x-[3.5rem]">
 				<NuxtLink
+					@click="console.log(store.pages[index])"
 					:active-class="store.pages[index] ? 'styleLink' : ''"
 					:to="store.pages[index]"
 					v-for="(item, index) in linksData"
 					:key="index"
-					class="first-letter:uppercase text-[1.5rem] text-neutral-1 lg:hover:text-black lg:transition-colors lg:relative lineHover"
+					class="first-letter:uppercase text-[1.5rem] text-neutral-1 lg:hover:text-black lg:transition-colors lg:relative lineHover lg:hover:cursor-pointer"
 					>{{ item }}</NuxtLink
 				>
 			</div>
@@ -55,11 +60,12 @@ import logo from '~/assets/images/logo.png'
 import hamburger from '~/assets/images/icon-hamburger.svg'
 import closeMenu from '~/assets/images/icon-close.svg'
 
-const route = useRoute()
+
+
 const store = useBankStore()
 const navMenu = ref()
 
-const linksData = ref<string[]>(['home', 'about', 'contact', 'blog', 'careers'])
+const linksData = ref<string[]>(['home', 'about', 'contact', 'careers', 'articles'])
 
 const handleCloseOutside = (e: Event): void => {
 	if (navMenu.value && !navMenu.value.contains(e.target)) {

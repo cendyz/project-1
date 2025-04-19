@@ -20,7 +20,7 @@
 					href="#"
 					v-for="(item, index) in linksData"
 					:key="index"
-					class="lg:hover:text-primary-2 lg:transition-colors lg:w-fit"
+					class="lg:hover:text-primary-3 lg:transition-colors lg:w-fit"
 					>{{ item }}</a
 				>
 			</div>
@@ -76,7 +76,7 @@ const socialsData = ref([
 		}
 		&:hover {
 			img {
-				filter: invert(85%) sepia(22%) saturate(4829%) hue-rotate(74deg) brightness(294%) contrast(74%);
+				filter: invert(54%) sepia(78%) saturate(1273%) hue-rotate(179deg) brightness(85%) contrast(90%);
 			}
 		}
 	}

@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 export const useBankStore = defineStore('bank', {
 	state: () => ({
 		isOpenMenu: false,
-		pages: ['/', '/about', '/contact', '/blog', '/careers', '/404']
+		pages: ['/', '/about', '/contact', '/careers', '/articles', '/404'],
 	}),
 	actions: {
 		func() {
