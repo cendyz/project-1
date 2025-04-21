@@ -5,7 +5,7 @@
 			<h2 class="text-[3rem] font-w700 leading-[1.2] mb-[2.2rem] px-[1rem] text-primary-1 md:text-[3.5rem] lg:px-0">
 				Why choose mWallet?
 			</h2>
-			<p class="sm:w-[38rem] text-primary-1 px-[2rem] mt-[2rem] leading-[2] sm:mx-auto lg:w-[57rem] lg:mx-auto">
+			<p class="sm:w-[38rem] text-primary-1 px-[2rem] mt-[2rem] leading-[2] sm:mx-auto lg:w-[55rem] lg:mx-auto">
 				With seamless digital integration, BlueWallet transforms your phone into a smart financial command center.
 				Manage money intuitively and securely.
 			</p>

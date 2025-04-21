@@ -17,7 +17,7 @@ export default {
 			},
 			colors: {
 				primary: {
-					1: 'hsl(233, 26%, 24%)',
+					1: '#2d314d',
 					2: '#126ca7',
 					3: '#3790d0',
 				},

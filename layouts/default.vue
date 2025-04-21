@@ -1,8 +1,8 @@
 <template>
 	<nav
-		class="px-[3rem] lg:px-0 py-[2rem] bg-white w-full relative z-[1000] lg:fixed lg:top-0 lg:left-0 lg:w-full"
+		class=" py-[2rem] bg-white w-full relative z-[1000] lg:fixed lg:top-0 lg:left-0 lg:w-full"
 		ref="navMenu">
-		<div class="flex justify-between relative container lg:items-center lg:justify-between lg:px-[3.5rem] xl:px-[7rem]">
+		<div class="px-[3rem] flex justify-between relative container lg:items-center lg:justify-between lg:px-[3.5rem] xl:px-[7rem]">
 			<NuxtLink to="/" class="flex items-center gap-x-[1rem] select-none hover:cursor-pointer">
 				<img :src="logo" class="w-[5rem] h-[5rem] z-[50]" alt="logo easybank" />
 				<p class="font-w700 text-[2rem] hidden sm:block text-[#2d314d]">mWallet</p>
