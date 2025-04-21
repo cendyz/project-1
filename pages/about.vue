@@ -1,7 +1,7 @@
 <template>
 	<main>
-		<section class="p-[3rem] py-[5rem] bg-primary-1 text-white lg:pt-[15rem] check xl:px-[7rem]">
-			<div class="container bg-black bg-opacity-70 rounded-3xl xl:w-[1140px] xl:mx-auto 2xl:w-[1396px]">
+		<section class="p-[3rem] py-[5rem] bg-primary-1 text-white lg:pt-[15rem] pattern_bg xl:px-[7rem]">
+			<div class="container lg:bg-black lg:bg-opacity-70 rounded-3xl lg:w-[954px] xl:w-[1140px] lg:mx-auto 2xl:w-[1396px]">
 				<div class="md:w-[50rem] md:mx-auto lg:flex lg:items-center lg:justify-center lg:w-auto">
 					<img :src="dollar" alt="dollar" class="bounce sm:w-[35rem] mx-auto lg:mx-0 lg:w-[43rem] xl:mr-[8rem]" />
 					<div class="lg:w-[50rem]">
@@ -112,10 +112,6 @@ onMounted(() => {
 	--slide: 5.7%;
 }
 
-.check {
-	background-image: url('../assets/images/patternpad.png');
-	background-size: cover;
-}
 
 .niceColor {
 	position: relative;
@@ -152,6 +148,13 @@ onMounted(() => {
 
 	to {
 		transform: translateY(2%);
+	}
+}
+
+@media (min-width: 1024px) {
+	.pattern_bg {
+		background-image: url('../assets/images/patternpad.png');
+		background-size: cover;
 	}
 }
 </style>

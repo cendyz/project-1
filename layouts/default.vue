@@ -118,6 +118,7 @@ watch(
 	}
 
 	.styleLink {
+		color: #2d314d;
 		&::before {
 			width: 100%;
 		}

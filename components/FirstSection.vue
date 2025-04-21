@@ -1,6 +1,6 @@
 <template>
 	<section
-		class="bg-neutral-2 py-[11rem] px-[2.2rem] text-center text-neutral-1 text-[1.5rem] md:text-[1.6rem] lg:z-[9] md:relative">
+		class="bg-neutral-2 py-[11rem] px-[2.2rem] text-center text-neutral-1 text-[1.5rem] md:text-[1.6rem] lg:z-[9] relative">
 		<div class="container lg:px-[3.5rem] xl:px-0">
 			<h2 class="text-[3rem] font-w700 leading-[1.2] mb-[2.2rem] px-[1rem] text-primary-1 md:text-[3.5rem] lg:px-0">
 				Why choose mWallet?
@@ -12,11 +12,11 @@
 			<div
 				class="mt-[7rem] grid gap-y-[3rem] lg:grid lg:grid-cols-2 lg:gap-y-[6rem] xl:flex xl:justify-items-center xl:flex-wrap lg:w-[90rem] lg:mx-auto">
 				<div
-					data-aos="zoom-in"
-					data-aos-once="true"
-					data-aos-duration="700"
+					:data-aos="is_width && width >= 1024 ? 'zoom-in' : ''"
+					:data-aos-once="true"
+					:data-aos-duration="700"
 					v-for="(item, index) in profitsData"
-					class="bg-neutral-3 p-[2rem] border-[2px] rounded-xl border-primary-2 max-w-[45rem] mx-auto lg:w-auto z-[10]"
+					class="bg-neutral-3 bg-opacity-50 lg:bg-opacity-100 p-[2rem] border lg:border-[2px] rounded-xl lg:border-primary-2 max-w-[45rem] mx-auto lg:w-auto z-[10]"
 					:key="index">
 					<div class="p-[2rem]">
 						<img :src="item.img" :alt="item.title" class="block mx-auto w-[7rem] h-[7rem] md:w-[8rem] md:h-[8rem]" />
@@ -26,7 +26,7 @@
 							<li>Lorem ipsum dolor sit amet con se cte tur adi pisic ing elit. Eligendi, quae. Lorem, ipsum.</li>
 							<li>Lorem ipsum dolor sit amet con se cte tur adi pcs icing elit. Eligendi, quae. Lorem, ipsum.</li>
 						</ul>
-						<div class="flex justify-between items-center mt-[3rem]">
+						<div class="flex justify-between items-center mt-[3rem] relative">
 							<button
 								type="button"
 								class="bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] md:text-[1.6rem] lg:hover:opacity-60 lg:transition-opacity">
@@ -34,27 +34,52 @@
 							</button>
 							<button
 								type="button"
-								class="underline italic rounded-full font-w700 md:text-[1.6rem] text-[1.1rem] lawHover">
+								class="underline italic rounded-full font-w700 md:text-[1.6rem] text-[1.1rem]"
+								@click="is_law = index">
 								law note
 							</button>
+							<Transition>
+								<div
+									v-if="is_law == index"
+									class="absolute w-[20rem] rounded-xl text-left h-[20rem] text-black bg-white p-[2rem] overflow-scroll right-[.6rem] bottom-[5rem] z-[10] md:w-[25rem] md:right-[1.7rem] md:bottom-[6rem] boxShadowLaw"
+									:ref="el => (law_refs[index] = el as HTMLDivElement)">
+									<p class="text-[1.2rem] font-w700">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam eligendi quibusdam sapiente pariatur,
+										exercitationem doloremque nihil autem omnis laboriosam esse hic temporibus vel at veniam ut maxime
+										totam necessitatibus minima.
+									</p>
+								</div>
+							</Transition>
+							<Transition>
+								<div
+									class="absolute bottom-[3rem] right-[.5rem] md:right-7 md:bottom-[4rem] z-[11]"
+									v-if="is_law == index">
+									<img :src="triangle" alt="" aria-hidden="true" class="w-[3rem] invert-[100%]" />
+								</div>
+							</Transition>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<img :src="icon1" alt="" aria-hidden="true" :class="iconStyles" class="top-[10%] left-[10%] rotate-12 animeSpin" />
+		<img
+			:src="icon1"
+			alt=""
+			aria-hidden="true"
+			:class="iconStyles"
+			class="top-[14%] left-[-2%] md:top-[10%] md:left-[10%] rotate-12 animeSpin" />
 		<img
 			:src="icon2"
 			alt=""
 			aria-hidden="true"
 			:class="iconStyles"
-			class="right-0 top-1/2 rotate-45 animeSpin 2xl:right-[12%]" />
+			class="right-0 top-[54%] md:right-0 md:top-1/2 rotate-45 animeSpin 2xl:right-[12%]" />
 		<img
 			:src="icon3"
 			alt=""
 			aria-hidden="true"
 			:class="iconStyles"
-			class="bottom-[2%] left-[-2%] rotate-6 animeSpinRight xl:left-2 2xl:left-[7%] 2xl:bottom-[13%]" />
+			class="left-0 bottom-[1%] md:bottom-[2%] md:left-[-2%] rotate-6 animeSpinRight xl:left-2 2xl:left-[7%] 2xl:bottom-[13%]" />
 	</section>
 </template>
 
@@ -66,7 +91,22 @@ import img4 from 'assets/images/icon-api.svg'
 import icon1 from 'assets/images/icon1.svg'
 import icon2 from 'assets/images/icon2.svg'
 import icon3 from 'assets/images/icon3.svg'
+import triangle from 'assets/images/triangle.svg'
 import { ref } from 'vue'
+
+const { width } = useWindowSize()
+const is_width = ref(false)
+const is_law = ref<number | null>(null)
+const law_refs = ref<(HTMLDivElement | null)[]>([])
+
+const disable_law = (e: Event) => {
+	if (is_law.value !== null) {
+		const currentRef = law_refs.value[is_law.value]
+		if (currentRef && !currentRef.contains(e.target as Node)) {
+			is_law.value = null
+		}
+	}
+}
 
 const profitsData = ref([
 	{
@@ -91,10 +131,46 @@ const profitsData = ref([
 	},
 ])
 
-const iconStyles = 'hidden absolute lg:block opacity-[10%] w-[20rem] z-[1] 2xl:w-[30rem]'
+watch(
+	() => is_law.value,
+	(newValue, oldValue) => {
+		document.removeEventListener('click', disable_law)
+
+		if (newValue !== null) {
+			// ⏳ dodaj dopiero po zakończeniu aktualnego event loopa
+			setTimeout(() => {
+				document.addEventListener('click', disable_law)
+			}, 0)
+		}
+	}
+)
+
+onMounted(() => {
+	is_width.value = true
+})
+
+const iconStyles = 'absolute opacity-[5%] w-[15rem] md:w-[20rem] z-[1] 2xl:w-[30rem]'
 </script>
 
 <style scoped lang="scss">
+.boxShadowLaw {
+	box-shadow: 0 -10px 20px -5px rgba(115, 115, 115, 0.75);
+}
+
+.v-enter-active,
+.v-leave-active {
+	transition: opacity 0.2s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+	opacity: 0;
+}
+
+.boxShadow {
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
 .lawHover {
 	position: relative;
 	&::before {
@@ -102,20 +178,34 @@ const iconStyles = 'hidden absolute lg:block opacity-[10%] w-[20rem] z-[1] 2xl:w
 		content: 'Lorem ipsum dolor sit amet con se cte tur lorem lorem';
 		padding: 1.1rem;
 		border-radius: 7px;
-		border: 2px solid #3790d0;
 		top: -400%;
 		left: 50%;
 		transform: translateX(-50%);
 		width: 300%;
 		height: auto;
 		background-color: white;
-		z-index: -1;
-		opacity: 0;
+		z-index: 1;
+		opacity: 1;
 		font-size: 1.4rem;
 		transition: opacity 0.2s;
 		color: black;
 		box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 	}
+
+	&::after {
+		position: absolute;
+		content: '';
+		width: 4rem;
+		height: 4rem;
+		background-color: white;
+		rotate: 45deg;
+		top: -3rem;
+		left: 45%;
+		z-index: 0;
+		transform: translateX(-50%);
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	}
+
 	&:focus {
 		&::before {
 			opacity: 1;
