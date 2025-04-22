@@ -40,9 +40,9 @@
 							</button>
 							<Transition>
 								<div
+									:ref="el => law_refs[index] = el as HTMLDivElement"
 									v-if="is_law == index"
-									class="absolute w-[20rem] rounded-xl text-left h-[20rem] text-black bg-white p-[2rem] overflow-scroll right-[.6rem] bottom-[5rem] z-[10] md:w-[25rem] md:right-[1.7rem] md:bottom-[6rem] boxShadowLaw"
-									:ref="el => (law_refs[index] = el as HTMLDivElement)">
+									class="absolute w-[20rem] rounded-xl text-left h-[20rem] text-black bg-white p-[2rem] overflow-scroll lg:overflow-hidden right-[.6rem] bottom-[5rem] z-[10] md:w-[25rem] md:right-[1.7rem] md:bottom-[6rem] boxShadowLaw">
 									<p class="text-[1.2rem] font-w700">
 										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam eligendi quibusdam sapiente pariatur,
 										exercitationem doloremque nihil autem omnis laboriosam esse hic temporibus vel at veniam ut maxime
@@ -96,17 +96,29 @@ import { ref } from 'vue'
 
 const { width } = useWindowSize()
 const is_width = ref(false)
-const is_law = ref<number | null>(null)
-const law_refs = ref<(HTMLDivElement | null)[]>([])
+const is_law = ref<null | number>(null)
+const law_refs = ref<HTMLDivElement[]>([])
 
-const disable_law = (e: Event) => {
+const hide_law = (e: Event): void => {
 	if (is_law.value !== null) {
-		const currentRef = law_refs.value[is_law.value]
-		if (currentRef && !currentRef.contains(e.target as Node)) {
+		const current_law = law_refs.value[is_law.value]
+		if (current_law && !current_law.contains(e.target as Node)) {
 			is_law.value = null
 		}
 	}
 }
+
+watch(
+	() => is_law.value,
+	newValue => {
+		document.removeEventListener('click', hide_law)
+		if (newValue || newValue == 0) {
+			setTimeout(() => {
+				document.addEventListener('click', hide_law)
+			}, 0)
+		}
+	}
+)
 
 const profitsData = ref([
 	{
@@ -130,20 +142,6 @@ const profitsData = ref([
 		// desc: 'Sync savings, payments, crypto, and more—all in one place. Managing your finances has never been this connected.',
 	},
 ])
-
-watch(
-	() => is_law.value,
-	(newValue, oldValue) => {
-		document.removeEventListener('click', disable_law)
-
-		if (newValue !== null) {
-			// ⏳ dodaj dopiero po zakończeniu aktualnego event loopa
-			setTimeout(() => {
-				document.addEventListener('click', disable_law)
-			}, 0)
-		}
-	}
-)
 
 onMounted(() => {
 	is_width.value = true
