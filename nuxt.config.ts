@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
 	compatibilityDate: '2024-11-01',
 	devtools: { enabled: true },
-	modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', '@nuxt/image', '@vueuse/nuxt', 'nuxt-aos', 'vue3-carousel-nuxt'],
+	modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', '@nuxt/image', '@vueuse/nuxt', 'nuxt-aos', 'vue3-carousel-nuxt', ,],
+
 	app: {
 		head: {
 			title: 'mWallet',

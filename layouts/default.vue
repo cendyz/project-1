@@ -1,6 +1,6 @@
 <template>
 	<nav
-		class=" py-[2rem] bg-white w-full z-[1000] fixed lg:top-0 lg:left-0 lg:w-full"
+		class=" py-[2rem] bg-white w-full z-[1000] fixed lg:relative lg:top-0 lg:left-0 lg:w-full"
 		ref="navMenu">
 		<div class="px-[3rem] flex justify-between relative container lg:items-center lg:justify-between lg:px-[3.5rem] xl:px-[7rem]">
 			<NuxtLink to="/" class="flex items-center gap-x-[1rem] select-none hover:cursor-pointer">

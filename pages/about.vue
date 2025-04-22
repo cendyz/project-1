@@ -1,7 +1,8 @@
 <template>
 	<main>
-		<section class="p-[3rem] py-[5rem] bg-primary-1 text-white lg:pt-[15rem] pattern_bg xl:px-[7rem]">
-			<div class="container lg:bg-black lg:bg-opacity-70 rounded-3xl lg:w-[954px] xl:w-[1140px] lg:mx-auto 2xl:w-[1396px]">
+		<section class="p-[3rem] py-[5rem] bg-primary-1 text-white pattern_bg xl:px-[7rem]">
+			<div
+				class="container lg:bg-black lg:bg-opacity-70 rounded-3xl lg:w-[954px] xl:w-[1140px] lg:mx-auto 2xl:w-[1396px]">
 				<div class="md:w-[50rem] md:mx-auto lg:flex lg:items-center lg:justify-center lg:w-auto">
 					<img :src="dollar" alt="dollar" class="bounce sm:w-[35rem] mx-auto lg:mx-0 lg:w-[43rem] xl:mr-[8rem]" />
 					<div class="lg:w-[50rem]">
@@ -40,7 +41,7 @@
 						@click=";(actualInfo = index), changeLinePosition(index)"
 						v-for="(item, index) in dataYears"
 						:key="index"
-						class="px-[2rem] rounded-xl border-primary-2 py-[.5rem] sm:px-[2rem] border"
+						class="px-[2rem] rounded-xl border-primary-2 py-[.5rem] sm:px-[2rem] border lg:hover:text-white lg:hover:bg-primary-2 transition-colors duration-300"
 						:class="actualInfo == index ? 'bg-primary-2 text-white' : 'text-black'">
 						{{ item }}
 					</button>
@@ -111,7 +112,6 @@ onMounted(() => {
 :root {
 	--slide: 5.7%;
 }
-
 
 .niceColor {
 	position: relative;

@@ -1,6 +1,6 @@
 <template>
 	<header class="bg-neutral-3 lg:overflow-x-clip lg:pb-0">
-		<div class="container relative text-center pt-[9rem] sm:pt-[5rem] lg:flex lg:px-[3.5rem] xl:px-[7rem] lg:mt-[8rem]">
+		<div class="container relative text-center pt-[9rem] sm:pt-[5rem] lg:flex lg:px-[3.5rem] xl:px-[7rem]">
 			<picture>
 				<source :srcset="desktopIntro" media="(min-width: 640px)" />
 				<NuxtImg
