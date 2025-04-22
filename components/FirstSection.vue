@@ -16,7 +16,7 @@
 					:data-aos-once="true"
 					:data-aos-duration="700"
 					v-for="(item, index) in profitsData"
-					class="bg-neutral-3 bg-opacity-50 lg:bg-opacity-100 p-[2rem] border lg:border-[2px] rounded-xl lg:border-primary-2 max-w-[45rem] mx-auto lg:w-auto z-[10]"
+					class="bg-neutral-3 bg-opacity-50 p-[2rem] border lg:border-[2px] rounded-xl lg:border-primary-2 max-w-[45rem] mx-auto lg:w-auto z-[10]"
 					:key="index">
 					<div class="p-[2rem]">
 						<img :src="item.img" :alt="item.title" class="block mx-auto w-[7rem] h-[7rem] md:w-[8rem] md:h-[8rem]" />
@@ -67,19 +67,19 @@
 			alt=""
 			aria-hidden="true"
 			:class="iconStyles"
-			class="top-[14%] left-[-2%] md:top-[10%] md:left-[10%] rotate-12 animeSpin" />
+			class="top-[35rem] left-[-2rem] md:top-[30rem] md:left-[5rem] lg:top-[20rem] rotate-12 animeSpin" />
 		<img
 			:src="icon2"
 			alt=""
 			aria-hidden="true"
 			:class="iconStyles"
-			class="right-0 top-[54%] md:right-0 md:top-1/2 rotate-45 animeSpin 2xl:right-[12%]" />
+			class="right-[5rem] top-[130rem] md:top-[120rem] lg:top-[75rem] rotate-45 animeSpin 2xl:right-[12%]" />
 		<img
 			:src="icon3"
 			alt=""
 			aria-hidden="true"
 			:class="iconStyles"
-			class="left-0 bottom-[1%] md:bottom-[2%] md:left-[-2%] rotate-6 animeSpinRight xl:left-2 2xl:left-[7%] 2xl:bottom-[13%]" />
+			class="left-[2rem] bottom-[1rem] md:left-[4rem] rotate-6 animeSpinRight 2xl:left-[7%] 2xl:bottom-[13%]" />
 	</section>
 </template>
 
