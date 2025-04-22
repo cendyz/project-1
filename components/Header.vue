@@ -1,13 +1,13 @@
 <template>
 	<header class="bg-neutral-3 lg:overflow-x-clip lg:pb-0">
-		<div class="container relative text-center lg:flex lg:px-[3.5rem] xl:px-[7rem] lg:mt-[8rem]">
+		<div class="container relative text-center pt-[9rem] sm:pt-[5rem] lg:flex lg:px-[3.5rem] xl:px-[7rem] lg:mt-[8rem]">
 			<picture>
 				<source :srcset="desktopIntro" media="(min-width: 640px)" />
 				<NuxtImg
 					:src="mobileIntro"
 					alt=""
 					aria-hidden="true"
-					class="block w-full absolute sm:top-[5rem] lg:left-[50rem] xl:left-[55rem] lg:top-[-20rem] xl:top-[-26rem] lg:z-[0]" />
+					class="block w-full absolute sm:top-[8rem] lg:left-[50rem] xl:left-[55rem] lg:top-[-20rem] xl:top-[-26rem] lg:z-[0]" />
 			</picture>
 			<NuxtImg
 				:src="wallet"
