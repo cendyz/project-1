@@ -1,10 +1,10 @@
 <template>
 	<main>
-		<section class="p-[3rem] py-[5rem] bg-primary-1 text-white pattern_bg xl:px-[7rem]">
+		<section class="p-[3rem] py-[5rem] pt-[10rem] lg:pt-[5rem] bg-primary-1 text-white pattern_bg xl:px-[7rem]">
 			<div
 				class="container lg:bg-black lg:bg-opacity-70 rounded-3xl lg:w-[954px] xl:w-[1140px] lg:mx-auto 2xl:w-[1396px]">
 				<div class="md:w-[50rem] md:mx-auto lg:flex lg:items-center lg:justify-center lg:w-auto">
-					<img :src="dollar" alt="dollar" class="bounce sm:w-[35rem] mx-auto lg:mx-0 lg:w-[43rem] xl:mr-[8rem]" />
+					<img :src="dollar" alt="dollar" class="bounce w-[35rem] mx-auto lg:mx-0 lg:w-[43rem] xl:mr-[8rem]" />
 					<div class="lg:w-[50rem]">
 						<h1 class="font-w700 text-[3rem] text-center text-shadow-lg leading-[1.3] md:text-[3.3rem] lg:w-auto">
 							Transforming <span class="niceColor">everyday</span> finances through personalized digital experiences.
