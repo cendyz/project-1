@@ -3,11 +3,6 @@
 		<FirstSection />
 		<SecondSection />
 		<Footer />
-		<Transition>
-			<div
-				v-if="store.isOpenMenu"
-				class="absolute top-[9rem] left-0 w-full h-full opacity-70 bg-gradient-to-t from-transparent to-slate-900 transition-opacity z-[30]"></div>
-		</Transition>
 	</main>
 </template>
 

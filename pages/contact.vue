@@ -129,9 +129,9 @@ const handle_submit = (): void => {
 
 		const my_interval = setInterval(() => {
 			document.documentElement.style.setProperty('--line-width', `${line_width.value--}%`)
-		}, 26.3)
+		}, 27)
 
-		scroll(0,0)
+		scroll(0, 0)
 
 		setTimeout(() => {
 			is_sended.value = false

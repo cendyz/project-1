@@ -1,11 +1,15 @@
 <template>
-	<nav
-		class=" py-[2rem] bg-white w-full z-[1000] fixed lg:relative lg:top-0 lg:left-0 lg:w-full"
-		ref="navMenu">
-		<div class="px-[3rem] flex justify-between relative container lg:items-center lg:justify-between lg:px-[3.5rem] xl:px-[7rem]">
-			<NuxtLink to="/" class="flex items-center gap-x-[1rem] select-none hover:cursor-pointer">
-				<img :src="logo" class="w-[5rem] h-[5rem] z-[50]" alt="logo easybank" />
-				<p class="font-w700 text-[2rem] hidden sm:block text-[#2d314d]">mWallet</p>
+	<nav class="py-[2rem] bg-white w-full z-[1000] fixed lg:relative lg:top-0 lg:left-0 lg:w-full" ref="navMenu">
+		<div
+			class="px-[3rem] md:px-[5rem] flex justify-between lg:container relative lg:items-center lg:justify-between lg:px-[3.5rem] xl:px-[7rem]">
+			<NuxtLink
+				to="/"
+				class="flex items-center gap-x-[1rem] select-none z-[50] hover:cursor-pointer"
+				@click="store.isOpenMenu = false">
+				<img :src="logo" class="w-[5rem] h-[5rem]" alt="logo easybank" />
+				<p class="font-w700 text-[2rem] hidden sm:block" :class="store.isOpenMenu ? 'text-white' : 'text-[#2d314d]'">
+					mWallet
+				</p>
 			</NuxtLink>
 			<button
 				type="button"
@@ -15,27 +19,36 @@
 				<img
 					:src="store.isOpenMenu ? closeMenu : hamburger"
 					:alt="store.isOpenMenu ? 'close menu' : 'open menu'"
-					class="h-[1.8rem] z-[100]"
-					:class="store.isOpenMenu ? 'w-[2rem] h-[2.1rem]' : 'w-[2.8rem]'" />
+					class="h-[3rem] z-[100]" />
 			</button>
 			<Transition>
 				<div
 					v-if="store.isOpenMenu"
-					class="absolute top-[9.5rem] w-[calc(100%-4.4rem)] left-1/2 translate-x-[-50%] justify-items-center bg-neutral-4 grid gap-y-[1.5rem] py-[3rem] rounded-md lg:none">
-					<NuxtLink
-						:to="store.pages[index]"
-						v-for="(item, index) in linksData"
-						@click="store.isOpenMenu = false"
-						:key="index"
-						class="first-letter:uppercase text-[1.8rem] w-fit"
-						>{{ item }}</NuxtLink
-						
-					>
+					class="absolute top-[-3rem] md:px-[5rem] h-[103vh] w-full left-0 bg-primary-1 bg-opacity-90 p-[3rem] rounded-md lg:none text-white">
+					<div class="flex items-center justify-between w-full">
+						<button class="p-[1rem] pr-0 ml-auto">
+							<img :src="closeMenu" alt="close menu" class="invert" @click="store.isOpenMenu = false" />
+						</button>
+					</div>
+					<div class="mt-[5rem] grid gap-y-[1.5rem] justify-items-center max-w-[50rem] mx-auto">
+						<NuxtLink
+							:to="store.pages[index]"
+							v-for="(item, index) in linksData"
+							@click="store.isOpenMenu = false"
+							:key="index"
+							class="first-letter:uppercase uppercase font-w400 text-[2.3rem] border-t pt-[2rem] text-center w-full last:border-[3px] last:pb-[1rem] last:pt-[1.2rem] last:rounded-xl"
+							>{{ item }}</NuxtLink
+						>
+					</div>
+					<div class="flex justify-center gap-x-[2rem] my-[3.5rem] mt-[7rem]">
+						<a href="#" v-for="(item, index) in socialsData" :key="index">
+							<img :src="item.img" :alt="`${item.alt} icon`" class="w-[3rem] lg:brightness-15" />
+						</a>
+					</div>
 				</div>
 			</Transition>
 			<div class="hidden lg:flex gap-x-[3.5rem]">
 				<NuxtLink
-					@click="console.log(store.pages[index])"
 					:active-class="store.pages[index] ? 'styleLink' : ''"
 					:to="store.pages[index]"
 					v-for="(item, index) in linksData"
@@ -58,31 +71,58 @@ import { ref, watch } from 'vue'
 import { useBankStore } from '~/store/bank'
 import logo from '~/assets/images/logo.png'
 import hamburger from '~/assets/images/icon-hamburger.svg'
-import closeMenu from '~/assets/images/icon-close.svg'
-
-
+import closeMenu from '~/assets/images/close_x.svg'
+const { width } = useWindowSize()
+import fb from 'assets/images/icon-facebook.svg'
+import yt from 'assets/images/icon-youtube.svg'
+import x from 'assets/images/icon-twitter.svg'
+import pt from 'assets/images/icon-pinterest.svg'
+import insta from 'assets/images/icon-instagram.svg'
 
 const store = useBankStore()
 const navMenu = ref()
 
 const linksData = ref<string[]>(['home', 'about', 'contact', 'careers', 'articles'])
 
-const handleCloseOutside = (e: Event): void => {
-	if (navMenu.value && !navMenu.value.contains(e.target)) {
-		store.isOpenMenu = false
-	}
-}
+const socialsData = ref([
+	{
+		img: fb,
+		alt: 'facebook',
+	},
+	{
+		img: yt,
+		alt: 'youtube',
+	},
+	{
+		img: x,
+		alt: 'twitter',
+	},
+	{
+		img: pt,
+		alt: 'pinterest',
+	},
+	{
+		img: insta,
+		alt: 'instagram',
+	},
+])
 
 watch(
 	() => store.isOpenMenu,
 	newValue => {
 		if (newValue) {
-			document.addEventListener('click', handleCloseOutside)
+			document.body.style.overflow = 'hidden'
 		} else {
-			document.removeEventListener('click', handleCloseOutside)
+			document.body.style.overflow = 'visible'
 		}
 	}
 )
+
+watch(width, newValue => {
+	if (newValue >= 1024) {
+		store.isOpenMenu = false
+	}
+})
 </script>
 
 <style scoped lang="scss">
