@@ -1,5 +1,5 @@
 <template>
-	<main class="h-[95rem] lg:h-auto lg:py-[5rem] flex justify-center items-center">
+	<main class="h-[95rem] lg:h-auto lg:py-[5rem] flex justify-center items-center" ref="el">
 		<form
 			@submit.prevent="handle_submit"
 			class="bg-white p-[3rem] border-dashed border-[3px] border-[#3790d0] w-[calc(100%-6rem)] mx-auto my-auto max-w-[540px] lg:p-[5rem] lg:max-w-[580px] z-[100]">
@@ -129,7 +129,9 @@ const handle_submit = (): void => {
 
 		const my_interval = setInterval(() => {
 			document.documentElement.style.setProperty('--line-width', `${line_width.value--}%`)
-		}, 26.5)
+		}, 26.3)
+
+		scroll(0,0)
 
 		setTimeout(() => {
 			is_sended.value = false
