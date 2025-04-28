@@ -1,16 +1,13 @@
 <template>
 	<main class="w-full">
 		<FirstSection />
+		<BeforeSecond />
 		<SecondSection />
 		<Footer />
 	</main>
 </template>
 
-<script setup lang="ts">
-import { useBankStore } from '~/store/bank'
-
-const store = useBankStore()
-</script>
+<script setup lang="ts"></script>
 
 <style scoped lang="scss">
 .v-enter-active,
