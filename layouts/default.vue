@@ -82,7 +82,7 @@ import insta from 'assets/images/icon-instagram.svg'
 const store = useBankStore()
 const navMenu = ref()
 
-const linksData = ref<string[]>(['home', 'about', 'contact', 'careers', 'articles'])
+const linksData = ref<string[]>(['home', 'news', 'about', 'faq', 'contact'])
 
 const socialsData = ref([
 	{

@@ -1,29 +1,29 @@
 <template>
-	<main>
-		<section class="p-[3rem] py-[5rem] pt-[10rem] lg:pt-[5rem] bg-primary-1 text-white pattern_bg xl:px-[7rem]">
-			<div
-				class="container lg:bg-black lg:bg-opacity-70 rounded-3xl lg:w-[954px] xl:w-[1140px] lg:mx-auto 2xl:w-[1396px]">
-				<div class="md:w-[50rem] md:mx-auto lg:flex lg:items-center lg:justify-center lg:w-auto">
-					<img :src="dollar" alt="dollar" class="bounce w-[35rem] mx-auto lg:mx-0 lg:w-[43rem] xl:mr-[8rem]" />
-					<div class="lg:w-[50rem]">
-						<h1 class="font-w700 text-[3rem] text-center text-shadow-lg leading-[1.3] md:text-[3.3rem] lg:w-auto">
-							Transforming <span class="niceColor">everyday</span> finances through personalized digital experiences.
-						</h1>
-						<div class="lg:w-[48rem] xl:w-auto">
-							<p :class="textStyles">
-								mWallet empowers everyone — from students and freelancers to small businesses and organizations — to
-								manage money in a simple, fast, and secure way. Our platform lets users pay, save, plan, and grow from
-								anywhere.
-							</p>
-							<p :class="textStyles">
-								People choose mWallet to take full control of their finances and create modern, seamless experiences
-								every day.
-							</p>
-						</div>
+	<header class="p-[3rem] py-[5rem] pt-[10rem] lg:pt-[5rem] bg-primary-1 text-white pattern_bg xl:px-[7rem]">
+		<div
+			class="container lg:bg-black lg:bg-opacity-70 rounded-3xl lg:w-[954px] xl:w-[1140px] lg:mx-auto 2xl:w-[1396px]">
+			<div class="md:w-[50rem] md:mx-auto lg:flex lg:items-center lg:justify-center lg:w-auto">
+				<img :src="dollar" alt="dollar" class="bounce w-[35rem] mx-auto lg:mx-0 lg:w-[43rem] xl:mr-[8rem]" />
+				<div class="lg:w-[50rem]">
+					<h1 class="font-w700 text-[3rem] text-center text-shadow-lg leading-[1.3] md:text-[3.3rem] lg:w-auto">
+						Transforming <span class="niceColor">everyday</span> finances through personalized digital experiences.
+					</h1>
+					<div class="lg:w-[48rem] xl:w-auto">
+						<p :class="textStyles">
+							mWallet empowers everyone — from students and freelancers to small businesses and organizations — to
+							manage money in a simple, fast, and secure way. Our platform lets users pay, save, plan, and grow from
+							anywhere.
+						</p>
+						<p :class="textStyles">
+							People choose mWallet to take full control of their finances and create modern, seamless experiences every
+							day.
+						</p>
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
+	</header>
+	<main>
 		<section class="pt-[5rem]">
 			<div class="px-[3rem] md:w-[50rem] md:mx-auto lg:w-[70rem]">
 				<h2 class="text-[2.8rem] font-w700 md:text-[3rem] text-center">Redefining finance for the digital age.</h2>

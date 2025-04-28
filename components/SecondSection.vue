@@ -1,7 +1,7 @@
 <template>
 	<section class="bg-neutral-3 py-[7rem]">
 		<div class="text-center container px-[2.2rem] lg:px-[3.5rem] xl:px-[7rem]">
-			<h2 class="capitalize text-[3rem] md:text-[3.5rem]">latest articles</h2>
+			<h2 class="capitalize text-[3rem] md:text-[3.5rem]">latest news</h2>
 			<div class="mt-[3rem] grid gap-y-[3rem] md:grid-cols-2 md:gap-[2rem] xl:grid-cols-4 lg:gap-[5rem] xl:gap-[2rem]">
 				<div
 					class=" rounded-lg overflow-hidden max-w-[45rem] mx-auto sm:mx-auto md:w-auto lg:h-[40.4rem] xl:h-auto hover:cursor-pointer lg:hover:scale-110 transition-transform duration-300"
