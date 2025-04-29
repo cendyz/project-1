@@ -70,38 +70,40 @@ const grid_data = ref([
 </script>
 
 <style lang="scss">
-.grid_cols {
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-areas:
-		'one two two'
-		'three three four'
-		'five six six';
-	gap: 3em;
-}
-
-.one {
-	grid-area: one;
-}
-.two {
-	grid-area: two;
-}
-.three {
-	grid-area: three;
-}
-.four {
-	grid-area: four;
-}
-.five {
-	grid-area: five;
-}
-.six {
-	grid-area: six;
-}
-
 .one,
 .five,
 .four {
 	background-color: #2d314d;
 	color: white;
+}
+
+@media (min-width: 1024px) {
+	.grid_cols {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+			'one two two'
+			'three three four'
+			'five six six';
+		gap: 3em;
+	}
+
+	.one {
+		grid-area: one;
+	}
+	.two {
+		grid-area: two;
+	}
+	.three {
+		grid-area: three;
+	}
+	.four {
+		grid-area: four;
+	}
+	.five {
+		grid-area: five;
+	}
+	.six {
+		grid-area: six;
+	}
 }
 </style>

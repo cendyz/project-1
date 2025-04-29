@@ -3,6 +3,7 @@
 		<FirstSection />
 		<BeforeSecond />
 		<SecondSection />
+		<ThirdSection />
 		<Footer />
 	</main>
 </template>
