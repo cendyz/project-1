@@ -5,7 +5,7 @@
 				ref="containerRef"
 				:loop="true"
 				autoplay-delay="5000"
-				class="p-[2rem] py-[4rem] mb-[9rem] bg-primary-1 sm:w-[60rem] sm:mx-auto rounded-3xl">
+				class="p-[2rem] pt-[4rem] pb-[7rem] mb-[9rem] bg-primary-1 sm:w-[60rem] sm:mx-auto rounded-3xl">
 				<swiper-slide
 					v-for="(slide, idx) in slides"
 					:key="idx"
