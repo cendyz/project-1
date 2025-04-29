@@ -12,9 +12,10 @@
 			<div
 				class="mt-[7rem] grid gap-y-[3rem] lg:grid lg:grid-cols-2 lg:gap-y-[6rem] xl:flex xl:justify-items-center xl:flex-wrap lg:w-[90rem] lg:mx-auto">
 				<div
-					:data-aos="is_width && width >= 1024 ? 'zoom-in' : ''"
+					data-aos="zoom-in-up"
 					:data-aos-once="true"
-					:data-aos-duration="700"
+					:data-aos-duration="400"
+					:delay="index * 200"
 					v-for="(item, index) in profitsData"
 					class="bg-neutral-3 bg-opacity-50 p-[2rem] border lg:border-[2px] rounded-xl lg:border-primary-2 max-w-[45rem] mx-auto lg:w-auto z-[10]"
 					:key="index">
