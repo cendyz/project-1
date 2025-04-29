@@ -1,5 +1,5 @@
 <template>
-	<section class="grid p-[3rem] lg:pb-[10rem]">
+	<section class="grid p-[3rem] pb-[10rem]">
 		<div>
 			<div class="lg:w-[50rem] lg:mx-auto lg:text-center">
 				<h2 class="capitalize text-[2.8rem] md:text-[3.5rem] mb-[2rem]">

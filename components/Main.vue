@@ -2,8 +2,8 @@
 	<main class="w-full">
 		<FirstSection />
 		<BeforeSecond />
-		<SecondSection />
 		<ThirdSection />
+		<SecondSection />
 		<Footer />
 	</main>
 </template>
