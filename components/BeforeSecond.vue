@@ -14,7 +14,9 @@
 				class="grid gap-[3rem] mt-[5rem] sm:block sm:columns-2 lg:grid lg:grid-cols-2 grid_cols lg:w-[100rem] lg:mx-auto">
 				<div
 					class="border-[2px] border-primary-1 rounded-3xl lg:flex lg:items-center overflow-hidden sm:mb-[3.5rem] lg:mb-0"
-					data-aos="zoom-in-up" :once="true" :delay="index * 200"
+					data-aos="zoom-in-up"
+					:data-aos-once="true"
+					:delay="index * 200"
 					:class="[item.my_class, item.img ? 'lg:flex-row ' : 'lg:flex-col']"
 					v-for="(item, index) in grid_data"
 					:key="index">
