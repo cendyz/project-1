@@ -1,6 +1,6 @@
-import { d as default_vue_vue_type_style_index_0_scoped_1f12e8cf_lang } from './default-styles-1.mjs.mjs';
+import { d as default_vue_vue_type_style_index_0_scoped_6786f67c_lang } from './default-styles-1.mjs.mjs';
 
-const defaultStyles_ieL6qKRG = [default_vue_vue_type_style_index_0_scoped_1f12e8cf_lang, default_vue_vue_type_style_index_0_scoped_1f12e8cf_lang];
+const defaultStyles_ieL6qKRG = [default_vue_vue_type_style_index_0_scoped_6786f67c_lang, default_vue_vue_type_style_index_0_scoped_6786f67c_lang];
 
 export { defaultStyles_ieL6qKRG as default };
 //# sourceMappingURL=default-styles.ieL6qKRG.mjs.map

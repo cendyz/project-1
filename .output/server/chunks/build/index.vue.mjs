@@ -1,6 +1,5 @@
 import { computed, defineComponent, useAttrs, ref, mergeProps, unref, watch, useSSRContext, provide, createElementBlock } from 'vue';
 import { ssrRenderAttrs, ssrRenderSlot, ssrRenderAttr, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderClass } from 'vue/server-renderer';
-import { u as useWindowSize } from './index.mjs';
 import { u as useNuxtApp, a as useRuntimeConfig, _ as _export_sfc } from './server.mjs';
 import { _ as __nuxt_component_4 } from './Footer.vue.mjs';
 import { l as defu, r as withLeadingSlash, m as hasProtocol, n as joinURL, v as parseURL, x as encodePath, y as encodeParam, p as publicAssetsURL } from '../nitro/nitro.mjs';
@@ -8,6 +7,7 @@ import { u as useHead } from './v3.mjs';
 import 'pinia';
 import 'vue-router';
 import './icon-instagram.svg.mjs';
+import './nuxt-link.mjs';
 import 'node:http';
 import 'node:https';
 import 'node:events';
@@ -617,7 +617,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
       const _component_NuxtImg = _sfc_main$7;
-      _push(`<header${ssrRenderAttrs(mergeProps({ class: "bg-neutral-3 lg:overflow-x-clip lg:pb-0" }, _attrs))}><div class="container relative text-center pt-[9rem] sm:pt-[5rem] lg:flex lg:px-[3.5rem] xl:px-[7rem]"><picture><source${ssrRenderAttr("srcset", unref(desktopIntro))} media="(min-width: 640px)">`);
+      _push(`<header${ssrRenderAttrs(mergeProps({ class: "bg-neutral-3 lg:overflow-x-clip lg:pb-0" }, _attrs))}><div class="container relative text-center pt-[9rem] sm:pt-[5rem] lg:pt-[11rem] lg:h-[65rem] lg:flex lg:px-[3.5rem] xl:px-[7rem]"><picture><source${ssrRenderAttr("srcset", unref(desktopIntro))} media="(min-width: 640px)">`);
       _push(ssrRenderComponent(_component_NuxtImg, {
         src: unref(mobileIntro),
         alt: "",
@@ -628,7 +628,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
       _push(ssrRenderComponent(_component_NuxtImg, {
         src: unref(wallet),
         alt: "phone and wallet",
-        class: "block w-[calc(100%-3rem)] mx-auto lg:absolute top-0 z-[30] relative md:w-[70%] md:top-[5rem] lg:w-[47rem] xl:w-[55rem] lg:left-[80.5rem] xl:left-[99.5rem] lg:top-1/2 lg:translate-x-[-50%] lg:translate-y-[-50%] lg:z-[20] 2xl:left-[126rem]"
+        class: "block w-[calc(100%-3rem)] mx-auto lg:absolute top-0 z-[30] relative md:w-[70%] md:top-[5rem] lg:w-[47rem] xl:w-[55rem] lg:left-[80.5rem] xl:left-[99.5rem] lg:top-[55%] lg:translate-x-[-50%] lg:translate-y-[-50%] lg:z-[20] 2xl:left-[126rem]"
       }, null, _parent));
       _push(`<div class="lg:py-[12rem] lg:text-left px-[2rem] lg:px-0 sm:w-[50rem] sm:mx-auto lg:mx-0 flex flex-col justify-center items-center h-[40rem] md:h-[70rem] lg:h-auto lg:items-start xl:px-0"><h1 class="text-[4rem] leading-[1.1] mt-[-3rem] sm:mt-0 mb-[3rem] text-primary-1 md:text-[5rem] md:mx-auto lg:mt-0 lg:mx-0 lg:text-[6.5rem] lg:w-[50rem] sm:px-[2rem] md:w-auto md:px-0"> Next generation digital wallet </h1><p class="text-[1.5rem] px-[1rem] text-neutral-1 md:text-[1.7rem] md:w-[47rem] md:mx-auto lg:mx-0 lg:px-0 lg:text-[1.82rem] md:px-0 lg:w-[43rem]"> Take your finances to the next level. Your mWallet account is your all-in-one solution for managing payments, saving, tracking expenses, investing, and more. </p><button type="button" class="mt-[4rem] bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] md:text-[1.6rem] lg:hover:opacity-60 lg:transition-opacity"> Request Invite </button></div></div></header>`);
     };
@@ -656,7 +656,6 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
   __name: "FirstSection",
   __ssrInlineRender: true,
   setup(__props) {
-    useWindowSize();
     ref(false);
     const is_law = ref(null);
     const law_refs = ref([]);
@@ -683,41 +682,37 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
       {
         img: img1$1,
         title: "All-in-one Banking"
-        // desc: 'Access your funds anytime, anywhere. Our responsive platform works smoothly across both web and mobile.',
       },
       {
         img: img2$1,
         title: "Smart Budgeting"
-        // desc: 'Stay on top of your spending with real-time insights and instant alerts when you approach your budget goals.',
       },
       {
         img: img3$1,
         title: "Instant Setup"
-        // desc: 'Get started in just a few clicks. No paperwork, no queues—your wallet is ready when you are.',
       },
       {
         img: img4$1,
         title: "Connected Tools"
-        // desc: 'Sync savings, payments, crypto, and more—all in one place. Managing your finances has never been this connected.',
       }
     ]);
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<section${ssrRenderAttrs(mergeProps({ class: "bg-neutral-2 py-[11rem] px-[2.2rem] text-center text-neutral-1 text-[1.5rem] md:text-[1.6rem] lg:z-[9] relative" }, _attrs))} data-v-0c4ab7fd><div class="container lg:px-[3.5rem] xl:px-0" data-v-0c4ab7fd><h2 class="text-[3rem] font-w700 leading-[1.2] mb-[2.2rem] px-[1rem] text-primary-1 md:text-[3.5rem] lg:px-0" data-v-0c4ab7fd> Why choose mWallet? </h2><p class="sm:w-[38rem] text-primary-1 px-[2rem] mt-[2rem] leading-[2] sm:mx-auto lg:w-[55rem] lg:mx-auto" data-v-0c4ab7fd> With seamless digital integration, BlueWallet transforms your phone into a smart financial command center. Manage money intuitively and securely. </p><div class="mt-[7rem] grid gap-y-[3rem] lg:grid lg:grid-cols-2 lg:gap-y-[6rem] xl:flex xl:justify-items-center xl:flex-wrap lg:w-[90rem] lg:mx-auto" data-v-0c4ab7fd><!--[-->`);
+      _push(`<section${ssrRenderAttrs(mergeProps({ class: "bg-neutral-2 py-[11rem] px-[2.2rem] text-center text-neutral-1 text-[1.5rem] md:text-[1.6rem] lg:z-[9] relative" }, _attrs))} data-v-806c2c90><div class="container lg:px-[3.5rem] xl:px-0" data-v-806c2c90><h2 class="text-[3rem] font-w700 leading-[1.2] mb-[2.2rem] px-[1rem] text-primary-1 md:text-[3.5rem] lg:px-0" data-v-806c2c90> Why choose mWallet? </h2><p class="sm:w-[38rem] text-primary-1 px-[2rem] mt-[2rem] leading-[2] sm:mx-auto lg:w-[55rem] lg:mx-auto" data-v-806c2c90> With seamless digital integration, BlueWallet transforms your phone into a smart financial command center. Manage money intuitively and securely. </p><div class="mt-[7rem] grid gap-y-[3rem] lg:grid lg:grid-cols-2 lg:gap-y-[6rem] xl:flex xl:justify-items-center xl:flex-wrap lg:w-[90rem] lg:mx-auto" data-v-806c2c90><!--[-->`);
       ssrRenderList(profitsData.value, (item, index) => {
-        _push(`<div data-aos="zoom-in-up"${ssrRenderAttr("data-aos-once", true)}${ssrRenderAttr("data-aos-duration", 400)}${ssrRenderAttr("delay", index * 200)} class="bg-neutral-3 bg-opacity-50 p-[2rem] border lg:border-[2px] rounded-xl lg:border-primary-2 max-w-[45rem] mx-auto lg:w-auto z-[10]" data-v-0c4ab7fd><div class="p-[2rem]" data-v-0c4ab7fd><img${ssrRenderAttr("src", item.img)}${ssrRenderAttr("alt", item.title)} class="block mx-auto w-[7rem] h-[7rem] md:w-[8rem] md:h-[8rem]" data-v-0c4ab7fd><h3 class="text-primary-1 text-[2.5rem] font-w700 my-[2rem] md:text-[2.2rem]" data-v-0c4ab7fd>${ssrInterpolate(item.title)}</h3><ul class="text-left text-primary-1 sm:w-[35rem] sm:mx-auto lg:w-[30rem] lg:mx-0 list-disc grid gap-y-[2rem]" data-v-0c4ab7fd><li data-v-0c4ab7fd>Lorem ipsum dolor sit amet con se cte tur adi pisic ing elit. Eligendi, quae. Lorem, ipsum.</li><li data-v-0c4ab7fd>Lorem ipsum dolor sit amet con se cte tur adi pcs icing elit. Eligendi, quae. Lorem, ipsum.</li></ul><div class="flex justify-between items-center mt-[3rem] relative" data-v-0c4ab7fd><button type="button" class="bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] md:text-[1.6rem] lg:hover:opacity-60 lg:transition-opacity" data-v-0c4ab7fd> Check </button><button type="button" class="underline italic rounded-full font-w700 md:text-[1.6rem] text-[1.1rem]" data-v-0c4ab7fd> law note </button>`);
+        _push(`<div data-aos="zoom-in-up"${ssrRenderAttr("data-aos-once", true)}${ssrRenderAttr("data-aos-duration", 400)}${ssrRenderAttr("delay", index * 200)} class="bg-neutral-3 bg-opacity-50 p-[2rem] border lg:border-[2px] rounded-xl lg:border-primary-2 max-w-[45rem] mx-auto lg:w-auto z-[10]" data-v-806c2c90><div class="p-[2rem]" data-v-806c2c90><img${ssrRenderAttr("src", item.img)}${ssrRenderAttr("alt", item.title)} class="block mx-auto w-[7rem] h-[7rem] md:w-[8rem] md:h-[8rem]" data-v-806c2c90><h3 class="text-primary-1 text-[2.5rem] font-w700 my-[2rem] md:text-[2.2rem]" data-v-806c2c90>${ssrInterpolate(item.title)}</h3><ul class="text-left text-primary-1 sm:w-[35rem] sm:mx-auto lg:w-[30rem] lg:mx-0 list-disc grid gap-y-[2rem]" data-v-806c2c90><li data-v-806c2c90>Lorem ipsum dolor sit amet con se cte tur adi pisic ing elit. Eligendi, quae. Lorem, ipsum.</li><li data-v-806c2c90>Lorem ipsum dolor sit amet con se cte tur adi pcs icing elit. Eligendi, quae. Lorem, ipsum.</li></ul><div class="flex justify-between items-center mt-[3rem] relative" data-v-806c2c90><button type="button" class="bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] md:text-[1.6rem] lg:hover:opacity-60 lg:transition-opacity" data-v-806c2c90> Check </button><button type="button" class="underline italic rounded-full font-w700 md:text-[1.6rem] text-[1.1rem]" data-v-806c2c90> law note </button>`);
         if (is_law.value == index) {
-          _push(`<div class="absolute w-[20rem] rounded-xl text-left h-[20rem] text-black bg-white p-[2rem] overflow-scroll lg:overflow-hidden right-[.6rem] bottom-[5rem] z-[10] md:w-[25rem] md:right-[1.7rem] md:bottom-[6rem] boxShadowLaw" data-v-0c4ab7fd><p class="text-[1.2rem] font-w700" data-v-0c4ab7fd> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam eligendi quibusdam sapiente pariatur, exercitationem doloremque nihil autem omnis laboriosam esse hic temporibus vel at veniam ut maxime totam necessitatibus minima. </p></div>`);
+          _push(`<div class="absolute w-[20rem] rounded-xl text-left h-[20rem] text-primary-1 bg-neutral-4 p-[2rem] overflow-scroll lg:overflow-hidden right-[.6rem] bottom-[5rem] z-[10] md:w-[25rem] md:right-[1.7rem] md:bottom-[6rem] boxShadowLaw" data-v-806c2c90><p class="text-[1.2rem] font-w700" data-v-806c2c90> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam eligendi quibusdam sapiente pariatur, exercitationem doloremque nihil autem omnis laboriosam esse hic temporibus vel at veniam ut maxime totam necessitatibus minima. </p></div>`);
         } else {
           _push(`<!---->`);
         }
         if (is_law.value == index) {
-          _push(`<div class="absolute bottom-[3rem] right-[.5rem] md:right-7 md:bottom-[4rem] z-[11]" data-v-0c4ab7fd><img${ssrRenderAttr("src", unref(triangle))} alt="" aria-hidden="true" class="w-[3rem] invert-[100%]" data-v-0c4ab7fd></div>`);
+          _push(`<div class="absolute bottom-[3rem] right-[.5rem] md:right-7 md:bottom-[4rem] z-[11]" data-v-806c2c90><img${ssrRenderAttr("src", unref(triangle))} alt="" aria-hidden="true" class="w-[3rem] invert-[100%]" data-v-806c2c90></div>`);
         } else {
           _push(`<!---->`);
         }
         _push(`</div></div></div>`);
       });
-      _push(`<!--]--></div></div><img${ssrRenderAttr("src", unref(icon1))} alt="" aria-hidden="true" class="${ssrRenderClass([iconStyles, "top-[35rem] left-[-2rem] md:top-[30rem] md:left-[5rem] lg:top-[20rem] 2xl:left-[35rem] rotate-12 animeSpin"])}" data-v-0c4ab7fd><img${ssrRenderAttr("src", unref(icon2))} alt="" aria-hidden="true" class="${ssrRenderClass([iconStyles, "right-[5rem] top-[130rem] md:top-[120rem] lg:top-[75rem] rotate-45 animeSpin 2xl:right-[30rem]"])}" data-v-0c4ab7fd><img${ssrRenderAttr("src", unref(icon3))} alt="" aria-hidden="true" class="${ssrRenderClass([iconStyles, "left-[2rem] bottom-[1rem] md:left-[4rem] rotate-6 animeSpinRight 2xl:left-[19rem] 2xl:bottom-[10rem]"])}" data-v-0c4ab7fd></section>`);
+      _push(`<!--]--></div></div><img${ssrRenderAttr("src", unref(icon1))} alt="" aria-hidden="true" class="${ssrRenderClass([iconStyles, "top-[35rem] left-[-2rem] md:top-[30rem] md:left-[5rem] lg:top-[20rem] 2xl:left-[35rem] rotate-12 animeSpin"])}" data-v-806c2c90><img${ssrRenderAttr("src", unref(icon2))} alt="" aria-hidden="true" class="${ssrRenderClass([iconStyles, "right-[5rem] top-[130rem] md:top-[120rem] lg:top-[75rem] rotate-45 animeSpin 2xl:right-[30rem]"])}" data-v-806c2c90><img${ssrRenderAttr("src", unref(icon3))} alt="" aria-hidden="true" class="${ssrRenderClass([iconStyles, "left-[2rem] bottom-[1rem] md:left-[4rem] rotate-6 animeSpinRight 2xl:left-[19rem] 2xl:bottom-[10rem]"])}" data-v-806c2c90></section>`);
     };
   }
 });
@@ -728,7 +723,7 @@ _sfc_main$5.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/FirstSection.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __nuxt_component_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-0c4ab7fd"]]);
+const __nuxt_component_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-806c2c90"]]);
 
 const second_img = "" + __buildAssetsURL("2.BiI_s8Yc.png");
 
@@ -744,7 +739,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
       {
         title: "Track Your Spending",
         desc: "Monitor daily expenses and gain full control over your financial habits — in real time.",
-        my_class: "one"
+        my_class: "one text-white bg-primary-1"
       },
       {
         title: "Set Smart Budgets",
@@ -761,12 +756,12 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
       {
         title: "Connect Your Accounts",
         desc: "Link your bank accounts securely and manage all your finances from one simple dashboard.",
-        my_class: "four"
+        my_class: "four text-white bg-primary-1"
       },
       {
         title: "Plan Your Savings",
         desc: "Set savings goals and watch your progress grow with automatic tracking and smart recommendations.",
-        my_class: "five"
+        my_class: "five text-white bg-primary-1"
       },
       {
         title: "Stay Secure",
@@ -979,7 +974,7 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
   const _component_ThirdSection = _sfc_main$3;
   const _component_SecondSection = _sfc_main$2;
   const _component_Footer = __nuxt_component_4;
-  _push(`<main${ssrRenderAttrs(mergeProps({ class: "w-full" }, _attrs))} data-v-fddb55a0>`);
+  _push(`<main${ssrRenderAttrs(mergeProps({ class: "w-full" }, _attrs))}>`);
   _push(ssrRenderComponent(_component_FirstSection, null, null, _parent));
   _push(ssrRenderComponent(_component_BeforeSecond, null, null, _parent));
   _push(ssrRenderComponent(_component_ThirdSection, null, null, _parent));
@@ -993,7 +988,7 @@ _sfc_main$1.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Main.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const __nuxt_component_1 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-fddb55a0"]]);
+const __nuxt_component_1 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender$1]]);
 
 const _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {

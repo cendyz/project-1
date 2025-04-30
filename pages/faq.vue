@@ -1,13 +1,13 @@
 <template>
 	<header class="relative">
-		<div class="container pt-[15rem] lg:pt-[7rem] py-[7rem] p-[3rem] lg:px-[3.5rem] xl:px-[7rem]">
-			<p class="px-[1.2rem] py-[.5rem] border-primary-3 border rounded-3xl w-fit">FAQs</p>
+		<div class="container pt-[15rem] py-[7rem] lg:pt-[11rem] lg:h-[50rem] p-[3rem] lg:px-[3.5rem] xl:px-[7rem]">
+			<p class="px-[1.2rem] lg:mt-[5rem] py-[.5rem] border-primary-3 border rounded-3xl w-fit">FAQs</p>
 			<div class="mt-[2rem]">
 				<label for="question" class="text-[4rem] text-primary-1 lg:text-[5rem]">What can we help you find?</label>
 				<input
 					type="text"
 					id="question"
-					class="block mt-[3rem] w-full p-[1rem] rounded-md border border-primary-3 bg-white z-[100] relative lg:w-[40rem]"
+					class="block mt-[3rem] w-full p-[1rem] rounded-md border border-primary-3 bg-neutral-4 z-[100] relative lg:w-[40rem]"
 					v-model.trim="input_data.user_print" />
 			</div>
 		</div>

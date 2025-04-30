@@ -16,7 +16,7 @@ import 'vue-router';
 
 const _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "grid gap-y-[5rem] absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] text-center" }, _attrs))}><h1 class="text-red font-w700 text-red-600 text-[9rem]">Error 404</h1><p class="text-[3rem]">Page not found</p></div>`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "grid gap-y-[5rem] absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] text-center" }, _attrs))}><h1 class="text-red font-w700 text-primary-red text-[9rem]">Error 404</h1><p class="text-[3rem]">Page not found</p></div>`);
 }
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {

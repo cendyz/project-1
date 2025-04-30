@@ -61,5 +61,3 @@ const articlesData = ref([
 	},
 ])
 </script>
-
-<style scoped></style>

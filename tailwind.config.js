@@ -20,6 +20,9 @@ export default {
 					1: '#2d314d',
 					2: '#126ca7',
 					3: '#3790d0',
+					red: '#dc2626',
+					gray: '#9ca3af',
+					gray2: '#6b7280',
 				},
 				neutral: {
 					1: 'hsl(233, 8%, 62%)',

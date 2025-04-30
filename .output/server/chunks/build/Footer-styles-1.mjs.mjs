@@ -1,4 +1,4 @@
-const Footer_vue_vue_type_style_index_0_scoped_29f001e9_lang = '@media (min-width:1024px){.hoverIcon img[data-v-29f001e9]{transition:filter .2s}.hoverIcon:hover img[data-v-29f001e9]{filter:invert(54%) sepia(78%) saturate(1273%) hue-rotate(179deg) brightness(85%) contrast(90%)}.hoverButton[data-v-29f001e9]{overflow:hidden;position:relative;z-index:10}.hoverButton[data-v-29f001e9]:before{background-color:#fff;content:"";height:100%;left:0;opacity:0;position:absolute;top:0;transition:opacity .2s;width:100%;z-index:-2}.hoverButton[data-v-29f001e9]:hover:before{opacity:40%}}';
+const Footer_vue_vue_type_style_index_0_scoped_4ad8b403_lang = '@media (min-width:1024px){.hoverIcon img[data-v-4ad8b403]{transition:filter .2s}.hoverIcon:hover img[data-v-4ad8b403]{filter:invert(54%) sepia(78%) saturate(1273%) hue-rotate(179deg) brightness(85%) contrast(90%)}.hoverButton[data-v-4ad8b403]{overflow:hidden;position:relative;z-index:10}.hoverButton[data-v-4ad8b403]:before{background-color:#fff;content:"";height:100%;left:0;opacity:0;position:absolute;top:0;transition:opacity .2s;width:100%;z-index:-2}.hoverButton[data-v-4ad8b403]:hover:before{opacity:40%}}';
 
-export { Footer_vue_vue_type_style_index_0_scoped_29f001e9_lang as F };
+export { Footer_vue_vue_type_style_index_0_scoped_4ad8b403_lang as F };
 //# sourceMappingURL=Footer-styles-1.mjs.mjs.map

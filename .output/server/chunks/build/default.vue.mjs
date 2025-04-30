@@ -68,10 +68,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     return (_ctx, _push, _parent, _attrs) => {
       const _component_NuxtLink = __nuxt_component_0;
       _push(`<nav${ssrRenderAttrs(mergeProps({
-        class: "py-[2rem] bg-white w-full z-[1000] fixed lg:relative lg:top-0 lg:left-0 lg:w-full",
+        class: "py-[2rem] bg-neutral-4 w-full z-[1000] fixed lg:w-full",
         ref_key: "navMenu",
         ref: navMenu
-      }, _attrs))} data-v-1f12e8cf><div class="px-[3rem] md:px-[5rem] flex justify-between lg:container relative lg:items-center lg:justify-between lg:px-[3.5rem] xl:px-[7rem]" data-v-1f12e8cf>`);
+      }, _attrs))} data-v-6786f67c><div class="px-[3rem] md:px-[5rem] flex justify-between lg:container relative lg:items-center lg:justify-between lg:px-[3.5rem] xl:px-[7rem]" data-v-6786f67c>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: "/",
         class: "flex items-center gap-x-[1rem] select-none z-[50] hover:cursor-pointer",
@@ -79,7 +79,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<img${ssrRenderAttr("src", unref(logo))} class="w-[5rem] h-[5rem]" alt="logo easybank" data-v-1f12e8cf${_scopeId}><p class="${ssrRenderClass([unref(store).isOpenMenu ? "text-white" : "text-[#2d314d]", "font-w700 text-[2rem] hidden sm:block"])}" data-v-1f12e8cf${_scopeId}> mWallet </p>`);
+            _push2(`<img${ssrRenderAttr("src", unref(logo))} class="w-[5rem] h-[5rem]" alt="logo easybank" data-v-6786f67c${_scopeId}><p class="${ssrRenderClass([unref(store).isOpenMenu ? "text-neutral-4" : "text-primary-1", "font-w700 text-[2rem] hidden sm:block"])}" data-v-6786f67c${_scopeId}> mWallet </p>`);
           } else {
             return [
               createVNode("img", {
@@ -88,16 +88,16 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                 alt: "logo easybank"
               }, null, 8, ["src"]),
               createVNode("p", {
-                class: ["font-w700 text-[2rem] hidden sm:block", unref(store).isOpenMenu ? "text-white" : "text-[#2d314d]"]
+                class: ["font-w700 text-[2rem] hidden sm:block", unref(store).isOpenMenu ? "text-neutral-4" : "text-primary-1"]
               }, " mWallet ", 2)
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`<button type="button" aria-label="open close nav menu" class="lg:hidden" data-v-1f12e8cf><img${ssrRenderAttr("src", unref(store).isOpenMenu ? unref(closeMenu) : unref(hamburger))}${ssrRenderAttr("alt", unref(store).isOpenMenu ? "close menu" : "open menu")} class="h-[3rem] z-[100]" data-v-1f12e8cf></button>`);
+      _push(`<button type="button" aria-label="open close nav menu" class="lg:hidden" data-v-6786f67c><img${ssrRenderAttr("src", unref(store).isOpenMenu ? unref(closeMenu) : unref(hamburger))}${ssrRenderAttr("alt", unref(store).isOpenMenu ? "close menu" : "open menu")} class="h-[3rem] z-[100]" data-v-6786f67c></button>`);
       if (unref(store).isOpenMenu) {
-        _push(`<div class="absolute top-[-3rem] md:px-[5rem] h-[103vh] w-full left-0 bg-primary-1 bg-opacity-90 p-[3rem] rounded-md lg:none text-white" data-v-1f12e8cf><div class="flex items-center justify-between w-full" data-v-1f12e8cf><button class="p-[1rem] pr-0 ml-auto" data-v-1f12e8cf><img${ssrRenderAttr("src", unref(closeMenu))} alt="close menu" class="invert" data-v-1f12e8cf></button></div><div class="mt-[5rem] grid gap-y-[1.5rem] justify-items-center max-w-[50rem] mx-auto" data-v-1f12e8cf><!--[-->`);
+        _push(`<div class="absolute top-[-3rem] md:px-[5rem] h-[103vh] w-full left-0 bg-primary-1 bg-opacity-90 p-[3rem] rounded-md lg:none text-white" data-v-6786f67c><div class="flex items-center justify-between w-full" data-v-6786f67c><button class="p-[1rem] pr-0 ml-auto" data-v-6786f67c><img${ssrRenderAttr("src", unref(closeMenu))} alt="close menu" class="invert" data-v-6786f67c></button></div><div class="mt-[5rem] grid gap-y-[1.5rem] justify-items-center max-w-[50rem] mx-auto" data-v-6786f67c><!--[-->`);
         ssrRenderList(linksData.value, (item, index) => {
           _push(ssrRenderComponent(_component_NuxtLink, {
             to: unref(store).pages[index],
@@ -117,15 +117,15 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             _: 2
           }, _parent));
         });
-        _push(`<!--]--></div><div class="flex justify-center gap-x-[2rem] my-[3.5rem] mt-[7rem]" data-v-1f12e8cf><!--[-->`);
+        _push(`<!--]--></div><div class="flex justify-center gap-x-[2rem] my-[3.5rem] mt-[7rem]" data-v-6786f67c><!--[-->`);
         ssrRenderList(socialsData.value, (item, index) => {
-          _push(`<a href="#" data-v-1f12e8cf><img${ssrRenderAttr("src", item.img)}${ssrRenderAttr("alt", `${item.alt} icon`)} class="w-[3rem] lg:brightness-15" data-v-1f12e8cf></a>`);
+          _push(`<a href="#" data-v-6786f67c><img${ssrRenderAttr("src", item.img)}${ssrRenderAttr("alt", `${item.alt} icon`)} class="w-[3rem] lg:brightness-15" data-v-6786f67c></a>`);
         });
         _push(`<!--]--></div></div>`);
       } else {
         _push(`<!---->`);
       }
-      _push(`<div class="hidden lg:flex gap-x-[3.5rem]" data-v-1f12e8cf><!--[-->`);
+      _push(`<div class="hidden lg:flex gap-x-[3.5rem]" data-v-6786f67c><!--[-->`);
       ssrRenderList(linksData.value, (item, index) => {
         _push(ssrRenderComponent(_component_NuxtLink, {
           "active-class": unref(store).pages[index] ? "styleLink" : "",
@@ -145,7 +145,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           _: 2
         }, _parent));
       });
-      _push(`<!--]--></div><button type="button" class="hidden lg:block capitalize bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] lg:hover:opacity-60 lg:transition-opacity" data-v-1f12e8cf> request invite </button></div></nav>`);
+      _push(`<!--]--></div><button type="button" class="hidden lg:block capitalize bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] lg:hover:opacity-60 lg:transition-opacity" data-v-6786f67c> request invite </button></div></nav>`);
     };
   }
 });
@@ -156,7 +156,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("layouts/default.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const _default = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-1f12e8cf"]]);
+const _default = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-6786f67c"]]);
 
 export { _default as default };
 //# sourceMappingURL=default.vue.mjs.map

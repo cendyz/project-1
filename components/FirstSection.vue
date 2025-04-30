@@ -43,7 +43,7 @@
 								<div
 									:ref="el => law_refs[index] = el as HTMLDivElement"
 									v-if="is_law == index"
-									class="absolute w-[20rem] rounded-xl text-left h-[20rem] text-black bg-white p-[2rem] overflow-scroll lg:overflow-hidden right-[.6rem] bottom-[5rem] z-[10] md:w-[25rem] md:right-[1.7rem] md:bottom-[6rem] boxShadowLaw">
+									class="absolute w-[20rem] rounded-xl text-left h-[20rem] text-primary-1 bg-neutral-4 p-[2rem] overflow-scroll lg:overflow-hidden right-[.6rem] bottom-[5rem] z-[10] md:w-[25rem] md:right-[1.7rem] md:bottom-[6rem] boxShadowLaw">
 									<p class="text-[1.2rem] font-w700">
 										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam eligendi quibusdam sapiente pariatur,
 										exercitationem doloremque nihil autem omnis laboriosam esse hic temporibus vel at veniam ut maxime
@@ -95,7 +95,6 @@ import icon3 from 'assets/images/icon3.svg'
 import triangle from 'assets/images/triangle.svg'
 import { ref } from 'vue'
 
-const { width } = useWindowSize()
 const is_width = ref(false)
 const is_law = ref<null | number>(null)
 const law_refs = ref<HTMLDivElement[]>([])
@@ -125,22 +124,18 @@ const profitsData = ref([
 	{
 		img: img1,
 		title: 'All-in-one Banking',
-		// desc: 'Access your funds anytime, anywhere. Our responsive platform works smoothly across both web and mobile.',
 	},
 	{
 		img: img2,
 		title: 'Smart Budgeting',
-		// desc: 'Stay on top of your spending with real-time insights and instant alerts when you approach your budget goals.',
 	},
 	{
 		img: img3,
 		title: 'Instant Setup',
-		// desc: 'Get started in just a few clicks. No paperwork, no queues—your wallet is ready when you are.',
 	},
 	{
 		img: img4,
 		title: 'Connected Tools',
-		// desc: 'Sync savings, payments, crypto, and more—all in one place. Managing your finances has never been this connected.',
 	},
 ])
 

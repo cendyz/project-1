@@ -4,7 +4,7 @@
 			<div class="flex flex-col items-center lg:items-start">
 				<div class="flex items-center gap-x-[2rem]">
 					<img :src="logo" alt="wallet" class="wallet w-[5rem] h-[5rem]" />
-					<p class="font-w700 text-[2rem] sm:block text-white">mWallet</p>
+					<p class="font-w700 text-[2rem] sm:block text-neutral-2">mWallet</p>
 				</div>
 				<div class="xl:flex xl:flex-col xl:gap-y-[2rem] xl:items-start lg:mr-auto">
 					<div class="flex justify-center gap-x-[1.5rem] my-[3.5rem] lg:mb-0">
@@ -14,14 +14,15 @@
 					</div>
 				</div>
 			</div>
+
 			<div
 				class="grid gap-y-[1rem] capitalize text-neutral-3 lg:grid-cols-2 lg:text-left lg:gap-y-[2rem] xl:translate-x-[-8rem]">
-				<a
-					href="#"
+				<NuxtLink
+					:to="`/${item}`"
 					v-for="(item, index) in linksData"
 					:key="index"
 					class="lg:hover:text-primary-3 lg:transition-colors lg:w-fit"
-					>{{ item }}</a
+					>{{ item }}</NuxtLink
 				>
 			</div>
 			<div class="xl:flex xl:flex-col xl:justify-between">
@@ -41,8 +42,9 @@ import yt from 'assets/images/icon-youtube.svg'
 import x from 'assets/images/icon-twitter.svg'
 import pt from 'assets/images/icon-pinterest.svg'
 import insta from 'assets/images/icon-instagram.svg'
+import { NuxtLink } from '#components'
 
-const linksData = ref(['about us', 'contact', 'blog', 'careers', 'support', 'privacy policy'])
+const linksData = ref(['news', 'about', 'faq', 'contact'])
 
 const socialsData = ref([
 	{

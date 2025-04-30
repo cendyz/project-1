@@ -1,7 +1,8 @@
 <template>
-	<header class="p-[3rem] py-[5rem] pt-[10rem] lg:pt-[5rem] bg-primary-1 text-white pattern_bg xl:px-[7rem]">
+	<header
+		class="p-[3rem] py-[5rem] pt-[10rem] lg:h-[65rem] lg:pt-[11rem] bg-primary-1 text-neutral-4 pattern_bg xl:px-[7rem]">
 		<div
-			class="container lg:bg-black lg:bg-opacity-70 rounded-3xl lg:w-[954px] xl:w-[1140px] lg:mx-auto 2xl:w-[1396px]">
+			class="container lg:bg-primary-1 lg:bg-opacity-90 rounded-3xl lg:mt-[4rem] lg:w-[954px] xl:w-[1140px] lg:mx-auto 2xl:w-[1396px]">
 			<div class="md:w-[50rem] md:mx-auto lg:flex lg:items-center lg:justify-center lg:w-auto">
 				<img :src="dollar" alt="dollar" class="bounce w-[35rem] mx-auto lg:mx-0 lg:w-[43rem] xl:mr-[8rem]" />
 				<div class="lg:w-[50rem]">
@@ -33,7 +34,7 @@
 					manage money every day.
 				</p>
 			</div>
-			<div class="mt-[4rem] border-gray-400 border-b-[2px] sm:px-[10rem] sm:mx-auto lg:mt-[8rem]">
+			<div class="mt-[4rem] border-primary-gray border-b-[2px] sm:px-[10rem] sm:mx-auto lg:mt-[8rem]">
 				<div
 					class="flex flex-wrap gap-[3rem] lg:w-[80rem] lg:mx-auto items-center justify-center pb-[2rem]"
 					:class="is_width && width >= 1024 ? 'line' : ''">
@@ -41,8 +42,8 @@
 						@click=";(actualInfo = index), changeLinePosition(index)"
 						v-for="(item, index) in dataYears"
 						:key="index"
-						class="px-[2rem] rounded-xl border-primary-2 py-[.5rem] sm:px-[2rem] border lg:hover:text-white lg:hover:bg-primary-2 transition-colors duration-300"
-						:class="actualInfo == index ? 'bg-primary-2 text-white' : 'text-black'">
+						class="px-[2rem] rounded-xl border-primary-2 py-[.5rem] sm:px-[2rem] border lg:hover:text-neutral-4 lg:hover:bg-primary-2 transition-colors duration-300"
+						:class="actualInfo == index ? 'bg-primary-2 text-neutral-4' : 'text-primary-1'">
 						{{ item }}
 					</button>
 				</div>

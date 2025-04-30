@@ -39,7 +39,7 @@ const grid_data = ref([
 	{
 		title: 'Track Your Spending',
 		desc: 'Monitor daily expenses and gain full control over your financial habits — in real time.',
-		my_class: 'one',
+		my_class: 'one text-white bg-primary-1',
 	},
 	{
 		title: 'Set Smart Budgets',
@@ -56,12 +56,12 @@ const grid_data = ref([
 	{
 		title: 'Connect Your Accounts',
 		desc: 'Link your bank accounts securely and manage all your finances from one simple dashboard.',
-		my_class: 'four',
+		my_class: 'four text-white bg-primary-1',
 	},
 	{
 		title: 'Plan Your Savings',
 		desc: 'Set savings goals and watch your progress grow with automatic tracking and smart recommendations.',
-		my_class: 'five',
+		my_class: 'five text-white bg-primary-1',
 	},
 	{
 		title: 'Stay Secure',
@@ -73,13 +73,6 @@ const grid_data = ref([
 </script>
 
 <style lang="scss">
-.one,
-.five,
-.four {
-	background-color: #2d314d;
-	color: white;
-}
-
 @media (min-width: 1024px) {
 	.grid_cols {
 		grid-template-columns: 1fr 1fr 1fr;

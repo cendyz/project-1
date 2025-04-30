@@ -1,8 +1,8 @@
 <template>
-	<main class="h-[95rem] lg:h-auto lg:py-[5rem] flex justify-center items-center" ref="el">
+	<main class="h-[95rem] lg:py-[5rem] flex justify-center items-center" ref="el">
 		<form
 			@submit.prevent="handle_submit"
-			class="bg-white p-[3rem] border-dashed border-[3px] border-[#3790d0] w-[calc(100%-6rem)] mx-auto my-auto max-w-[540px] lg:p-[5rem] lg:max-w-[580px] z-[100]">
+			class="bg-neutral-4 p-[3rem] border-dashed border-[3px] border-primary-3 w-[calc(100%-6rem)] mx-auto my-auto max-w-[540px] lg:p-[5rem] lg:max-w-[580px] z-[100]">
 			<h1 class="text-[2.5rem] font-w700 mb-[1rem] lg:text-[3rem]">Contact us</h1>
 			<p class="text-[1.4rem] mb-[2rem] lg:text-[1.5rem]">
 				Got any questions or suggestions? <br class="sm:hidden" />
@@ -14,7 +14,7 @@
 					<input
 						type="text"
 						id="name"
-						:class="[inputStyles, name_error && 'border-[#EF4444]']"
+						:class="[inputStyles, name_error && 'border-primary-red']"
 						placeholder="Enter your name"
 						v-model="input_data.name" />
 					<p v-if="name_error" :class="errorStyles">{{ name_error }}</p>
@@ -24,7 +24,7 @@
 					<input
 						type="email"
 						id="email"
-						:class="[inputStyles, email_error && 'border-[#EF4444]']"
+						:class="[inputStyles, email_error && 'border-primary-red']"
 						placeholder="Enter your email"
 						v-model="input_data.email" />
 					<p v-if="email_error" :class="errorStyles">{{ email_error }}</p>
@@ -36,17 +36,17 @@
 					id="message"
 					v-model="input_data.message"
 					placeholder="Enter your message"
-					:class="[inputStyles, message_error && 'border-[#EF4444]']"
+					:class="[inputStyles, message_error && 'border-primary-red']"
 					class="min-h-[13rem] min-w-full"></textarea>
 				<p :class="errorStyles">{{ message_error }}</p>
 			</div>
 			<div class="mt-[5rem]">
 				<button
 					type="submit"
-					class="uppercase border-[3px] border-primary-1 w-full py-[.5rem] font-w700 lg:hover:bg-primary-1 lg:hover:text-white transition-colors duration-300">
+					class="uppercase border-[3px] rounded-lg border-primary-1 w-full py-[.5rem] font-w700 lg:hover:bg-primary-1 lg:hover:text-neutral-4 transition-colors duration-300">
 					send
 				</button>
-				<p class="text-[1.3rem] text-gray-500 mt-[3rem]">
+				<p class="text-[1.3rem] text-primary-gray2 mt-[3rem]">
 					You can email us directly at <span class="underline">contact@mWallet.com</span>
 				</p>
 			</div>
@@ -59,8 +59,8 @@
 				<button aria-label="close pop up" class="ml-auto block p-[1rem]" @click="is_sended = false">
 					<img :src="x" alt="x" class="invert-[100]" />
 				</button>
-				<h2 class="text-[2rem] text-center font-w700 mb-[5rem] text-white">Message successfully sent!</h2>
-				<div class="my_line"></div>
+				<h2 class="text-[2rem] text-center font-w700 mb-[5rem] text-neutral-4">Message successfully sent!</h2>
+				<div class="my_line bg-primary-3"></div>
 			</div>
 		</Transition>
 	</main>
@@ -161,7 +161,6 @@ const errorStyles = 'mt-[.3rem] text-[1.2rem] text-[#EF4444]'
 .my_line {
 	width: var(--line-width);
 	height: 4px;
-	background-color: #3790d0;
 }
 
 .v-enter-active,

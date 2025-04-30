@@ -2,14 +2,17 @@
 	<section class="relative">
 		<ClientOnly>
 			<swiper-container
+				data-aos="zoom-in-up"
+				:data-aos-once="true"
+				:delay="1000"
 				ref="containerRef"
 				:loop="true"
 				autoplay-delay="5000"
-				class="p-[2rem] pt-[4rem] pb-[7rem] mb-[9rem] bg-primary-1 sm:w-[60rem] sm:mx-auto rounded-3xl">
+				class="p-[2rem] pt-[4rem] pb-[7rem] mb-[9rem] bg-primary-1 sm:w-[60rem] sm:mx-auto sm:rounded-3xl">
 				<swiper-slide
 					v-for="(slide, idx) in slides"
 					:key="idx"
-					class="py-[4rem] px-[2rem] text-center flex flex-col text-white">
+					class="py-[4rem] px-[2rem] text-center flex flex-col text-neutral-4">
 					<h4 class="mb-[2rem] font-w700 text-[2.2rem]">{{ slide.title }}</h4>
 					<p>{{ slide.desc }}</p>
 				</swiper-slide>
