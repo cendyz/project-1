@@ -1,22 +1,21 @@
 <template>
 	<header class="relative">
-		<div class="container pt-[15rem] py-[7rem] lg:pt-[11rem] lg:h-[50rem] p-[3rem] lg:px-[3.5rem] xl:px-[7rem]">
-			<p class="px-[1.2rem] lg:mt-[5rem] py-[.5rem] border-primary-3 border rounded-3xl w-fit">FAQs</p>
+		<div class="container pt-[15rem] py-[7rem] lg:pt-[11rem] lg:h-[50rem] p-[3rem] lg:px-[3.5rem] xl:px-[7rem] lg:text-center lg:flex lg:justify-center lg:items-center">
+			<p class="px-[1.2rem] lg:mt-[5rem] py-[.5rem] border-primary-3 border rounded-3xl w-fit lg:hidden">FAQs</p>
 			<div class="mt-[2rem]">
-				<label for="question" class="text-[4rem] text-primary-1 lg:text-[5rem]">What can we help you find?</label>
+				<label for="question" class="text-[4rem] text-primary-1 lg:text-[5rem] z-[100] relative">What can we help you find?</label>
 				<input
 					type="text"
 					id="question"
-					class="block mt-[3rem] w-full p-[1rem] rounded-md border border-primary-3 bg-neutral-4 z-[100] relative lg:w-[40rem]"
+					class="block mt-[3rem] w-full p-[1rem] rounded-md border border-primary-3 bg-neutral-4 z-[100] relative lg:w-[40rem] lg:mx-auto"
 					v-model.trim="input_data.user_print" />
 			</div>
 		</div>
 		<div class="bg"></div>
 	</header>
-	<main
-		class="px-[3rem] py-[10rem] container sm:w-[70rem] lg:w-auto lg:grid lg:grid-cols-2 lg:gap-x-[10rem] lg:px-[3.5rem] xl:px-[7rem]">
+	<main class="px-[3rem] py-[10rem] container sm:w-[70rem] lg:w-auto lg:px-[3.5rem] xl:px-[7rem]">
 		<div
-			class="pt-[2rem] mt-[2.8rem] border-t border-primary-2 text-primary-1"
+			class="pt-[2rem] mt-[2.8rem] border-t border-primary-2 text-primary-1 lg:first:mt-0 lg:w-[50%] lg:mx-auto"
 			v-for="(item, index) in new_faq_data"
 			:ref="el => show_animation(el)"
 			:key="index">
@@ -38,7 +37,6 @@
 import autoAnimate from '@formkit/auto-animate'
 import minus from 'assets/images/minus.svg'
 import plus from 'assets/images/plus.svg'
-import type { ComponentPublicInstance } from 'vue'
 
 const is_hidden = ref<null | number>(null)
 const input_data = ref({
