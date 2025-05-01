@@ -24,7 +24,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
 import img1 from '/img/image-currency.jpg'
 import img2 from '/img/image-restaurant.jpg'
 import img3 from '/img/image-plane.jpg'
