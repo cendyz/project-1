@@ -2,9 +2,6 @@
 	<section class="relative">
 		<ClientOnly>
 			<swiper-container
-				data-aos="zoom-in-up"
-				:data-aos-once="true"
-				:delay="1000"
 				ref="containerRef"
 				:loop="true"
 				autoplay-delay="5000"

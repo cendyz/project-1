@@ -4,8 +4,9 @@
 			<h2 class="capitalize text-[3rem] md:text-[3.5rem]">latest news</h2>
 			<div class="mt-[3rem] grid gap-y-[3rem] md:grid-cols-2 md:gap-[2rem] xl:grid-cols-4 lg:gap-[5rem] xl:gap-[2rem]">
 				<div
-					class=" rounded-lg overflow-hidden max-w-[45rem] mx-auto sm:mx-auto md:w-auto lg:h-[40.4rem] xl:h-auto hover:cursor-pointer lg:hover:scale-110 transition-transform duration-300"
-					v-for="(item, index) in articlesData"
+					class="rounded-lg overflow-hidden max-w-[45rem] mx-auto sm:mx-auto md:w-auto lg:h-[40.4rem] xl:h-auto hover:cursor-pointer lg:hover:scale-110 transition-transform duration-300"
+					v-for="(item, index) in store.articles_data.slice(0, 4)"
+					@click="goToArticle(index)"
 					:key="index">
 					<NuxtImg :src="item.img" :alt="item.alt" class="block h-[27rem] w-full z-[10]" />
 					<div
@@ -24,39 +25,12 @@
 </template>
 
 <script setup lang="ts">
-import img1 from '/img/image-currency.jpg'
-import img2 from '/img/image-restaurant.jpg'
-import img3 from '/img/image-plane.jpg'
-import img4 from '/img/image-confetti.jpg'
+import { useBankStore } from '~/store/bank'
 
-const articlesData = ref([
-	{
-		img: img1,
-		quote: 'By Claire Robinson',
-		title: 'Receive money in any currency with zero fees',
-		desc: 'The world is more connected than ever, and mobility is the new normal. With BlueWallet, you can receive funds from anywhere...',
-		alt: 'Money',
-	},
-	{
-		img: img2,
-		quote: 'By Wilson Hutton',
-		title: 'Treat yourself without worrying about money',
-		desc: 'Thanks to mWallet intuitive budgeting tools, you can enjoy life without financial stress. Easily split your spending...',
-		alt: 'Restaurant',
-	},
-	{
-		img: img3,
-		quote: 'By Wilson Hutton',
-		title: 'Take your mWallet card wherever you go',
-		desc: 'Travel with confidence — mWallet won’t hit you with foreign transaction fees. Use your card worldwide and see real-time...',
-		alt: 'Plane',
-	},
-	{
-		img: img4,
-		quote: 'By Claire Robinson',
-		title: 'Our invite-only Beta accounts are now live!',
-		desc: 'After months of development, we’re thrilled to open access to our exclusive Beta program. Be among the first to experience the future of ...',
-		alt: 'Confetti',
-	},
-])
+const router = useRouter()
+const store = useBankStore()
+
+const goToArticle = (index: number): void => {
+	router.push(`/news/${store.news[index]}`)
+}
 </script>
