@@ -22,11 +22,17 @@
 	</section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import right from 'assets/images/left_circle.svg'
 import left from 'assets/images/right_circle.svg'
 
 const containerRef = ref(null)
+
+interface MySlides {
+	title: string
+	desc: string
+}
+
 const slides = ref([
 	{
 		title: 'Your Money. Your Rules.',
@@ -48,7 +54,7 @@ const slides = ref([
 const swiper = useSwiper(containerRef)
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .bright {
 	filter: invert(94%) sepia(100%) saturate(25%) hue-rotate(63deg) brightness(107%) contrast(100%);
 }

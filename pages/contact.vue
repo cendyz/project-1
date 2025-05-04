@@ -51,7 +51,7 @@
 				</p>
 			</div>
 		</form>
-		<div class="absolute top-0 left-0 w-full h-full bg_pattern"></div>
+		<div class="absolute top-0 left-0 w-full h-[115%] bg_pattern"></div>
 		<Transition>
 			<div
 				v-if="is_sended"
@@ -64,11 +64,19 @@
 			</div>
 		</Transition>
 	</main>
+	<Footer class="z-[100] relative" />
 </template>
 
 <script setup lang="ts">
 import x from 'assets/images/close_x.svg'
-const input_data = reactive({
+
+interface Input {
+	name: string
+	email: string
+	message: string
+}
+
+const input_data = reactive<Input>({
 	name: '',
 	email: '',
 	message: '',
@@ -76,11 +84,11 @@ const input_data = reactive({
 
 const email_regex = /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/
 
-const name_error = ref('')
-const email_error = ref('')
-const message_error = ref('')
-const is_sended = ref(false)
-const line_width = ref(100)
+const name_error = ref<string>('')
+const email_error = ref<string>('')
+const message_error = ref<string>('')
+const is_sended = ref<boolean>(false)
+const line_width = ref<number>(100)
 
 const validate_inputs = (): number => {
 	let errors = 0
@@ -146,7 +154,7 @@ const inputStyles = 'border rounded-md p-[.5rem] w-full text-[1.3rem] lg:text-[1
 const errorStyles = 'mt-[.3rem] text-[1.2rem] text-[#EF4444]'
 </script>
 
-<style>
+<style scoped>
 :root {
 	--line-width: 100%;
 }

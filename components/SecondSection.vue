@@ -1,36 +1,113 @@
 <template>
-	<section class="bg-neutral-3 py-[7rem]">
-		<div class="text-center container px-[2.2rem] lg:px-[3.5rem] xl:px-[7rem]">
-			<h2 class="capitalize text-[3rem] md:text-[3.5rem]">latest news</h2>
-			<div class="mt-[3rem] grid gap-y-[3rem] md:grid-cols-2 md:gap-[2rem] xl:grid-cols-4 lg:gap-[5rem] xl:gap-[2rem]">
+	<section class="grid p-[3rem] pb-[10rem]">
+		<div>
+			<div class="lg:w-[50rem] lg:mx-auto lg:text-center">
+				<h2 class="capitalize text-[2.8rem] md:text-[3.5rem] mb-[2rem]">
+					Over 20 Tools to Manage Your Finances. Unlimited Control.
+				</h2>
+				<p class="leading-[1.7]">
+					Track your expenses in real time. Set smart budgets with just a few taps. Plan your savings goals and manage
+					your money anywhere, anytime. With mWallet, your financial future is in your hands.
+				</p>
+			</div>
+			<div
+				class="grid gap-[3rem] mt-[5rem] sm:block sm:columns-2 lg:grid lg:grid-cols-2 grid_cols lg:w-[100rem] lg:mx-auto">
 				<div
-					class="rounded-lg overflow-hidden max-w-[45rem] mx-auto sm:mx-auto md:w-auto lg:h-[40.4rem] xl:h-auto hover:cursor-pointer lg:hover:scale-110 transition-transform duration-300"
-					v-for="(item, index) in store.articles_data.slice(0, 4)"
-					@click="goToArticle(index)"
+					class="border-[2px] border-primary-1 rounded-3xl lg:flex lg:items-center overflow-hidden mx-auto lg:max-w-[100%] lg:mx-0 max-w-[40rem] sm:mb-[3.5rem] lg:mb-0"
+					data-aos="zoom-in-up"
+					:data-aos-once="true"
+					:delay="index * 200"
+					:class="[item.my_class, item.img ? 'lg:flex-row ' : 'lg:flex-col']"
+					v-for="(item, index) in grid_data"
 					:key="index">
-					<NuxtImg :src="item.img" :alt="item.alt" class="block h-[27rem] w-full z-[10]" />
-					<div
-						class="p-[3rem] pb-[3.9rem mt-[-2.5rem] bg-neutral-4 z-[20] relative text-neutral-1 text-left grid gap-y-[1rem]">
-						<p class="text-[1.1rem] xl:text-[1.2rem]">{{ item.quote }}</p>
-						<h3
-							class="text-primary-1 xl:text-[1.8rem] lg:hover:text-primary-2 lg:transition-colors lg:cursor-pointer lg:w-fit">
-							{{ item.title }}
-						</h3>
-						<p class="text-[1.3rem] xl:text-[1.35rem] xl:h-[8rem]">{{ item.desc }}</p>
+					<div class="p-[2rem] lg:m-auto lg:text-left">
+						<h3 class="font-w700 mb-[2rem] text-[2rem]">{{ item.title }}</h3>
+						<p class="">{{ item.desc }}</p>
 					</div>
+					<img v-if="item.img" :src="item.img" alt="phone" class="block lg:h-[30rem]" />
 				</div>
 			</div>
 		</div>
 	</section>
 </template>
 
-<script setup lang="ts">
-import { useBankStore } from '~/store/bank'
+<script lang="ts" setup>
+import second_img from 'assets/images/2.png'
+import third_img from 'assets/images/3.png'
+import six_img from 'assets/images/4.png'
 
-const router = useRouter()
-const store = useBankStore()
-
-const goToArticle = (index: number): void => {
-	router.push(`/news/${store.news[index]}`)
+interface GridData {
+	title: string
+	desc: string
+	my_class: string
+	img?: string
 }
+
+const grid_data = ref<GridData[]>([
+	{
+		title: 'Track Your Spending',
+		desc: 'Monitor daily expenses and gain full control over your financial habits — in real time.',
+		my_class: 'one text-white bg-primary-1',
+	},
+	{
+		title: 'Set Smart Budgets',
+		desc: 'Create personalized budgets and receive insights that help you stay on track with your financial goals.',
+		img: second_img,
+		my_class: 'two',
+	},
+	{
+		title: 'Analyze Your Finances',
+		desc: 'Visualize your income, expenses, and trends with intuitive graphs and detailed reports.',
+		img: third_img,
+		my_class: 'three',
+	},
+	{
+		title: 'Connect Your Accounts',
+		desc: 'Link your bank accounts securely and manage all your finances from one simple dashboard.',
+		my_class: 'four text-white bg-primary-1',
+	},
+	{
+		title: 'Plan Your Savings',
+		desc: 'Set savings goals and watch your progress grow with automatic tracking and smart recommendations.',
+		my_class: 'five text-white bg-primary-1',
+	},
+	{
+		title: 'Stay Secure',
+		desc: 'Your data is protected with bank-level encryption and strict privacy controls — your security is our priority.',
+		img: six_img,
+		my_class: 'six',
+	},
+])
 </script>
+
+<style lang="scss" scoped>
+@media (min-width: 1024px) {
+	.grid_cols {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+			'one two two'
+			'three three four'
+			'five six six';
+		gap: 3em;
+	}
+
+	.one {
+		grid-area: one;
+	}
+	.two {
+		grid-area: two;
+	}
+	.three {
+		grid-area: three;
+	}
+	.four {
+		grid-area: four;
+	}
+	.five {
+		grid-area: five;
+	}
+	.six {
+		grid-area: six;
+	}
+}
+</style>

@@ -13,6 +13,7 @@
 		<div
 			v-for="(item, index) in store.articles_data"
 			@click="goToArticle(index)"
+			prefetch
 			:key="index"
 			class="rounded-lg overflow-hidden bg-neutral-4 max-w-[40rem] lg:flex lg:max-w-[110rem] lg:cursor-pointer">
 			<img :src="item.img" :alt="item.alt" class="lg:w-[40rem] lg:h-[30rem]" />
@@ -25,18 +26,17 @@
 	<Footer />
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useBankStore } from '~/store/bank'
-
 
 const router = useRouter()
 const store = useBankStore()
 
-const goToArticle = index => {
+const goToArticle = (index: number) => {
 	router.push(`/news/${store.news[index]}`)
 }
 
-const scroll_data = ref([
+const scroll_data = ref<{ title: string; desc: string }[]>([
 	{
 		title: '✅ New Feature:',
 		desc: 'Link multiple bank accounts with one click!',

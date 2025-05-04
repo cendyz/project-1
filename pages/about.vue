@@ -65,7 +65,7 @@ const is_width = ref(false)
 const { width } = useWindowSize()
 
 const actualInfo = ref<number | null>(0)
-const actualLine = ref(['5.7%', '25%', '44.3%', '63.2%', '82.3%'])
+const actualLine = ref<string[]>(['5.7%', '25%', '44.3%', '63.2%', '82.3%'])
 
 const changeLinePosition = (i: number): void => {
 	document.documentElement.style.setProperty('--slide', actualLine.value[i])
@@ -109,7 +109,7 @@ onMounted(() => {
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 :root {
 	--slide: 5.7%;
 }

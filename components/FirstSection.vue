@@ -95,7 +95,7 @@ import icon3 from 'assets/images/icon3.svg'
 import triangle from 'assets/images/triangle.svg'
 import { ref } from 'vue'
 
-const is_width = ref(false)
+const is_width = ref<boolean>(false)
 const is_law = ref<null | number>(null)
 const law_refs = ref<HTMLDivElement[]>([])
 

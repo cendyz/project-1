@@ -40,5 +40,3 @@ import mobileIntro from '/img/bg-intro-mobile.svg'
 import desktopIntro from '/img/bg-intro-desktop.svg'
 import wallet from '/img/mockup.png'
 </script>
-
-<style scoped></style>

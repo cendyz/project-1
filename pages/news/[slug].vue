@@ -1,9 +1,10 @@
 <template>
-	<header class="pt-[13rem] pb-[5rem] px-[3rem]">
-		<NuxtLink to="/news"><img :src="back" alt="back to news" class="mb-[2rem] inline" /></NuxtLink>
-		<h1 class="text-[3.3rem] font-w700 sm:text-center">
-			{{ store.articles_data[store.news.indexOf(route.params.slug)].title }}
-		</h1>
+	<header class="pt-[13rem] pb-[5rem] px-[3rem] md:max-w-[77rem] md:mx-auto">
+			<NuxtLink to="/news"><img :src="back" alt="back to news" class="mb-[2rem] inline" /></NuxtLink>
+			<h1 class="text-[3.3rem] font-w700 sm:text-center">
+				{{ store.articles_data[store.news.indexOf(route.params.slug)].title }}
+			</h1>
+		
 	</header>
 	<main>
 		<img

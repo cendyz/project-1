@@ -2,6 +2,7 @@ import { _ as __nuxt_component_1 } from './Footer.vue.mjs';
 import { defineComponent, ref, unref, useSSRContext } from 'vue';
 import { ssrRenderAttr, ssrRenderClass, ssrRenderList, ssrInterpolate, ssrRenderComponent } from 'vue/server-renderer';
 import { u as useWindowSize } from './index.mjs';
+import { _ as _export_sfc } from './server.mjs';
 import './icon-instagram.svg.mjs';
 import './nuxt-link.mjs';
 import '../nitro/nitro.mjs';
@@ -14,7 +15,6 @@ import 'node:path';
 import 'node:crypto';
 import 'node:url';
 import 'ipx';
-import './server.mjs';
 import 'pinia';
 import 'vue-router';
 
@@ -62,15 +62,15 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     ];
     return (_ctx, _push, _parent, _attrs) => {
       const _component_Footer = __nuxt_component_1;
-      _push(`<!--[--><header class="p-[3rem] py-[5rem] pt-[10rem] lg:h-[65rem] lg:pt-[11rem] bg-primary-1 text-neutral-4 pattern_bg xl:px-[7rem]"><div class="container lg:bg-primary-1 lg:bg-opacity-90 rounded-3xl lg:mt-[4rem] lg:w-[954px] xl:w-[1140px] lg:mx-auto 2xl:w-[1396px]"><div class="md:w-[50rem] md:mx-auto lg:flex lg:items-center lg:justify-center lg:w-auto"><img${ssrRenderAttr("src", unref(dollar))} alt="dollar" class="bounce w-[35rem] mx-auto lg:mx-0 lg:w-[43rem] xl:mr-[8rem]"><div class="lg:w-[50rem]"><h1 class="font-w700 text-[3rem] text-center text-shadow-lg leading-[1.3] md:text-[3.3rem] lg:w-auto"> Transforming <span class="niceColor">everyday</span> finances through personalized digital experiences. </h1><div class="lg:w-[48rem] xl:w-auto"><p class="${ssrRenderClass(textStyles)}"> mWallet empowers everyone — from students and freelancers to small businesses and organizations — to manage money in a simple, fast, and secure way. Our platform lets users pay, save, plan, and grow from anywhere. </p><p class="${ssrRenderClass(textStyles)}"> People choose mWallet to take full control of their finances and create modern, seamless experiences every day. </p></div></div></div></div></header><main><section class="pt-[5rem]"><div class="px-[3rem] md:w-[50rem] md:mx-auto lg:w-[70rem]"><h2 class="text-[2.8rem] font-w700 md:text-[3rem] text-center">Redefining finance for the digital age.</h2><p class="text-[1.7rem] mt-[2rem] text-justify"> Explore the milestones that shaped mWallet — from launching our first seamless payment solution to introducing smart budgeting tools, advanced security features, and the innovations that continue to transform how people manage money every day. </p></div><div class="mt-[4rem] border-primary-gray border-b-[2px] sm:px-[10rem] sm:mx-auto lg:mt-[8rem]"><div class="${ssrRenderClass([unref(is_width) && unref(width) >= 1024 ? "line" : "", "flex flex-wrap gap-[3rem] lg:w-[80rem] lg:mx-auto items-center justify-center pb-[2rem]"])}"><!--[-->`);
+      _push(`<!--[--><header class="p-[3rem] py-[5rem] pt-[10rem] lg:h-[65rem] lg:pt-[11rem] bg-primary-1 text-neutral-4 pattern_bg xl:px-[7rem]" data-v-16f20a2a><div class="container lg:bg-primary-1 lg:bg-opacity-90 rounded-3xl lg:mt-[4rem] lg:w-[954px] xl:w-[1140px] lg:mx-auto 2xl:w-[1396px]" data-v-16f20a2a><div class="md:w-[50rem] md:mx-auto lg:flex lg:items-center lg:justify-center lg:w-auto" data-v-16f20a2a><img${ssrRenderAttr("src", unref(dollar))} alt="dollar" class="bounce w-[35rem] mx-auto lg:mx-0 lg:w-[43rem] xl:mr-[8rem]" data-v-16f20a2a><div class="lg:w-[50rem]" data-v-16f20a2a><h1 class="font-w700 text-[3rem] text-center text-shadow-lg leading-[1.3] md:text-[3.3rem] lg:w-auto" data-v-16f20a2a> Transforming <span class="niceColor" data-v-16f20a2a>everyday</span> finances through personalized digital experiences. </h1><div class="lg:w-[48rem] xl:w-auto" data-v-16f20a2a><p class="${ssrRenderClass(textStyles)}" data-v-16f20a2a> mWallet empowers everyone — from students and freelancers to small businesses and organizations — to manage money in a simple, fast, and secure way. Our platform lets users pay, save, plan, and grow from anywhere. </p><p class="${ssrRenderClass(textStyles)}" data-v-16f20a2a> People choose mWallet to take full control of their finances and create modern, seamless experiences every day. </p></div></div></div></div></header><main data-v-16f20a2a><section class="pt-[5rem]" data-v-16f20a2a><div class="px-[3rem] md:w-[50rem] md:mx-auto lg:w-[70rem]" data-v-16f20a2a><h2 class="text-[2.8rem] font-w700 md:text-[3rem] text-center" data-v-16f20a2a>Redefining finance for the digital age.</h2><p class="text-[1.7rem] mt-[2rem] text-justify" data-v-16f20a2a> Explore the milestones that shaped mWallet — from launching our first seamless payment solution to introducing smart budgeting tools, advanced security features, and the innovations that continue to transform how people manage money every day. </p></div><div class="mt-[4rem] border-primary-gray border-b-[2px] sm:px-[10rem] sm:mx-auto lg:mt-[8rem]" data-v-16f20a2a><div class="${ssrRenderClass([unref(is_width) && unref(width) >= 1024 ? "line" : "", "flex flex-wrap gap-[3rem] lg:w-[80rem] lg:mx-auto items-center justify-center pb-[2rem]"])}" data-v-16f20a2a><!--[-->`);
       ssrRenderList(dataYears, (item, index) => {
-        _push(`<button class="${ssrRenderClass([unref(actualInfo) == index ? "bg-primary-2 text-neutral-4" : "text-primary-1", "px-[2rem] rounded-xl border-primary-2 py-[.5rem] sm:px-[2rem] border lg:hover:text-neutral-4 lg:hover:bg-primary-2 transition-colors duration-300"])}">${ssrInterpolate(item)}</button>`);
+        _push(`<button class="${ssrRenderClass([unref(actualInfo) == index ? "bg-primary-2 text-neutral-4" : "text-primary-1", "px-[2rem] rounded-xl border-primary-2 py-[.5rem] sm:px-[2rem] border lg:hover:text-neutral-4 lg:hover:bg-primary-2 transition-colors duration-300"])}" data-v-16f20a2a>${ssrInterpolate(item)}</button>`);
       });
       _push(`<!--]--></div></div>`);
       if (unref(actualInfo) != null) {
-        _push(`<div class="px-[4rem] pb-[4rem]"><ul class="text-left list-disc mt-[5rem] grid gap-y-[1rem] md:w-[50rem] md:mx-auto px-[3rem]"><!--[-->`);
+        _push(`<div class="px-[4rem] pb-[4rem]" data-v-16f20a2a><ul class="text-left list-disc mt-[5rem] grid gap-y-[1rem] md:w-[50rem] md:mx-auto px-[3rem]" data-v-16f20a2a><!--[-->`);
         ssrRenderList(dataInfo[unref(actualInfo)], (item, index) => {
-          _push(`<li>${ssrInterpolate(item)}</li>`);
+          _push(`<li data-v-16f20a2a>${ssrInterpolate(item)}</li>`);
         });
         _push(`<!--]--></ul></div>`);
       } else {
@@ -89,6 +89,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/about.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
+const about = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-16f20a2a"]]);
 
-export { _sfc_main as default };
+export { about as default };
 //# sourceMappingURL=about.vue.mjs.map

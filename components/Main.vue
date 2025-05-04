@@ -1,9 +1,9 @@
 <template>
 	<main class="w-full">
 		<FirstSection />
-		<BeforeSecond />
-		<ThirdSection />
 		<SecondSection />
+		<ThirdSection />
+		<FourthSection />
 		<Footer />
 	</main>
 </template>

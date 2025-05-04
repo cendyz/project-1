@@ -44,9 +44,14 @@ import pt from 'assets/images/icon-pinterest.svg'
 import insta from 'assets/images/icon-instagram.svg'
 import { NuxtLink } from '#components'
 
-const linksData = ref(['news', 'about', 'faq', 'contact'])
+const linksData = ref<string[]>(['news', 'about', 'faq', 'contact'])
 
-const socialsData = ref([
+interface SocialData {
+	img: string
+	alt: string
+}
+
+const socialsData = ref<SocialData[]>([
 	{
 		img: fb,
 		alt: 'facebook',

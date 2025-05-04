@@ -1,4 +1,4 @@
-import { h, useSSRContext, ref, withCtx, unref, createBlock, openBlock, Fragment, renderList, createVNode, createTextVNode, toDisplayString } from 'vue';
+import { h, useSSRContext, defineComponent, ref, withCtx, unref, createBlock, openBlock, Fragment, renderList, createVNode, createTextVNode, toDisplayString } from 'vue';
 import { Marquee } from 'vue-fast-marquee';
 import { _ as __nuxt_component_1 } from './Footer.vue.mjs';
 import { ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderAttr } from 'vue/server-renderer';
@@ -56,7 +56,7 @@ _sfc_main$1.setup = (props, ctx) => {
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 
-const _sfc_main = {
+const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "index",
   __ssrInlineRender: true,
   setup(__props) {
@@ -118,14 +118,15 @@ const _sfc_main = {
       }, _parent));
       _push(`</div></header><main class="bg-neutral-3 pt-[3rem] pb-[7rem] px-[3rem] grid gap-y-[3rem] lg:gap-y-[7rem] place-items-center"><!--[-->`);
       ssrRenderList(unref(store).articles_data, (item, index) => {
-        _push(`<div class="rounded-lg overflow-hidden bg-neutral-4 max-w-[40rem] lg:flex lg:max-w-[110rem] lg:cursor-pointer"><img${ssrRenderAttr("src", item.img)}${ssrRenderAttr("alt", item.alt)} class="lg:w-[40rem] lg:h-[30rem]"><div class="p-[2rem]"><h2 class="font-w700 text-[2rem] lg:text-[3rem] lg:w-[40rem]">${ssrInterpolate(item.title)}</h2><p class="text-[1.4rem] mt-[1rem] lg:text-[1.6rem]">${ssrInterpolate(item.desc)}</p></div></div>`);
+        _push(`<div prefetch class="rounded-lg overflow-hidden bg-neutral-4 max-w-[40rem] lg:flex lg:max-w-[110rem] lg:cursor-pointer"><img${ssrRenderAttr("src", item.img)}${ssrRenderAttr("alt", item.alt)} class="lg:w-[40rem] lg:h-[30rem]"><div class="p-[2rem]"><h2 class="font-w700 text-[2rem] lg:text-[3rem] lg:w-[40rem]">${ssrInterpolate(item.title)}</h2><p class="text-[1.4rem] mt-[1rem] lg:text-[1.6rem]">${ssrInterpolate(item.desc)}</p></div></div>`);
       });
       _push(`<!--]--></main>`);
       _push(ssrRenderComponent(_component_Footer, null, null, _parent));
       _push(`<!--]-->`);
     };
   }
-};
+});
+
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
   const ssrContext = useSSRContext();

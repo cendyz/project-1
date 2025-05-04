@@ -1,9 +1,12 @@
 <template>
 	<header class="relative">
-		<div class="container pt-[15rem] py-[7rem] lg:pt-[11rem] lg:h-[50rem] p-[3rem] lg:px-[3.5rem] xl:px-[7rem] lg:text-center lg:flex lg:justify-center lg:items-center">
+		<div
+			class="container pt-[15rem] py-[7rem] lg:pt-[11rem] lg:h-[50rem] p-[3rem] lg:px-[3.5rem] xl:px-[7rem] lg:text-center lg:flex lg:justify-center lg:items-center">
 			<p class="px-[1.2rem] lg:mt-[5rem] py-[.5rem] border-primary-3 border rounded-3xl w-fit lg:hidden">FAQs</p>
 			<div class="mt-[2rem]">
-				<label for="question" class="text-[4rem] text-primary-1 lg:text-[5rem] z-[100] relative">What can we help you find?</label>
+				<label for="question" class="text-[4rem] text-primary-1 lg:text-[5rem] z-[100] relative"
+					>What can we help you find?</label
+				>
 				<input
 					type="text"
 					id="question"
@@ -39,7 +42,7 @@ import minus from 'assets/images/minus.svg'
 import plus from 'assets/images/plus.svg'
 
 const is_hidden = ref<null | number>(null)
-const input_data = ref({
+const input_data = ref<{ user_print: string }>({
 	user_print: '',
 })
 
@@ -118,7 +121,7 @@ const faq_data = ref([
 ])
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .bg {
 	position: absolute;
 	top: 0;

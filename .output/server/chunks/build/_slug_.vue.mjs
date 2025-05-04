@@ -28,7 +28,7 @@ const _sfc_main = {
     return (_ctx, _push, _parent, _attrs) => {
       const _component_NuxtLink = __nuxt_component_0;
       const _component_Footer = __nuxt_component_1;
-      _push(`<!--[--><header class="pt-[13rem] pb-[5rem] px-[3rem]">`);
+      _push(`<!--[--><header class="pt-[13rem] pb-[5rem] px-[3rem] md:max-w-[77rem] md:mx-auto">`);
       _push(ssrRenderComponent(_component_NuxtLink, { to: "/news" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {

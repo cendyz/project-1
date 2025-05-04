@@ -1,6 +1,6 @@
-import { a as about_vue_vue_type_style_index_0_lang } from './about-styles-1.mjs.mjs';
+import { a as about_vue_vue_type_style_index_0_scoped_16f20a2a_lang } from './about-styles-1.mjs.mjs';
 
-const aboutStyles_Bq75k2b = [about_vue_vue_type_style_index_0_lang];
+const aboutStyles_Bq75k2b = [about_vue_vue_type_style_index_0_scoped_16f20a2a_lang];
 
 export { aboutStyles_Bq75k2b as default };
 //# sourceMappingURL=about-styles.Bq75k-2b.mjs.map

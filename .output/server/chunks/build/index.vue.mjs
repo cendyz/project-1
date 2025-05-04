@@ -1,7 +1,7 @@
 import { computed, defineComponent, useAttrs, ref, mergeProps, unref, watch, useSSRContext, provide, createElementBlock } from 'vue';
 import { ssrRenderAttrs, ssrRenderSlot, ssrRenderAttr, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderClass } from 'vue/server-renderer';
 import { u as useNuxtApp, a as useRuntimeConfig, _ as _export_sfc, b as useRouter, c as useBankStore } from './server.mjs';
-import { _ as __nuxt_component_1$1 } from './Footer.vue.mjs';
+import { _ as __nuxt_component_1$2 } from './Footer.vue.mjs';
 import { l as defu, r as withLeadingSlash, m as hasProtocol, n as joinURL, v as parseURL, x as encodePath, y as encodeParam, p as publicAssetsURL } from '../nitro/nitro.mjs';
 import { u as useHead } from './v3.mjs';
 import 'pinia';
@@ -697,33 +697,33 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
       }
     ]);
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<section${ssrRenderAttrs(mergeProps({ class: "bg-neutral-2 py-[11rem] px-[2.2rem] text-center text-neutral-1 text-[1.5rem] md:text-[1.6rem] lg:z-[9] relative" }, _attrs))} data-v-806c2c90><div class="container lg:px-[3.5rem] xl:px-0" data-v-806c2c90><h2 class="text-[3rem] font-w700 leading-[1.2] mb-[2.2rem] px-[1rem] text-primary-1 md:text-[3.5rem] lg:px-0" data-v-806c2c90> Why choose mWallet? </h2><p class="sm:w-[38rem] text-primary-1 px-[2rem] mt-[2rem] leading-[2] sm:mx-auto lg:w-[55rem] lg:mx-auto" data-v-806c2c90> With seamless digital integration, BlueWallet transforms your phone into a smart financial command center. Manage money intuitively and securely. </p><div class="mt-[7rem] grid gap-y-[3rem] lg:grid lg:grid-cols-2 lg:gap-y-[6rem] xl:flex xl:justify-items-center xl:flex-wrap lg:w-[90rem] lg:mx-auto" data-v-806c2c90><!--[-->`);
+      _push(`<section${ssrRenderAttrs(mergeProps({ class: "bg-neutral-2 py-[11rem] px-[2.2rem] text-center text-neutral-1 text-[1.5rem] md:text-[1.6rem] lg:z-[9] relative" }, _attrs))} data-v-7aef260a><div class="container lg:px-[3.5rem] xl:px-0" data-v-7aef260a><h2 class="text-[3rem] font-w700 leading-[1.2] mb-[2.2rem] px-[1rem] text-primary-1 md:text-[3.5rem] lg:px-0" data-v-7aef260a> Why choose mWallet? </h2><p class="sm:w-[38rem] text-primary-1 px-[2rem] mt-[2rem] leading-[2] sm:mx-auto lg:w-[55rem] lg:mx-auto" data-v-7aef260a> With seamless digital integration, BlueWallet transforms your phone into a smart financial command center. Manage money intuitively and securely. </p><div class="mt-[7rem] grid gap-y-[3rem] lg:grid lg:grid-cols-2 lg:gap-y-[6rem] xl:flex xl:justify-items-center xl:flex-wrap lg:w-[90rem] lg:mx-auto" data-v-7aef260a><!--[-->`);
       ssrRenderList(profitsData.value, (item, index) => {
-        _push(`<div data-aos="zoom-in-up"${ssrRenderAttr("data-aos-once", true)}${ssrRenderAttr("data-aos-duration", 400)}${ssrRenderAttr("delay", index * 200)} class="bg-neutral-3 bg-opacity-50 p-[2rem] border lg:border-[2px] rounded-xl lg:border-primary-2 max-w-[45rem] mx-auto lg:w-auto z-[10]" data-v-806c2c90><div class="p-[2rem]" data-v-806c2c90><img${ssrRenderAttr("src", item.img)}${ssrRenderAttr("alt", item.title)} class="block mx-auto w-[7rem] h-[7rem] md:w-[8rem] md:h-[8rem]" data-v-806c2c90><h3 class="text-primary-1 text-[2.5rem] font-w700 my-[2rem] md:text-[2.2rem]" data-v-806c2c90>${ssrInterpolate(item.title)}</h3><ul class="text-left text-primary-1 sm:w-[35rem] sm:mx-auto lg:w-[30rem] lg:mx-0 list-disc grid gap-y-[2rem]" data-v-806c2c90><li data-v-806c2c90>Lorem ipsum dolor sit amet con se cte tur adi pisic ing elit. Eligendi, quae. Lorem, ipsum.</li><li data-v-806c2c90>Lorem ipsum dolor sit amet con se cte tur adi pcs icing elit. Eligendi, quae. Lorem, ipsum.</li></ul><div class="flex justify-between items-center mt-[3rem] relative" data-v-806c2c90><button type="button" class="bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] md:text-[1.6rem] lg:hover:opacity-60 lg:transition-opacity" data-v-806c2c90> Check </button><button type="button" class="underline italic rounded-full font-w700 md:text-[1.6rem] text-[1.1rem]" data-v-806c2c90> law note </button>`);
+        _push(`<div data-aos="zoom-in-up"${ssrRenderAttr("data-aos-once", true)}${ssrRenderAttr("data-aos-duration", 400)}${ssrRenderAttr("delay", index * 200)} class="bg-neutral-3 bg-opacity-50 p-[2rem] border lg:border-[2px] rounded-xl lg:border-primary-2 max-w-[45rem] mx-auto lg:w-auto z-[10]" data-v-7aef260a><div class="p-[2rem]" data-v-7aef260a><img${ssrRenderAttr("src", item.img)}${ssrRenderAttr("alt", item.title)} class="block mx-auto w-[7rem] h-[7rem] md:w-[8rem] md:h-[8rem]" data-v-7aef260a><h3 class="text-primary-1 text-[2.5rem] font-w700 my-[2rem] md:text-[2.2rem]" data-v-7aef260a>${ssrInterpolate(item.title)}</h3><ul class="text-left text-primary-1 sm:w-[35rem] sm:mx-auto lg:w-[30rem] lg:mx-0 list-disc grid gap-y-[2rem]" data-v-7aef260a><li data-v-7aef260a>Lorem ipsum dolor sit amet con se cte tur adi pisic ing elit. Eligendi, quae. Lorem, ipsum.</li><li data-v-7aef260a>Lorem ipsum dolor sit amet con se cte tur adi pcs icing elit. Eligendi, quae. Lorem, ipsum.</li></ul><div class="flex justify-between items-center mt-[3rem] relative" data-v-7aef260a><button type="button" class="bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] md:text-[1.6rem] lg:hover:opacity-60 lg:transition-opacity" data-v-7aef260a> Check </button><button type="button" class="underline italic rounded-full font-w700 md:text-[1.6rem] text-[1.1rem]" data-v-7aef260a> law note </button>`);
         if (is_law.value == index) {
-          _push(`<div class="absolute w-[20rem] rounded-xl text-left h-[20rem] text-primary-1 bg-neutral-4 p-[2rem] overflow-scroll lg:overflow-hidden right-[.6rem] bottom-[5rem] z-[10] md:w-[25rem] md:right-[1.7rem] md:bottom-[6rem] boxShadowLaw" data-v-806c2c90><p class="text-[1.2rem] font-w700" data-v-806c2c90> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam eligendi quibusdam sapiente pariatur, exercitationem doloremque nihil autem omnis laboriosam esse hic temporibus vel at veniam ut maxime totam necessitatibus minima. </p></div>`);
+          _push(`<div class="absolute w-[20rem] rounded-xl text-left h-[20rem] text-primary-1 bg-neutral-4 p-[2rem] overflow-scroll lg:overflow-hidden right-[.6rem] bottom-[5rem] z-[10] md:w-[25rem] md:right-[1.7rem] md:bottom-[6rem] boxShadowLaw" data-v-7aef260a><p class="text-[1.2rem] font-w700" data-v-7aef260a> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam eligendi quibusdam sapiente pariatur, exercitationem doloremque nihil autem omnis laboriosam esse hic temporibus vel at veniam ut maxime totam necessitatibus minima. </p></div>`);
         } else {
           _push(`<!---->`);
         }
         if (is_law.value == index) {
-          _push(`<div class="absolute bottom-[3rem] right-[.5rem] md:right-7 md:bottom-[4rem] z-[11]" data-v-806c2c90><img${ssrRenderAttr("src", unref(triangle))} alt="" aria-hidden="true" class="w-[3rem] invert-[100%]" data-v-806c2c90></div>`);
+          _push(`<div class="absolute bottom-[3rem] right-[.5rem] md:right-7 md:bottom-[4rem] z-[11]" data-v-7aef260a><img${ssrRenderAttr("src", unref(triangle))} alt="" aria-hidden="true" class="w-[3rem] invert-[100%]" data-v-7aef260a></div>`);
         } else {
           _push(`<!---->`);
         }
         _push(`</div></div></div>`);
       });
-      _push(`<!--]--></div></div><img${ssrRenderAttr("src", unref(icon1))} alt="" aria-hidden="true" class="${ssrRenderClass([iconStyles, "top-[35rem] left-[-2rem] md:top-[30rem] md:left-[5rem] lg:top-[20rem] 2xl:left-[35rem] rotate-12 animeSpin"])}" data-v-806c2c90><img${ssrRenderAttr("src", unref(icon2))} alt="" aria-hidden="true" class="${ssrRenderClass([iconStyles, "right-[5rem] top-[130rem] md:top-[120rem] lg:top-[75rem] rotate-45 animeSpin 2xl:right-[30rem]"])}" data-v-806c2c90><img${ssrRenderAttr("src", unref(icon3))} alt="" aria-hidden="true" class="${ssrRenderClass([iconStyles, "left-[2rem] bottom-[1rem] md:left-[4rem] rotate-6 animeSpinRight 2xl:left-[19rem] 2xl:bottom-[10rem]"])}" data-v-806c2c90></section>`);
+      _push(`<!--]--></div></div><img${ssrRenderAttr("src", unref(icon1))} alt="" aria-hidden="true" class="${ssrRenderClass([iconStyles, "top-[35rem] left-[-2rem] md:top-[30rem] md:left-[5rem] lg:top-[20rem] 2xl:left-[35rem] rotate-12 animeSpin"])}" data-v-7aef260a><img${ssrRenderAttr("src", unref(icon2))} alt="" aria-hidden="true" class="${ssrRenderClass([iconStyles, "right-[5rem] top-[130rem] md:top-[120rem] lg:top-[75rem] rotate-45 animeSpin 2xl:right-[30rem]"])}" data-v-7aef260a><img${ssrRenderAttr("src", unref(icon3))} alt="" aria-hidden="true" class="${ssrRenderClass([iconStyles, "left-[2rem] bottom-[1rem] md:left-[4rem] rotate-6 animeSpinRight 2xl:left-[19rem] 2xl:bottom-[10rem]"])}" data-v-7aef260a></section>`);
     };
   }
 });
 
-const _sfc_setup$3 = _sfc_main$5.setup;
+const _sfc_setup$4 = _sfc_main$5.setup;
 _sfc_main$5.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/FirstSection.vue");
-  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
+  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const __nuxt_component_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-806c2c90"]]);
+const __nuxt_component_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-7aef260a"]]);
 
 const second_img = "" + __buildAssetsURL("2.BiI_s8Yc.png");
 
@@ -732,7 +732,7 @@ const third_img = "" + __buildAssetsURL("3.BunfV8J9.png");
 const six_img = "" + __buildAssetsURL("4.CFrWfpYT.png");
 
 const _sfc_main$4 = /* @__PURE__ */ defineComponent({
-  __name: "BeforeSecond",
+  __name: "SecondSection",
   __ssrInlineRender: true,
   setup(__props) {
     const grid_data = ref([
@@ -771,11 +771,11 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
       }
     ]);
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<section${ssrRenderAttrs(mergeProps({ class: "grid p-[3rem] pb-[10rem]" }, _attrs))}><div><div class="lg:w-[50rem] lg:mx-auto lg:text-center"><h2 class="capitalize text-[2.8rem] md:text-[3.5rem] mb-[2rem]"> Over 20 Tools to Manage Your Finances. Unlimited Control. </h2><p class="leading-[1.7]"> Track your expenses in real time. Set smart budgets with just a few taps. Plan your savings goals and manage your money anywhere, anytime. With mWallet, your financial future is in your hands. </p></div><div class="grid gap-[3rem] mt-[5rem] sm:block sm:columns-2 lg:grid lg:grid-cols-2 grid_cols lg:w-[100rem] lg:mx-auto"><!--[-->`);
+      _push(`<section${ssrRenderAttrs(mergeProps({ class: "grid p-[3rem] pb-[10rem]" }, _attrs))} data-v-9dab912e><div data-v-9dab912e><div class="lg:w-[50rem] lg:mx-auto lg:text-center" data-v-9dab912e><h2 class="capitalize text-[2.8rem] md:text-[3.5rem] mb-[2rem]" data-v-9dab912e> Over 20 Tools to Manage Your Finances. Unlimited Control. </h2><p class="leading-[1.7]" data-v-9dab912e> Track your expenses in real time. Set smart budgets with just a few taps. Plan your savings goals and manage your money anywhere, anytime. With mWallet, your financial future is in your hands. </p></div><div class="grid gap-[3rem] mt-[5rem] sm:block sm:columns-2 lg:grid lg:grid-cols-2 grid_cols lg:w-[100rem] lg:mx-auto" data-v-9dab912e><!--[-->`);
       ssrRenderList(unref(grid_data), (item, index) => {
-        _push(`<div data-aos="zoom-in-up"${ssrRenderAttr("data-aos-once", true)}${ssrRenderAttr("delay", index * 200)} class="${ssrRenderClass([[item.my_class, item.img ? "lg:flex-row " : "lg:flex-col"], "border-[2px] border-primary-1 rounded-3xl lg:flex lg:items-center overflow-hidden sm:mb-[3.5rem] lg:mb-0"])}"><div class="p-[2rem] lg:m-auto lg:text-left"><h3 class="font-w700 mb-[2rem] text-[2rem]">${ssrInterpolate(item.title)}</h3><p class="">${ssrInterpolate(item.desc)}</p></div>`);
+        _push(`<div data-aos="zoom-in-up"${ssrRenderAttr("data-aos-once", true)}${ssrRenderAttr("delay", index * 200)} class="${ssrRenderClass([[item.my_class, item.img ? "lg:flex-row " : "lg:flex-col"], "border-[2px] border-primary-1 rounded-3xl lg:flex lg:items-center overflow-hidden mx-auto lg:max-w-[100%] lg:mx-0 max-w-[40rem] sm:mb-[3.5rem] lg:mb-0"])}" data-v-9dab912e><div class="p-[2rem] lg:m-auto lg:text-left" data-v-9dab912e><h3 class="font-w700 mb-[2rem] text-[2rem]" data-v-9dab912e>${ssrInterpolate(item.title)}</h3><p class="" data-v-9dab912e>${ssrInterpolate(item.desc)}</p></div>`);
         if (item.img) {
-          _push(`<img${ssrRenderAttr("src", item.img)} alt="phone" class="block lg:h-[30rem]">`);
+          _push(`<img${ssrRenderAttr("src", item.img)} alt="phone" class="block lg:h-[30rem]" data-v-9dab912e>`);
         } else {
           _push(`<!---->`);
         }
@@ -785,6 +785,14 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
     };
   }
 });
+
+const _sfc_setup$3 = _sfc_main$4.setup;
+_sfc_main$4.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/SecondSection.vue");
+  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
+};
+const __nuxt_component_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-9dab912e"]]);
 
 const clientOnlySymbol = Symbol.for("nuxt:client-only");
 const __nuxt_component_0 = defineComponent({
@@ -868,8 +876,7 @@ function useSwiper(swiperContainerRef, options) {
   };
 }
 
-/* empty css                   */
-const _sfc_main$3 = {
+const _sfc_main$3 = /* @__PURE__ */ defineComponent({
   __name: "ThirdSection",
   __ssrInlineRender: true,
   setup(__props) {
@@ -895,21 +902,23 @@ const _sfc_main$3 = {
     useSwiper(containerRef);
     return (_ctx, _push, _parent, _attrs) => {
       const _component_ClientOnly = __nuxt_component_0;
-      _push(`<section${ssrRenderAttrs(mergeProps({ class: "relative" }, _attrs))}>`);
+      _push(`<section${ssrRenderAttrs(mergeProps({ class: "relative" }, _attrs))} data-v-bd316bdb>`);
       _push(ssrRenderComponent(_component_ClientOnly, null, {}, _parent));
-      _push(`<div class="absolute bottom-[2rem] left-1/2 translate-x-[-50%] flex gap-x-[2rem] z-[100]"><button aria-label="prev"><img${ssrRenderAttr("src", unref(right))} alt="" class="bright"></button><button aria-label="next"><img${ssrRenderAttr("src", unref(left))} alt="" class="bright"></button></div></section>`);
+      _push(`<div class="absolute bottom-[2rem] left-1/2 translate-x-[-50%] flex gap-x-[2rem] z-[100]" data-v-bd316bdb><button aria-label="prev" data-v-bd316bdb><img${ssrRenderAttr("src", unref(right))} alt="" class="bright" data-v-bd316bdb></button><button aria-label="next" data-v-bd316bdb><img${ssrRenderAttr("src", unref(left))} alt="" class="bright" data-v-bd316bdb></button></div></section>`);
     };
   }
-};
+});
+
 const _sfc_setup$2 = _sfc_main$3.setup;
 _sfc_main$3.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/ThirdSection.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
+const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-bd316bdb"]]);
 
 const _sfc_main$2 = /* @__PURE__ */ defineComponent({
-  __name: "SecondSection",
+  __name: "FourthSection",
   __ssrInlineRender: true,
   setup(__props) {
     useRouter();
@@ -924,7 +933,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
           alt: item.alt,
           class: "block h-[27rem] w-full z-[10]"
         }, null, _parent));
-        _push(`<div class="p-[3rem] pb-[3.9rem mt-[-2.5rem] bg-neutral-4 z-[20] relative text-neutral-1 text-left grid gap-y-[1rem]"><p class="text-[1.1rem] xl:text-[1.2rem]">${ssrInterpolate(item.quote)}</p><h3 class="text-primary-1 xl:text-[1.8rem] lg:hover:text-primary-2 lg:transition-colors lg:cursor-pointer lg:w-fit">${ssrInterpolate(item.title)}</h3><p class="text-[1.3rem] xl:text-[1.35rem] xl:h-[8rem]">${ssrInterpolate(item.desc)}</p></div></div>`);
+        _push(`<div class="p-[3rem] pb-[3.9rem mt-[-2.5rem] bg-neutral-4 z-[20] relative text-neutral-1 text-left grid gap-y-[1rem]"><p class="text-[1.1rem] xl:text-[1.2rem]">${ssrInterpolate(item.quote)}</p><h3 class="text-primary-1 xl:text-[1.8rem] lg:hover:text-primary-2 lg:transition-colors lg:cursor-pointer lg:w-fit">${ssrInterpolate(item.title)}</h3><p class="text-[1.3rem] xl:text-[1.35rem] md:h-[11rem]">${ssrInterpolate(item.desc)}</p></div></div>`);
       });
       _push(`<!--]--></div></div></section>`);
     };
@@ -934,15 +943,15 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
 const _sfc_main$1 = {};
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
   const _component_FirstSection = __nuxt_component_0$1;
-  const _component_BeforeSecond = _sfc_main$4;
-  const _component_ThirdSection = _sfc_main$3;
-  const _component_SecondSection = _sfc_main$2;
-  const _component_Footer = __nuxt_component_1$1;
+  const _component_SecondSection = __nuxt_component_1$1;
+  const _component_ThirdSection = __nuxt_component_2;
+  const _component_FourthSection = _sfc_main$2;
+  const _component_Footer = __nuxt_component_1$2;
   _push(`<main${ssrRenderAttrs(mergeProps({ class: "w-full" }, _attrs))}>`);
   _push(ssrRenderComponent(_component_FirstSection, null, null, _parent));
-  _push(ssrRenderComponent(_component_BeforeSecond, null, null, _parent));
-  _push(ssrRenderComponent(_component_ThirdSection, null, null, _parent));
   _push(ssrRenderComponent(_component_SecondSection, null, null, _parent));
+  _push(ssrRenderComponent(_component_ThirdSection, null, null, _parent));
+  _push(ssrRenderComponent(_component_FourthSection, null, null, _parent));
   _push(ssrRenderComponent(_component_Footer, null, null, _parent));
   _push(`</main>`);
 }
