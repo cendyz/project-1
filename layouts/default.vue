@@ -1,5 +1,7 @@
 <template>
-	<nav class="py-[2rem] bg-neutral-4 w-full z-[1000] fixed lg:w-full" ref="navMenu">
+	<nav
+		class="py-[2rem] bg-neutral-4 dark:bg-neutral-40 dark:border-b-[2px] w-full z-[1000] fixed lg:w-full"
+		ref="navMenu">
 		<div
 			class="px-[3rem] md:px-[5rem] flex justify-between lg:container relative lg:items-center lg:justify-between lg:px-[3.5rem] xl:px-[7rem]">
 			<NuxtLink
@@ -7,7 +9,9 @@
 				class="flex items-center gap-x-[1rem] select-none z-[50] hover:cursor-pointer"
 				@click="store.isOpenMenu = false">
 				<img :src="logo" class="w-[5rem] h-[5rem]" alt="logo easybank" />
-				<p class="font-w700 text-[2rem] hidden sm:block" :class="store.isOpenMenu ? 'text-neutral-4' : 'text-primary-1'">
+				<p
+					class="font-w700 text-[2rem] hidden sm:block"
+					:class="store.isOpenMenu ? 'text-neutral-4' : 'text-primary-1 dark:text-neutral-4'">
 					mWallet
 				</p>
 			</NuxtLink>
@@ -19,7 +23,8 @@
 				<img
 					:src="store.isOpenMenu ? closeMenu : hamburger"
 					:alt="store.isOpenMenu ? 'close menu' : 'open menu'"
-					class="h-[3rem] z-[100]" />
+					class="h-[3rem] z-[100]"
+					:class="!store.isLight && 'light_burger'" />
 			</button>
 			<Transition>
 				<div
@@ -49,11 +54,11 @@
 			</Transition>
 			<div class="hidden lg:flex gap-x-[3.5rem]">
 				<NuxtLink
-					:active-class="store.pages[index] ? 'styleLink' : ''"
+					:active-class="store.pages[index] ? 'styleLink text-primary-1 dark:text-neutral-4' : ''"
 					:to="store.pages[index]"
 					v-for="(item, index) in linksData"
 					:key="index"
-					class="first-letter:uppercase text-[1.5rem] text-neutral-1 lg:hover:text-black lg:transition-colors lg:relative lineHover lg:hover:cursor-pointer"
+					class="first-letter:uppercase text-[1.5rem] text-neutral-1 lg:hover:text-primary-1 dark:lg:hover:text-neutral-4 lg:transition-colors lg:relative lineHover lg:hover:cursor-pointer"
 					>{{ item }}</NuxtLink
 				>
 			</div>
@@ -131,6 +136,10 @@ watch(width, newValue => {
 	transition: opacity 0.1s ease;
 }
 
+.light_burger {
+	filter: invert(100%) sepia(0%) saturate(2987%) hue-rotate(35deg) brightness(113%) contrast(90%);
+}
+
 .v-enter-from,
 .v-leave-to {
 	opacity: 0;
@@ -158,7 +167,6 @@ watch(width, newValue => {
 	}
 
 	.styleLink {
-		color: #2d314d;
 		&::before {
 			width: 100%;
 		}
