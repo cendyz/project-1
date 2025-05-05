@@ -58,13 +58,13 @@
 					:to="store.pages[index]"
 					v-for="(item, index) in linksData"
 					:key="index"
-					class="first-letter:uppercase text-[1.5rem] text-neutral-1 lg:hover:text-primary-1 dark:lg:hover:text-neutral-4 lg:transition-colors lg:relative lineHover lg:hover:cursor-pointer"
+					class="first-letter:uppercase text-[1.5rem] text-neutral-1 lg:hover:text-primary-1 dark:lg:hover:text-neutral-4 lg:transition-colors lg:relative lineHover lg:cursor-pointer"
 					>{{ item }}</NuxtLink
 				>
 			</div>
 			<button
 				type="button"
-				class="hidden lg:block capitalize bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] lg:hover:opacity-60 lg:transition-opacity">
+				class="hidden lg:block capitalize bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] lg:hover:opacity-60 lg:dark:hover:opacity-100 lg:dark:hover:text-primary-1 lg:dark:transition-colors  lg:transition-opacity">
 				request invite
 			</button>
 		</div>

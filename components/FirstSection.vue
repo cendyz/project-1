@@ -34,7 +34,7 @@
 						<div class="flex justify-between items-center mt-[3rem] relative">
 							<button
 								type="button"
-								class="bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] md:text-[1.6rem] lg:hover:opacity-60 lg:transition-opacity">
+								class="bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] md:text-[1.6rem] lg:hover:opacity-60 lg:transition-opacity lg:dark:hover:opacity-100 lg:dark:hover:text-primary-1 lg:dark:transition-colors">
 								Check
 							</button>
 							<button
