@@ -1,5 +1,5 @@
 <template>
-	<section class="relative">
+	<section class="relative dark:bg-neutral-21 py-[3rem]">
 		<ClientOnly>
 			<swiper-container
 				ref="containerRef"
@@ -15,7 +15,7 @@
 				</swiper-slide>
 			</swiper-container>
 		</ClientOnly>
-		<div class="absolute bottom-[2rem] left-1/2 translate-x-[-50%] flex gap-x-[2rem] z-[100]">
+		<div class="absolute bottom-[15rem] left-1/2 translate-x-[-50%] flex gap-x-[2rem] z-[100]">
 			<button @click="swiper.prev()" aria-label="prev"><img :src="right" alt="" class="bright" /></button>
 			<button @click="swiper.next()" aria-label="next"><img :src="left" alt="" class="bright" /></button>
 		</div>
