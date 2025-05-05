@@ -4,7 +4,7 @@
 			<h2 class="capitalize text-[3rem] md:text-[3.5rem] text-primary-1 dark:text-neutral-10">latest news</h2>
 			<div class="mt-[3rem] grid gap-y-[3rem] md:grid-cols-2 md:gap-[2rem] xl:grid-cols-4 lg:gap-[5rem] xl:gap-[2rem]">
 				<div
-					class="rounded-lg overflow-hidden max-w-[45rem] mx-auto sm:mx-auto md:w-auto lg:h-[40.4rem] xl:h-auto hover:cursor-pointer lg:hover:scale-110 transition-transform duration-300 dark:border-[2px] "
+					class="rounded-lg overflow-hidden max-w-[45rem] mx-auto sm:mx-auto md:w-auto lg:h-[40.4rem] xl:h-auto hover:cursor-pointer lg:hover:scale-110 transition-transform duration-300 dark:border-[3px] "
 					v-for="(item, index) in store.articles_data.slice(0, 4)"
 					@click="goToArticle(index)"
 					:key="index">

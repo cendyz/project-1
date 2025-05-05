@@ -1,17 +1,18 @@
 <template>
-	<header class="pt-[13rem] pb-[5rem] px-[3rem] md:max-w-[77rem] md:mx-auto">
-			<NuxtLink to="/news"><img :src="back" alt="back to news" class="mb-[2rem] inline" /></NuxtLink>
-			<h1 class="text-[3.3rem] font-w700 sm:text-center">
-				{{ store.articles_data[store.news.indexOf(route.params.slug)].title }}
-			</h1>
-		
+	<header class="pt-[13rem] pb-[5rem] px-[3rem] dark:bg-neutral-21">
+		<NuxtLink to="/news"
+			><img :src="back" alt="back to news" class="mb-[2rem] inline" :class="!store.isLight && 'light_arrow'"
+		/></NuxtLink>
+		<h1 class="text-[3.3rem] font-w700 sm:text-center dark:text-primary-10">
+			{{ store.articles_data[store.news.indexOf(route.params.slug)].title }}
+		</h1>
 	</header>
-	<main>
+	<main class="dark:bg-neutral-21">
 		<img
 			:src="store.articles_data[store.news.indexOf(route.params.slug)].img"
 			:alt="store.articles_data[store.news.indexOf(route.params.slug)].alt"
-			class="md:max-w-[80rem] md:mx-auto rounded-xl" />
-		<div class="px-[3rem] py-[6rem] grid gap-y-[4rem] md:max-w-[75rem] md:mx-auto">
+			class="md:max-w-[70rem] md:mx-auto md:rounded-xl" />
+		<div class="px-[3rem] py-[6rem] grid gap-y-[4rem] md:max-w-[75rem] md:mx-auto dark:text-primary-10">
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus libero a arcu tincidunt, nec fermentum
 				velit vehicula. Aenean sit amet semper nulla. Etiam in diam sed lacus fermentum malesuada. Nulla eget urna ut
@@ -85,3 +86,9 @@ import { useBankStore } from '~/store/bank'
 const route = useRoute()
 const store = useBankStore()
 </script>
+
+<style scoped>
+.light_arrow {
+	filter: invert(93%) sepia(10%) saturate(137%) hue-rotate(196deg) brightness(94%) contrast(85%);
+}
+</style>
