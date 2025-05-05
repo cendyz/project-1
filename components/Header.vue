@@ -1,5 +1,5 @@
 <template>
-	<header class="bg-neutral-3 lg:overflow-x-clip lg:pb-0">
+	<header class="bg-neutral-3 lg:overflow-x-clip lg:pb-0 dark:bg-neutral-30">
 		<div
 			class="container relative text-center pt-[9rem] sm:pt-[5rem] lg:pt-[11rem] lg:h-[65rem] lg:flex lg:px-[3.5rem] xl:px-[7rem]">
 			<picture>
@@ -17,11 +17,11 @@
 			<div
 				class="lg:py-[12rem] lg:text-left px-[2rem] lg:px-0 sm:w-[50rem] sm:mx-auto lg:mx-0 flex flex-col justify-center items-center h-[40rem] md:h-[70rem] lg:h-auto lg:items-start xl:px-0">
 				<h1
-					class="text-[4rem] leading-[1.1] mt-[-3rem] sm:mt-0 mb-[3rem] text-primary-1 md:text-[5rem] md:mx-auto lg:mt-0 lg:mx-0 lg:text-[6.5rem] lg:w-[50rem] sm:px-[2rem] md:w-auto md:px-0">
+					class="text-[4rem] leading-[1.1] mt-[-3rem] sm:mt-0 mb-[3rem] text-primary-1 md:text-[5rem] md:mx-auto lg:mt-0 lg:mx-0 lg:text-[6.5rem] lg:w-[50rem] sm:px-[2rem] md:w-auto md:px-0 dark:text-neutral-10">
 					Next generation digital wallet
 				</h1>
 				<p
-					class="text-[1.5rem] px-[1rem] text-neutral-1 md:text-[1.7rem] md:w-[47rem] md:mx-auto lg:mx-0 lg:px-0 lg:text-[1.82rem] md:px-0 lg:w-[43rem]">
+					class="text-[1.5rem] px-[1rem] text-neutral-1 md:text-[1.7rem] md:w-[47rem] md:mx-auto lg:mx-0 lg:px-0 lg:text-[1.82rem] md:px-0 lg:w-[43rem] dark:text-neutral-10">
 					Take your finances to the next level. Your mWallet account is your all-in-one solution for managing payments,
 					saving, tracking expenses, investing, and more.
 				</p>
