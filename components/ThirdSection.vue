@@ -33,7 +33,7 @@ interface MySlides {
 	desc: string
 }
 
-const slides = ref([
+const slides = ref<MySlides[]>([
 	{
 		title: 'Your Money. Your Rules.',
 		desc: 'Take control of your finances with real-time tracking and smart planning tools.',
