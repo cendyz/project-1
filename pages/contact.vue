@@ -51,7 +51,7 @@
 				</p>
 			</div>
 		</form>
-		<div class="absolute top-0 left-0 w-full h-[115%]" :class="store.isLight ? 'bg-pattern' : 'dark_pattern'"></div>
+		<div class="absolute top-0 left-0 w-full h-[115%]" :class="store.isLight ? 'dark_pattern' : 'bg_pattern'"></div>
 		<Transition>
 			<div
 				v-if="is_sended"

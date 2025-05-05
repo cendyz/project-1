@@ -1,7 +1,7 @@
 <template>
 	<header
 		class="p-[3rem] py-[5rem] pt-[10rem] lg:h-[65rem] lg:pt-[11rem] bg-primary-1 dark:bg-primary-10 text-neutral-4 xl:px-[7rem]"
-		:class="!store.isLight ? 'pattern_light' : 'pattern_bg'">
+		:class="store.isLight ? 'pattern_light' : 'pattern_bg'">
 		<div
 			class="container lg:bg-primary-1 lg:dark:dark:bg-primary-10 dark:text-primary-1 lg:bg-opacity-90 lg:dark:dark:bg-opacity-75 rounded-3xl lg:mt-[4rem] lg:w-[954px] xl:w-[1140px] lg:mx-auto 2xl:w-[1396px]">
 			<div class="md:w-[50rem] md:mx-auto lg:flex lg:items-center lg:justify-center lg:w-auto">
@@ -9,7 +9,7 @@
 				<div class="lg:w-[50rem]">
 					<h1 class="font-w700 text-[3rem] text-center text-shadow-lg leading-[1.3] md:text-[3.3rem] lg:w-auto">
 						Transforming
-						<span class="niceColor" :class="store.isLight ? 'niceLight' : 'niceDark'">everyday</span> finances through
+						<span class="niceColor" :class="store.isLight ? 'niceDark' : 'niceLight'">everyday</span> finances through
 						personalized digital experiences.
 					</h1>
 					<div class="lg:w-[48rem] xl:w-auto">

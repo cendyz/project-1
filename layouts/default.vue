@@ -62,11 +62,20 @@
 					>{{ item }}</NuxtLink
 				>
 			</div>
-			<button
-				type="button"
-				class="hidden lg:block capitalize bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] lg:hover:opacity-60 lg:dark:hover:opacity-100 lg:dark:hover:text-primary-1 lg:dark:transition-colors  lg:transition-opacity">
-				request invite
-			</button>
+			<div class="flex items-center gap-x-[2rem]">
+				<button aria-label="change theme" @click="change_theme">
+					<img
+						:src="store.isLight ? moon : sun"
+						:alt="store.isLight ? 'moon' : 'sun'"
+						:class="store.isLight && 'white_moon'"
+						class="w-[2.5rem] h-[2.5rem]" />
+				</button>
+				<button
+					type="button"
+					class="hidden lg:block capitalize bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] lg:hover:opacity-60 lg:dark:hover:opacity-100 lg:dark:hover:text-primary-1 lg:dark:transition-colors lg:transition-opacity">
+					request invite
+				</button>
+			</div>
 		</div>
 	</nav>
 </template>
@@ -83,6 +92,19 @@ import yt from 'assets/images/icon-youtube.svg'
 import x from 'assets/images/icon-twitter.svg'
 import pt from 'assets/images/icon-pinterest.svg'
 import insta from 'assets/images/icon-instagram.svg'
+import sun from 'assets/images/sun.svg'
+import moon from 'assets/images/moon.svg'
+
+const change_theme = (): void => {
+	store.isLight = !store.isLight
+	if (document.documentElement.classList.contains('light')) {
+		document.documentElement.classList.remove('light')
+		document.documentElement.classList.add('dark')
+	} else {
+		document.documentElement.classList.remove('dark')
+		document.documentElement.classList.add('light')
+	}
+}
 
 const store = useBankStore()
 const navMenu = ref()
@@ -144,6 +166,11 @@ watch(width, newValue => {
 .v-leave-to {
 	opacity: 0;
 }
+
+.white_moon {
+	filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(344deg) brightness(106%) contrast(101%);
+}
+
 @media (min-width: 1024px) {
 	.lineHover {
 		&::before {

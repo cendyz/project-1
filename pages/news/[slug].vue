@@ -1,7 +1,7 @@
 <template>
 	<header class="pt-[13rem] pb-[5rem] px-[3rem] dark:bg-neutral-21">
 		<NuxtLink to="/news"
-			><img :src="back" alt="back to news" class="mb-[2rem] inline" :class="!store.isLight && 'light_arrow'"
+			><img :src="back" alt="back to news" class="mb-[2rem] inline" :class="store.isLight && 'light_arrow'"
 		/></NuxtLink>
 		<h1 class="text-[3.3rem] font-w700 sm:text-center dark:text-primary-10">
 			{{ store.articles_data[store.news.indexOf(route.params.slug)].title }}

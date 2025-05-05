@@ -14,7 +14,7 @@
 					v-model.trim="input_data.user_print" />
 			</div>
 		</div>
-		<div class="bg" :class="store.isLight ? 'light_bg' : 'dark_bg'"></div>
+		<div class="bg" :class="store.isLight ? 'dark_bg' : 'light_bg'"></div>
 	</header>
 	<main class="px-[3rem] py-[10rem] sm:w-[70rem] lg:w-auto lg:px-[3.5rem] xl:px-[7rem] dark:bg-neutral-21">
 		<div
@@ -28,7 +28,7 @@
 					<img
 						:src="is_hidden == index ? minus : plus"
 						:alt="is_hidden == index ? 'hide answer' : 'show answer'"
-						:class="!store.isLight && 'dark_img'" />
+						:class="store.isLight && 'dark_img'" />
 				</button>
 			</div>
 			<p class="text-primary-2 dark:text-primary-3 mt-[2rem]" v-if="is_hidden == index">

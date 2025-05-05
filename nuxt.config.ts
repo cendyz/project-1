@@ -25,7 +25,7 @@ export default defineNuxtConfig({
 			link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.png?v2' }],
 			htmlAttrs: {
 				lang: 'en',
-				class: 'dark'
+				class: 'light'
 			},
 		},
 	},

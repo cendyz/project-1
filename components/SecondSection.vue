@@ -36,6 +36,7 @@ import second_img from 'assets/images/2.png'
 import third_img from 'assets/images/3.png'
 import six_img from 'assets/images/4.png'
 
+
 interface GridData {
 	title: string
 	desc: string
