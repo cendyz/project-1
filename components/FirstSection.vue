@@ -222,7 +222,7 @@ const iconStyles = 'absolute opacity-[5%] w-[15rem] md:w-[20rem] z-[1] 2xl:w-[30
 }
 
 .darkIconsBg {
-	filter: invert(100%) sepia(40%) saturate(491%) hue-rotate(177deg) brightness(100%) contrast(83%);
+	filter: invert(79%) sepia(11%) saturate(146%) hue-rotate(186deg) brightness(97%) contrast(86%);
 }
 
 .animeSpin {
