@@ -2,7 +2,7 @@
 	<main class="h-[95rem] lg:py-[5rem] flex justify-center items-center" ref="el">
 		<form
 			@submit.prevent="handle_submit"
-			class="bg-neutral-4 p-[3rem] border-dashed border-[3px] border-primary-3 w-[calc(100%-6rem)] mx-auto my-auto max-w-[540px] lg:p-[5rem] lg:max-w-[580px] z-[100]">
+			class="bg-neutral-4 p-[3rem] border-dashed border-[3px] dark:bg-neutral-40 dark:text-primary-11 border-primary-3 w-[calc(100%-6rem)] mx-auto my-auto max-w-[540px] lg:p-[5rem] lg:max-w-[580px] z-[100]">
 			<h1 class="text-[2.5rem] font-w700 mb-[1rem] lg:text-[3rem]">Contact us</h1>
 			<p class="text-[1.4rem] mb-[2rem] lg:text-[1.5rem]">
 				Got any questions or suggestions? <br class="sm:hidden" />
@@ -43,7 +43,7 @@
 			<div class="mt-[5rem]">
 				<button
 					type="submit"
-					class="uppercase border-[3px] rounded-lg border-primary-1 w-full py-[.5rem] font-w700 lg:hover:bg-primary-1 lg:hover:text-neutral-4 transition-colors duration-300">
+					class="uppercase border-[3px] rounded-lg border-primary-1 dark:border-primary-10 w-full py-[.5rem] font-w700 lg:hover:bg-primary-1 lg:hover:text-neutral-4 transition-colors duration-300">
 					send
 				</button>
 				<p class="text-[1.3rem] text-primary-gray2 mt-[3rem]">
@@ -51,7 +51,7 @@
 				</p>
 			</div>
 		</form>
-		<div class="absolute top-0 left-0 w-full h-[115%] bg_pattern"></div>
+		<div class="absolute top-0 left-0 w-full h-[115%]" :class="store.isLight ? 'bg-pattern' : 'dark_pattern'"></div>
 		<Transition>
 			<div
 				v-if="is_sended"
@@ -69,6 +69,8 @@
 
 <script setup lang="ts">
 import x from 'assets/images/close_x.svg'
+import { useBankStore } from '~/store/bank'
+const store = useBankStore()
 
 interface Input {
 	name: string
@@ -154,12 +156,16 @@ const inputStyles = 'border rounded-md p-[.5rem] w-full text-[1.3rem] lg:text-[1
 const errorStyles = 'mt-[.3rem] text-[1.2rem] text-[#EF4444]'
 </script>
 
-<style scoped>
+<style>
 :root {
 	--line-width: 100%;
 }
 .bg_pattern {
 	background-image: url('../assets/images/email-pattern.png');
+}
+
+.dark_pattern {
+	background-image: url('../assets/images/low_contrast_linen.png');
 }
 
 .my_shadow {
