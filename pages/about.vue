@@ -1,13 +1,16 @@
 <template>
 	<header
-		class="p-[3rem] py-[5rem] pt-[10rem] lg:h-[65rem] lg:pt-[11rem] bg-primary-1 text-neutral-4 pattern_bg xl:px-[7rem]">
+		class="p-[3rem] py-[5rem] pt-[10rem] lg:h-[65rem] lg:pt-[11rem] bg-primary-1 dark:bg-primary-10 text-neutral-4 xl:px-[7rem]"
+		:class="!store.isLight ? 'pattern_light' : 'pattern_bg'">
 		<div
-			class="container lg:bg-primary-1 lg:bg-opacity-90 rounded-3xl lg:mt-[4rem] lg:w-[954px] xl:w-[1140px] lg:mx-auto 2xl:w-[1396px]">
+			class="container lg:bg-primary-1 lg:dark:dark:bg-primary-10 dark:text-primary-1 lg:bg-opacity-90 lg:dark:dark:bg-opacity-75 rounded-3xl lg:mt-[4rem] lg:w-[954px] xl:w-[1140px] lg:mx-auto 2xl:w-[1396px]">
 			<div class="md:w-[50rem] md:mx-auto lg:flex lg:items-center lg:justify-center lg:w-auto">
 				<img :src="dollar" alt="dollar" class="bounce w-[35rem] mx-auto lg:mx-0 lg:w-[43rem] xl:mr-[8rem]" />
 				<div class="lg:w-[50rem]">
 					<h1 class="font-w700 text-[3rem] text-center text-shadow-lg leading-[1.3] md:text-[3.3rem] lg:w-auto">
-						Transforming <span class="niceColor">everyday</span> finances through personalized digital experiences.
+						Transforming
+						<span class="niceColor" :class="store.isLight ? 'niceLight' : 'niceDark'">everyday</span> finances through
+						personalized digital experiences.
 					</h1>
 					<div class="lg:w-[48rem] xl:w-auto">
 						<p :class="textStyles">
@@ -25,7 +28,7 @@
 		</div>
 	</header>
 	<main>
-		<section class="pt-[5rem]">
+		<section class="pt-[5rem] dark:bg-neutral-40 dark:text-primary-10">
 			<div class="px-[3rem] md:w-[50rem] md:mx-auto lg:w-[70rem]">
 				<h2 class="text-[2.8rem] font-w700 md:text-[3rem] text-center">Redefining finance for the digital age.</h2>
 				<p class="text-[1.7rem] mt-[2rem] text-justify">
@@ -43,7 +46,7 @@
 						v-for="(item, index) in dataYears"
 						:key="index"
 						class="px-[2rem] rounded-xl border-primary-2 py-[.5rem] sm:px-[2rem] border lg:hover:text-neutral-4 lg:hover:bg-primary-2 transition-colors duration-300"
-						:class="actualInfo == index ? 'bg-primary-2 text-neutral-4' : 'text-primary-1'">
+						:class="actualInfo == index ? 'bg-primary-2 text-neutral-4' : 'text-primary-1 dark:text-primary-10'">
 						{{ item }}
 					</button>
 				</div>
@@ -60,6 +63,8 @@
 
 <script setup lang="ts">
 import dollar from 'assets/images/dollar.png'
+import { useBankStore } from '~/store/bank'
+const store = useBankStore()
 
 const is_width = ref(false)
 const { width } = useWindowSize()
@@ -109,7 +114,7 @@ onMounted(() => {
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 :root {
 	--slide: 5.7%;
 }
@@ -117,7 +122,17 @@ onMounted(() => {
 .niceColor {
 	position: relative;
 	overflow: hidden;
+}
+
+.niceLight {
 	background: -webkit-linear-gradient(90deg, rgba(18, 108, 167, 1) 0%, rgb(101, 160, 202) 59%);
+	background-clip: initial;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.niceDark {
+	background: -webkit-linear-gradient(90deg, rgb(76, 134, 173) 0%, rgb(9, 87, 143) 59%);
 	background-clip: initial;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -155,6 +170,10 @@ onMounted(() => {
 @media (min-width: 1024px) {
 	.pattern_bg {
 		background-image: url('../assets/images/patternpad.png');
+		background-size: cover;
+	}
+	.pattern_light {
+		background-image: url('../assets/images/pattern_white.png');
 		background-size: cover;
 	}
 }
