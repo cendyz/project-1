@@ -8,6 +8,7 @@ import img6 from 'assets/images/img6.jpg'
 
 export const useBankStore = defineStore('bank', {
 	state: () => ({
+		isLight: false,
 		isOpenMenu: false,
 		news: ['3531', '3241', '13167', '1367', '90131', '241', '125'],
 		articles_data: [

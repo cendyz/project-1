@@ -1,11 +1,13 @@
 <template>
 	<section
-		class="bg-neutral-2 py-[11rem] px-[2.2rem] text-center text-neutral-1 text-[1.5rem] md:text-[1.6rem] lg:z-[9] relative">
+		class="bg-neutral-2 dark:bg-neutral-20 py-[11rem] px-[2.2rem] text-center text-neutral-1 dark:text-neutral-10 text-[1.5rem] md:text-[1.6rem] lg:z-[9] relative">
 		<div class="container lg:px-[3.5rem] xl:px-0">
-			<h2 class="text-[3rem] font-w700 leading-[1.2] mb-[2.2rem] px-[1rem] text-primary-1 md:text-[3.5rem] lg:px-0">
+			<h2
+				class="text-[3rem] font-w700 leading-[1.2] mb-[2.2rem] px-[1rem] text-primary-1 dark:text-neutral-10 md:text-[3.5rem] lg:px-0">
 				Why choose mWallet?
 			</h2>
-			<p class="sm:w-[38rem] text-primary-1 px-[2rem] mt-[2rem] leading-[2] sm:mx-auto lg:w-[55rem] lg:mx-auto">
+			<p
+				class="sm:w-[38rem] text-primary-1 dark:text-primary-10 px-[2rem] mt-[2rem] leading-[2] sm:mx-auto lg:w-[55rem] lg:mx-auto">
 				With seamless digital integration, BlueWallet transforms your phone into a smart financial command center.
 				Manage money intuitively and securely.
 			</p>
@@ -17,13 +19,15 @@
 					:data-aos-duration="400"
 					:delay="index * 200"
 					v-for="(item, index) in profitsData"
-					class="bg-neutral-3 bg-opacity-50 p-[2rem] border lg:border-[2px] rounded-xl lg:border-primary-2 max-w-[45rem] mx-auto lg:w-auto z-[10]"
+					class="bg-neutral-3 dark:bg-neutral-30 bg-opacity-50 p-[2rem] border lg:border-[2px] rounded-xl lg:border-primary-2 dark:border-primary-1 max-w-[45rem] mx-auto lg:w-auto z-[10]"
 					:key="index">
 					<div class="p-[2rem]">
 						<img :src="item.img" :alt="item.title" class="block mx-auto w-[7rem] h-[7rem] md:w-[8rem] md:h-[8rem]" />
-						<h3 class="text-primary-1 text-[2.5rem] font-w700 my-[2rem] md:text-[2.2rem]">{{ item.title }}</h3>
+						<h3 class="text-primary-1 dark:text-primary-10 text-[2.5rem] font-w700 my-[2rem] md:text-[2.2rem]">
+							{{ item.title }}
+						</h3>
 						<ul
-							class="text-left text-primary-1 sm:w-[35rem] sm:mx-auto lg:w-[30rem] lg:mx-0 list-disc grid gap-y-[2rem]">
+							class="text-left text-primary-1 dark:text-primary-10 sm:w-[35rem] sm:mx-auto lg:w-[30rem] lg:mx-0 list-disc grid gap-y-[2rem]">
 							<li>Lorem ipsum dolor sit amet con se cte tur adi pisic ing elit. Eligendi, quae. Lorem, ipsum.</li>
 							<li>Lorem ipsum dolor sit amet con se cte tur adi pcs icing elit. Eligendi, quae. Lorem, ipsum.</li>
 						</ul>
@@ -43,7 +47,7 @@
 								<div
 									:ref="el => law_refs[index] = el as HTMLDivElement"
 									v-if="is_law == index"
-									class="absolute w-[20rem] rounded-xl text-left h-[20rem] text-primary-1 bg-neutral-4 p-[2rem] overflow-scroll lg:overflow-hidden right-[.6rem] bottom-[5rem] z-[10] md:w-[25rem] md:right-[1.7rem] md:bottom-[6rem] boxShadowLaw">
+									class="absolute w-[20rem] rounded-xl text-left h-[20rem] text-primary-1 bg-neutral-4 dark:bg-neutral40 p-[2rem] overflow-scroll lg:overflow-hidden right-[.6rem] bottom-[5rem] z-[10] md:w-[25rem] md:right-[1.7rem] md:bottom-[6rem] boxShadowLaw">
 									<p class="text-[1.2rem] font-w700">
 										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam eligendi quibusdam sapiente pariatur,
 										exercitationem doloremque nihil autem omnis laboriosam esse hic temporibus vel at veniam ut maxime
@@ -67,19 +71,19 @@
 			:src="icon1"
 			alt=""
 			aria-hidden="true"
-			:class="iconStyles"
+			:class="[iconStyles, !store.isLight && 'darkIconsBg']"
 			class="top-[35rem] left-[-2rem] md:top-[30rem] md:left-[5rem] lg:top-[20rem] 2xl:left-[35rem] rotate-12 animeSpin" />
 		<img
 			:src="icon2"
 			alt=""
 			aria-hidden="true"
-			:class="iconStyles"
+			:class="[iconStyles, !store.isLight && 'darkIconsBg']"
 			class="right-[5rem] top-[130rem] md:top-[120rem] lg:top-[75rem] rotate-45 animeSpin 2xl:right-[30rem]" />
 		<img
 			:src="icon3"
 			alt=""
 			aria-hidden="true"
-			:class="iconStyles"
+			:class="[iconStyles, !store.isLight && 'darkIconsBg']"
 			class="left-[2rem] bottom-[1rem] md:left-[4rem] rotate-6 animeSpinRight 2xl:left-[19rem] 2xl:bottom-[10rem]" />
 	</section>
 </template>
@@ -93,7 +97,8 @@ import icon1 from 'assets/images/icon1.svg'
 import icon2 from 'assets/images/icon2.svg'
 import icon3 from 'assets/images/icon3.svg'
 import triangle from 'assets/images/triangle.svg'
-import { ref } from 'vue'
+import { useBankStore } from '~/store/bank'
+const store = useBankStore()
 
 const is_width = ref<boolean>(false)
 const is_law = ref<null | number>(null)
@@ -138,6 +143,14 @@ const profitsData = ref([
 		title: 'Connected Tools',
 	},
 ])
+
+watch(
+	() => store.isLight,
+	newValue => {
+		if (newValue) {
+		}
+	}
+)
 
 onMounted(() => {
 	is_width.value = true
@@ -206,6 +219,10 @@ const iconStyles = 'absolute opacity-[5%] w-[15rem] md:w-[20rem] z-[1] 2xl:w-[30
 			z-index: 1;
 		}
 	}
+}
+
+.darkIconsBg {
+	filter: invert(100%) sepia(40%) saturate(491%) hue-rotate(177deg) brightness(100%) contrast(83%);
 }
 
 .animeSpin {
