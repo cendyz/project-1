@@ -1,5 +1,5 @@
 <template>
-	<section class="bg-neutral-3 py-[7rem] dark:bg-neutral-30">
+	<section class="bg-neutral-2 py-[7rem] dark:bg-neutral-30">
 		<div class="text-center container px-[2.2rem] lg:px-[3.5rem] xl:px-[7rem]">
 			<h2 class="capitalize text-[3rem] md:text-[3.5rem] text-primary-1 dark:text-neutral-10">latest news</h2>
 			<div class="mt-[3rem] grid gap-y-[3rem] md:grid-cols-2 md:gap-[2rem] xl:grid-cols-4 lg:gap-[5rem] xl:gap-[2rem]">

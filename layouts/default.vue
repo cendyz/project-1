@@ -109,7 +109,7 @@ const change_theme = (): void => {
 const store = useBankStore()
 const navMenu = ref()
 
-const linksData = ref<string[]>(['home', 'news', 'about', 'faq', 'contact'])
+const linksData = ref<string[]>(['home', 'news', 'about', 'faq', 'contact', 'ewew'])
 
 const socialsData = ref([
 	{

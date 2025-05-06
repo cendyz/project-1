@@ -1,5 +1,5 @@
 <template>
-	<section class="grid py-[10rem] px-[3rem] pb-[10rem] dark:bg-neutral-21">
+	<section class="grid py-[10rem] px-[3rem] pb-[10rem] bg-neutral-3 dark:bg-neutral-21">
 		<div>
 			<div class="lg:w-[50rem] lg:mx-auto lg:text-center">
 				<h2 class="capitalize text-[2.8rem] md:text-[3.5rem] mb-[2rem] text-primary-1 dark:text-neutral-10">
@@ -17,6 +17,7 @@
 					data-aos="zoom-in-up"
 					:data-aos-once="true"
 					:delay="index * 200"
+					prefetch
 					:class="[item.my_class, item.img ? 'lg:flex-row ' : 'lg:flex-col']"
 					v-for="(item, index) in grid_data"
 					:key="index">
@@ -35,7 +36,6 @@
 import second_img from 'assets/images/2.png'
 import third_img from 'assets/images/3.png'
 import six_img from 'assets/images/4.png'
-
 
 interface GridData {
 	title: string

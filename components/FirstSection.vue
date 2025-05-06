@@ -71,19 +71,19 @@
 			:src="icon1"
 			alt=""
 			aria-hidden="true"
-			:class="[iconStyles, !store.isLight && 'darkIconsBg']"
+			:class="[iconStyles, store.isLight && 'darkIconsBg']"
 			class="top-[35rem] left-[-2rem] md:top-[30rem] md:left-[5rem] lg:top-[20rem] 2xl:left-[35rem] rotate-12 animeSpin" />
 		<img
 			:src="icon2"
 			alt=""
 			aria-hidden="true"
-			:class="[iconStyles, !store.isLight && 'darkIconsBg']"
+			:class="[iconStyles, store.isLight && 'darkIconsBg']"
 			class="right-[5rem] top-[130rem] md:top-[120rem] lg:top-[75rem] rotate-45 animeSpin 2xl:right-[30rem]" />
 		<img
 			:src="icon3"
 			alt=""
 			aria-hidden="true"
-			:class="[iconStyles, !store.isLight && 'darkIconsBg']"
+			:class="[iconStyles, store.isLight && 'darkIconsBg']"
 			class="left-[2rem] bottom-[1rem] md:left-[4rem] rotate-6 animeSpinRight 2xl:left-[19rem] 2xl:bottom-[10rem]" />
 	</section>
 </template>

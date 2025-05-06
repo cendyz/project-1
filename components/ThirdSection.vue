@@ -1,5 +1,5 @@
 <template>
-	<section class="relative dark:bg-neutral-21 py-[3rem]">
+	<section class="relative dark:bg-neutral-21 py-[3rem] bg-neutral-3">
 		<ClientOnly>
 			<swiper-container
 				ref="containerRef"
