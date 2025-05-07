@@ -1,5 +1,5 @@
 <template>
-	<header class="pb-[5rem] pt-[11rem] dark:bg-neutral-21">
+	<header class="pb-[5rem] pt-[11rem] bg-neutral-3 dark:bg-neutral-21">
 		<h1 class="uppercase text-primary-1 dark:text-primary-10 text-[5rem] px-[2rem] text-center font-w700">latest news</h1>
 		<div class="py-[1rem] border-t-[2px] border-b-[2px] border-primary-2 dark:bg-neutral-40 dark:text-primary-10 bg-neutral-4 overflow-hidden mt-[2rem]">
 			<NuxtMarquee class="px-[3rem] flex items-center justify-between min-w-full select-none">
@@ -9,13 +9,13 @@
 			</NuxtMarquee>
 		</div>
 	</header>
-	<main class="bg-neutral-3 pt-[3rem] pb-[7rem] px-[3rem] grid gap-y-[3rem] lg:gap-y-[7rem] place-items-center dark:bg-neutral-21">
+	<main class="bg-neutral-4 pt-[3rem] pb-[7rem] px-[3rem] grid gap-y-[3rem] lg:gap-y-[7rem] place-items-center dark:bg-neutral-21">
 		<div
 			v-for="(item, index) in store.articles_data"
 			@click="goToArticle(index)"
 			prefetch
 			:key="index"
-			class="rounded-lg overflow-hidden bg-neutral-4 dark:bg-neutral-40 dark:text-primary-10 max-w-[40rem] lg:flex lg:max-w-[110rem] lg:cursor-pointer dark:border-[3px]">
+			class="rounded-lg overflow-hidden bg-neutral-2 dark:bg-neutral-40 dark:text-primary-10 max-w-[40rem] lg:flex lg:max-w-[110rem] lg:cursor-pointer border-[3px] border-transparent dark:border-neutral-4">
 			<img :src="item.img" :alt="item.alt" class="lg:w-[40rem] lg:h-[30rem]" />
 			<div class="p-[2rem]">
 				<h2 class="font-w700 text-[2rem] lg:text-[3rem] lg:w-[40rem]">{{ item.title }}</h2>

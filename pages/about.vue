@@ -63,6 +63,7 @@
 
 <script setup lang="ts">
 import dollar from 'assets/images/dollar.png'
+import { useStorage } from '@vueuse/core'
 import { useBankStore } from '~/store/bank'
 const store = useBankStore()
 

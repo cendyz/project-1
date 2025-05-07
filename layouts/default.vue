@@ -1,6 +1,6 @@
 <template>
 	<nav
-		class="py-[2rem] bg-neutral-4 dark:bg-neutral-40 dark:border-b-[2px] w-full z-[1000] fixed lg:w-full"
+		class="py-[2rem] dark:border-b-[2px] w-full z-[1000] fixed lg:w-full bg-neutral-4 dark:bg-neutral-40"
 		ref="navMenu">
 		<div
 			class="px-[3rem] md:px-[5rem] flex justify-between lg:container relative lg:items-center lg:justify-between lg:px-[3.5rem] xl:px-[7rem]">
@@ -24,7 +24,7 @@
 					:src="store.isOpenMenu ? closeMenu : hamburger"
 					:alt="store.isOpenMenu ? 'close menu' : 'open menu'"
 					class="h-[3rem] z-[100]"
-					:class="!store.isLight && 'light_burger'" />
+					:class="isClient && my_theme && 'light_burger'" />
 			</button>
 			<Transition>
 				<div
@@ -65,9 +65,9 @@
 			<div class="flex items-center gap-x-[2rem]">
 				<button aria-label="change theme" @click="change_theme">
 					<img
-						:src="store.isLight ? moon : sun"
-						:alt="store.isLight ? 'moon' : 'sun'"
-						:class="store.isLight && 'white_moon'"
+						:src="isClient && my_theme ? moon : sun"
+						:alt="isClient && my_theme ? 'moon' : 'sun'"
+						:class="isClient && !my_theme && 'white_moon'"
 						class="w-[2.5rem] h-[2.5rem]" />
 				</button>
 				<button
@@ -83,6 +83,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useBankStore } from '~/store/bank'
+import { useStorage } from '@vueuse/core'
 import logo from '~/assets/images/logo.png'
 import hamburger from '~/assets/images/icon-hamburger.svg'
 import closeMenu from '~/assets/images/close_x.svg'
@@ -95,9 +96,17 @@ import insta from 'assets/images/icon-instagram.svg'
 import sun from 'assets/images/sun.svg'
 import moon from 'assets/images/moon.svg'
 
+const store = useBankStore()
+const navMenu = ref()
+
+const my_theme = useStorage('my-theme', false)
+const isClient = ref(false)
+
 const change_theme = (): void => {
-	store.isLight = !store.isLight
-	if (document.documentElement.classList.contains('light')) {
+	my_theme.value = !my_theme.value
+	store.isLight = !my_theme.value
+
+	if (!my_theme.value) {
 		document.documentElement.classList.remove('light')
 		document.documentElement.classList.add('dark')
 	} else {
@@ -106,10 +115,7 @@ const change_theme = (): void => {
 	}
 }
 
-const store = useBankStore()
-const navMenu = ref()
-
-const linksData = ref<string[]>(['home', 'news', 'about', 'faq', 'contact', 'ewew'])
+const linksData = ref<string[]>(['home', 'news', 'about', 'faq', 'contact'])
 
 const socialsData = ref([
 	{
@@ -148,6 +154,19 @@ watch(
 watch(width, newValue => {
 	if (newValue >= 1024) {
 		store.isOpenMenu = false
+	}
+})
+
+onMounted(() => {
+	isClient.value = true
+	store.isLight = !my_theme.value
+
+	if (!my_theme.value) {
+		document.documentElement.classList.remove('light')
+		document.documentElement.classList.add('dark')
+	} else {
+		document.documentElement.classList.remove('dark')
+		document.documentElement.classList.add('light')
 	}
 })
 </script>

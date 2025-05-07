@@ -1,5 +1,5 @@
 <template>
-	<header class="pt-[13rem] pb-[5rem] px-[3rem] dark:bg-neutral-21">
+	<header class="pt-[13rem] pb-[5rem] px-[3rem] bg-neutral-3 dark:bg-neutral-21">
 		<NuxtLink to="/news"
 			><img :src="back" alt="back to news" class="mb-[2rem] inline" :class="store.isLight && 'light_arrow'"
 		/></NuxtLink>
@@ -7,7 +7,7 @@
 			{{ store.articles_data[store.news.indexOf(route.params.slug)].title }}
 		</h1>
 	</header>
-	<main class="dark:bg-neutral-21">
+	<main class="dark:bg-neutral-21 bg-neutral-3">
 		<img
 			:src="store.articles_data[store.news.indexOf(route.params.slug)].img"
 			:alt="store.articles_data[store.news.indexOf(route.params.slug)].alt"
