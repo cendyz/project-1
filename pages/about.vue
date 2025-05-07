@@ -28,7 +28,7 @@
 		</div>
 	</header>
 	<main>
-		<section class="pt-[5rem] dark:bg-neutral-40 dark:text-primary-10">
+		<section class="pt-[5rem] bg-neutral-4 dark:bg-neutral-40 dark:text-primary-10">
 			<div class="px-[3rem] md:w-[50rem] md:mx-auto lg:w-[70rem]">
 				<h2 class="text-[2.8rem] font-w700 md:text-[3rem] text-center">Redefining finance for the digital age.</h2>
 				<p class="text-[1.7rem] mt-[2rem] text-justify">
@@ -63,7 +63,6 @@
 
 <script setup lang="ts">
 import dollar from 'assets/images/dollar.png'
-import { useStorage } from '@vueuse/core'
 import { useBankStore } from '~/store/bank'
 const store = useBankStore()
 

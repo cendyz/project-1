@@ -1,4 +1,7 @@
 <template>
+	<Transition>
+		<div v-if="store.isLoaded" class="absolute top-0 left-0 w-full h-full bg-neutral-4 z-[10000]"></div>
+	</Transition>
 	<nav
 		class="py-[2rem] dark:border-b-[2px] w-full z-[1000] fixed lg:w-full bg-neutral-4 dark:bg-neutral-40"
 		ref="navMenu">
@@ -15,17 +18,22 @@
 					mWallet
 				</p>
 			</NuxtLink>
-			<button
-				type="button"
-				@click="store.isOpenMenu = !store.isOpenMenu"
-				aria-label="open close nav menu"
-				class="lg:hidden">
-				<img
-					:src="store.isOpenMenu ? closeMenu : hamburger"
-					:alt="store.isOpenMenu ? 'close menu' : 'open menu'"
-					class="h-[3rem] z-[100]"
-					:class="isClient && my_theme && 'light_burger'" />
-			</button>
+			<div class="flex items-center gap-x-[2rem] lg:hidden">
+				<button aria-label="change theme" @click="change_theme">
+					<img
+						:src="isClient && my_theme ? moon : sun"
+						:alt="isClient && my_theme ? 'moon' : 'sun'"
+						:class="isClient && !my_theme && 'white_moon'"
+						class="w-[2.5rem] h-[2.5rem]" />
+				</button>
+				<button type="button" @click="store.isOpenMenu = !store.isOpenMenu" aria-label="open close nav menu">
+					<img
+						:src="store.isOpenMenu ? closeMenu : hamburger"
+						:alt="store.isOpenMenu ? 'close menu' : 'open menu'"
+						class="h-[3rem] z-[100]"
+						:class="isClient && !my_theme && 'light_burger'" />
+				</button>
+			</div>
 			<Transition>
 				<div
 					v-if="store.isOpenMenu"
@@ -62,7 +70,7 @@
 					>{{ item }}</NuxtLink
 				>
 			</div>
-			<div class="flex items-center gap-x-[2rem]">
+			<div class="items-center gap-x-[2rem] hidden lg:flex">
 				<button aria-label="change theme" @click="change_theme">
 					<img
 						:src="isClient && my_theme ? moon : sun"
@@ -72,7 +80,7 @@
 				</button>
 				<button
 					type="button"
-					class="hidden lg:block capitalize bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] lg:hover:opacity-60 lg:dark:hover:opacity-100 lg:dark:hover:text-primary-1 lg:dark:transition-colors lg:transition-opacity">
+					class="capitalize bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] lg:hover:opacity-60 lg:dark:hover:opacity-100 lg:dark:hover:text-primary-1 lg:dark:transition-colors lg:transition-opacity">
 					request invite
 				</button>
 			</div>
@@ -168,13 +176,18 @@ onMounted(() => {
 		document.documentElement.classList.remove('dark')
 		document.documentElement.classList.add('light')
 	}
+
+	setTimeout(() => {
+		store.isLoaded = false
+		document.body.style.overflow = 'visible'
+	}, 50)
 })
 </script>
 
 <style scoped lang="scss">
 .v-enter-active,
 .v-leave-active {
-	transition: opacity 0.1s ease;
+	transition: opacity 0.2s ease;
 }
 
 .light_burger {

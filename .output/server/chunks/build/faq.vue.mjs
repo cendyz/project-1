@@ -1,7 +1,8 @@
 import { _ as __nuxt_component_1 } from './Footer.vue.mjs';
 import { defineComponent, ref, computed, unref, useSSRContext } from 'vue';
 import { ssrRenderAttr, ssrRenderClass, ssrRenderList, ssrInterpolate, ssrRenderComponent } from 'vue/server-renderer';
-import { u as useBankStore, _ as _export_sfc } from './server.mjs';
+import { u as useBankStore } from './server.mjs';
+import { _ as _export_sfc } from './_plugin-vue_export-helper.mjs';
 import './icon-instagram.svg.mjs';
 import './nuxt-link.mjs';
 import '../nitro/nitro.mjs';
@@ -85,11 +86,11 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     ]);
     return (_ctx, _push, _parent, _attrs) => {
       const _component_Footer = __nuxt_component_1;
-      _push(`<!--[--><header class="relative" data-v-18a320f3><div class="container pt-[15rem] py-[7rem] lg:pt-[11rem] lg:h-[50rem] p-[3rem] lg:px-[3.5rem] xl:px-[7rem] lg:text-center lg:flex lg:justify-center lg:items-center" data-v-18a320f3><p class="px-[1.2rem] lg:mt-[5rem] py-[.5rem] border-primary-3 border rounded-3xl w-fit lg:hidden" data-v-18a320f3>FAQs</p><div class="mt-[2rem]" data-v-18a320f3><label for="question" class="text-[4rem] text-primary-1 dark:text-primary-10 lg:text-[5rem] z-[100] relative" data-v-18a320f3>What can we help you find?</label><input type="text" id="question" class="block mt-[3rem] w-full p-[1rem] rounded-md border border-primary-3 bg-neutral-4 z-[100] relative lg:w-[40rem] lg:mx-auto"${ssrRenderAttr("value", unref(input_data).user_print)} data-v-18a320f3></div></div><div class="${ssrRenderClass([unref(store).isLight ? "dark_bg" : "light_bg", "bg"])}" data-v-18a320f3></div></header><main class="px-[3rem] py-[10rem] sm:w-[70rem] lg:w-auto lg:px-[3.5rem] xl:px-[7rem] dark:bg-neutral-21" data-v-18a320f3><!--[-->`);
+      _push(`<!--[--><header class="relative" data-v-82462f7b><div class="container pt-[15rem] py-[7rem] lg:pt-[11rem] lg:h-[50rem] p-[3rem] lg:px-[3.5rem] xl:px-[7rem] lg:text-center lg:flex lg:justify-center lg:items-center" data-v-82462f7b><p class="px-[1.2rem] lg:mt-[5rem] py-[.5rem] border-primary-3 border rounded-3xl w-fit lg:hidden" data-v-82462f7b>FAQs</p><div class="mt-[2rem]" data-v-82462f7b><label for="question" class="text-[4rem] text-primary-1 dark:text-primary-10 lg:text-[5rem] z-[100] relative" data-v-82462f7b>What can we help you find?</label><input type="text" id="question" class="block mt-[3rem] w-full p-[1rem] rounded-md border border-primary-3 bg-neutral-4 z-[100] relative lg:w-[40rem] lg:mx-auto"${ssrRenderAttr("value", unref(input_data).user_print)} data-v-82462f7b></div></div><div class="${ssrRenderClass([unref(store).isLight ? "dark_bg" : "light_bg", "bg"])}" data-v-82462f7b></div></header><main class="px-[3rem] py-[10rem] sm:w-[70rem] lg:w-auto lg:px-[3.5rem] xl:px-[7rem] dark:bg-neutral-21" data-v-82462f7b><!--[-->`);
       ssrRenderList(unref(new_faq_data), (item, index) => {
-        _push(`<div class="pt-[2rem] mt-[2.8rem] border-t container border-primary-2 text-primary-1 lg:first:mt-0 lg:w-[50%] lg:mx-auto dark:text-primary-11" data-v-18a320f3><div class="flex justify-between items-center" data-v-18a320f3><p data-v-18a320f3>${ssrInterpolate(item.question)}</p><button aria-label="show question" data-v-18a320f3><img${ssrRenderAttr("src", unref(is_hidden) == index ? unref(minus) : unref(plus))}${ssrRenderAttr("alt", unref(is_hidden) == index ? "hide answer" : "show answer")} class="${ssrRenderClass(unref(store).isLight && "dark_img")}" data-v-18a320f3></button></div>`);
+        _push(`<div class="pt-[2rem] mt-[2.8rem] border-t container border-primary-2 text-primary-1 lg:first:mt-0 lg:w-[50%] lg:mx-auto dark:text-primary-11" data-v-82462f7b><div class="flex justify-between items-center" data-v-82462f7b><p data-v-82462f7b>${ssrInterpolate(item.question)}</p><button aria-label="show question" data-v-82462f7b><img${ssrRenderAttr("src", unref(is_hidden) == index ? unref(minus) : unref(plus))}${ssrRenderAttr("alt", unref(is_hidden) == index ? "hide answer" : "show answer")} class="${ssrRenderClass(unref(store).isLight && "dark_img")}" data-v-82462f7b></button></div>`);
         if (unref(is_hidden) == index) {
-          _push(`<p class="text-primary-2 dark:text-primary-3 mt-[2rem]" data-v-18a320f3>${ssrInterpolate(item.answer)}</p>`);
+          _push(`<p class="text-primary-2 dark:text-primary-3 mt-[2rem]" data-v-82462f7b>${ssrInterpolate(item.answer)}</p>`);
         } else {
           _push(`<!---->`);
         }
@@ -108,7 +109,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/faq.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const faq = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-18a320f3"]]);
+const faq = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-82462f7b"]]);
 
 export { faq as default };
 //# sourceMappingURL=faq.vue.mjs.map

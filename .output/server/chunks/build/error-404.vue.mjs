@@ -1,7 +1,7 @@
 import { _ as __nuxt_component_0 } from './nuxt-link.mjs';
 import { mergeProps, withCtx, createTextVNode, toDisplayString, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrInterpolate, ssrRenderComponent } from 'vue/server-renderer';
-import { _ as _export_sfc } from './server.mjs';
+import { _ as _export_sfc } from './_plugin-vue_export-helper.mjs';
 import { u as useHead } from './v3.mjs';
 import '../nitro/nitro.mjs';
 import 'node:http';
@@ -13,6 +13,7 @@ import 'node:path';
 import 'node:crypto';
 import 'node:url';
 import 'ipx';
+import './server.mjs';
 import 'pinia';
 import 'vue-router';
 import '../routes/renderer.mjs';

@@ -1,10 +1,11 @@
 import { _ as __nuxt_component_0 } from './nuxt-link.mjs';
-import { defineComponent, ref, watch, mergeProps, unref, withCtx, createVNode, createTextVNode, toDisplayString, useSSRContext } from 'vue';
-import { ssrRenderAttrs, ssrRenderComponent, ssrRenderAttr, ssrRenderClass, ssrRenderList, ssrInterpolate } from 'vue/server-renderer';
-import { u as useBankStore, _ as _export_sfc } from './server.mjs';
+import { defineComponent, ref, watch, unref, withCtx, createVNode, createTextVNode, toDisplayString, useSSRContext } from 'vue';
+import { ssrRenderComponent, ssrRenderAttr, ssrRenderClass, ssrRenderList, ssrInterpolate } from 'vue/server-renderer';
+import { u as useBankStore } from './server.mjs';
 import { u as useWindowSize, a as useStorage } from './index.mjs';
 import { f as fb, y as yt, x, p as pt, i as insta, l as logo } from './icon-instagram.svg.mjs';
 import { c as closeMenu } from './close_x.svg.mjs';
+import { _ as _export_sfc } from './_plugin-vue_export-helper.mjs';
 import '../nitro/nitro.mjs';
 import 'node:http';
 import 'node:https';
@@ -30,7 +31,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   setup(__props) {
     const { width } = useWindowSize();
     const store = useBankStore();
-    const navMenu = ref();
+    ref();
     const my_theme = useStorage("my-theme", false);
     const isClient = ref(false);
     const linksData = ref(["home", "news", "about", "faq", "contact"]);
@@ -73,11 +74,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _push, _parent, _attrs) => {
       const _component_NuxtLink = __nuxt_component_0;
-      _push(`<nav${ssrRenderAttrs(mergeProps({
-        class: "py-[2rem] dark:border-b-[2px] w-full z-[1000] fixed lg:w-full bg-neutral-4 dark:bg-neutral-40",
-        ref_key: "navMenu",
-        ref: navMenu
-      }, _attrs))} data-v-46af29bc><div class="px-[3rem] md:px-[5rem] flex justify-between lg:container relative lg:items-center lg:justify-between lg:px-[3.5rem] xl:px-[7rem]" data-v-46af29bc>`);
+      _push(`<!--[-->`);
+      if (unref(store).isLoaded) {
+        _push(`<div class="absolute top-0 left-0 w-full h-full bg-neutral-4 z-[10000]" data-v-48f76b5f></div>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`<nav class="py-[2rem] dark:border-b-[2px] w-full z-[1000] fixed lg:w-full bg-neutral-4 dark:bg-neutral-40" data-v-48f76b5f><div class="px-[3rem] md:px-[5rem] flex justify-between lg:container relative lg:items-center lg:justify-between lg:px-[3.5rem] xl:px-[7rem]" data-v-48f76b5f>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: "/",
         class: "flex items-center gap-x-[1rem] select-none z-[50] hover:cursor-pointer",
@@ -85,7 +88,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<img${ssrRenderAttr("src", unref(logo))} class="w-[5rem] h-[5rem]" alt="logo easybank" data-v-46af29bc${_scopeId}><p class="${ssrRenderClass([unref(store).isOpenMenu ? "text-neutral-4" : "text-primary-1 dark:text-neutral-4", "font-w700 text-[2rem] hidden sm:block"])}" data-v-46af29bc${_scopeId}> mWallet </p>`);
+            _push2(`<img${ssrRenderAttr("src", unref(logo))} class="w-[5rem] h-[5rem]" alt="logo easybank" data-v-48f76b5f${_scopeId}><p class="${ssrRenderClass([unref(store).isOpenMenu ? "text-neutral-4" : "text-primary-1 dark:text-neutral-4", "font-w700 text-[2rem] hidden sm:block"])}" data-v-48f76b5f${_scopeId}> mWallet </p>`);
           } else {
             return [
               createVNode("img", {
@@ -101,9 +104,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         }),
         _: 1
       }, _parent));
-      _push(`<button type="button" aria-label="open close nav menu" class="lg:hidden" data-v-46af29bc><img${ssrRenderAttr("src", unref(store).isOpenMenu ? unref(closeMenu) : unref(hamburger))}${ssrRenderAttr("alt", unref(store).isOpenMenu ? "close menu" : "open menu")} class="${ssrRenderClass([isClient.value && unref(my_theme) && "light_burger", "h-[3rem] z-[100]"])}" data-v-46af29bc></button>`);
+      _push(`<div class="flex items-center gap-x-[2rem] lg:hidden" data-v-48f76b5f><button aria-label="change theme" data-v-48f76b5f><img${ssrRenderAttr("src", isClient.value && unref(my_theme) ? unref(moon) : unref(sun))}${ssrRenderAttr("alt", isClient.value && unref(my_theme) ? "moon" : "sun")} class="${ssrRenderClass([isClient.value && !unref(my_theme) && "white_moon", "w-[2.5rem] h-[2.5rem]"])}" data-v-48f76b5f></button><button type="button" aria-label="open close nav menu" data-v-48f76b5f><img${ssrRenderAttr("src", unref(store).isOpenMenu ? unref(closeMenu) : unref(hamburger))}${ssrRenderAttr("alt", unref(store).isOpenMenu ? "close menu" : "open menu")} class="${ssrRenderClass([isClient.value && !unref(my_theme) && "light_burger", "h-[3rem] z-[100]"])}" data-v-48f76b5f></button></div>`);
       if (unref(store).isOpenMenu) {
-        _push(`<div class="absolute top-[-3rem] md:px-[5rem] h-[103vh] w-full left-0 bg-primary-1 bg-opacity-90 p-[3rem] rounded-md lg:none text-white" data-v-46af29bc><div class="flex items-center justify-between w-full" data-v-46af29bc><button class="p-[1rem] pr-0 ml-auto" data-v-46af29bc><img${ssrRenderAttr("src", unref(closeMenu))} alt="close menu" class="invert" data-v-46af29bc></button></div><div class="mt-[5rem] grid gap-y-[1.5rem] justify-items-center max-w-[50rem] mx-auto" data-v-46af29bc><!--[-->`);
+        _push(`<div class="absolute top-[-3rem] md:px-[5rem] h-[103vh] w-full left-0 bg-primary-1 bg-opacity-90 p-[3rem] rounded-md lg:none text-white" data-v-48f76b5f><div class="flex items-center justify-between w-full" data-v-48f76b5f><button class="p-[1rem] pr-0 ml-auto" data-v-48f76b5f><img${ssrRenderAttr("src", unref(closeMenu))} alt="close menu" class="invert" data-v-48f76b5f></button></div><div class="mt-[5rem] grid gap-y-[1.5rem] justify-items-center max-w-[50rem] mx-auto" data-v-48f76b5f><!--[-->`);
         ssrRenderList(linksData.value, (item, index) => {
           _push(ssrRenderComponent(_component_NuxtLink, {
             to: unref(store).pages[index],
@@ -123,15 +126,15 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             _: 2
           }, _parent));
         });
-        _push(`<!--]--></div><div class="flex justify-center gap-x-[2rem] my-[3.5rem] mt-[7rem]" data-v-46af29bc><!--[-->`);
+        _push(`<!--]--></div><div class="flex justify-center gap-x-[2rem] my-[3.5rem] mt-[7rem]" data-v-48f76b5f><!--[-->`);
         ssrRenderList(socialsData.value, (item, index) => {
-          _push(`<a href="#" data-v-46af29bc><img${ssrRenderAttr("src", item.img)}${ssrRenderAttr("alt", `${item.alt} icon`)} class="w-[3rem] lg:brightness-15" data-v-46af29bc></a>`);
+          _push(`<a href="#" data-v-48f76b5f><img${ssrRenderAttr("src", item.img)}${ssrRenderAttr("alt", `${item.alt} icon`)} class="w-[3rem] lg:brightness-15" data-v-48f76b5f></a>`);
         });
         _push(`<!--]--></div></div>`);
       } else {
         _push(`<!---->`);
       }
-      _push(`<div class="hidden lg:flex gap-x-[3.5rem]" data-v-46af29bc><!--[-->`);
+      _push(`<div class="hidden lg:flex gap-x-[3.5rem]" data-v-48f76b5f><!--[-->`);
       ssrRenderList(linksData.value, (item, index) => {
         _push(ssrRenderComponent(_component_NuxtLink, {
           "active-class": unref(store).pages[index] ? "styleLink text-primary-1 dark:text-neutral-4" : "",
@@ -151,7 +154,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           _: 2
         }, _parent));
       });
-      _push(`<!--]--></div><div class="flex items-center gap-x-[2rem]" data-v-46af29bc><button aria-label="change theme" data-v-46af29bc><img${ssrRenderAttr("src", isClient.value && unref(my_theme) ? unref(moon) : unref(sun))}${ssrRenderAttr("alt", isClient.value && unref(my_theme) ? "moon" : "sun")} class="${ssrRenderClass([isClient.value && !unref(my_theme) && "white_moon", "w-[2.5rem] h-[2.5rem]"])}" data-v-46af29bc></button><button type="button" class="hidden lg:block capitalize bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] lg:hover:opacity-60 lg:dark:hover:opacity-100 lg:dark:hover:text-primary-1 lg:dark:transition-colors lg:transition-opacity" data-v-46af29bc> request invite </button></div></div></nav>`);
+      _push(`<!--]--></div><div class="items-center gap-x-[2rem] hidden lg:flex" data-v-48f76b5f><button aria-label="change theme" data-v-48f76b5f><img${ssrRenderAttr("src", isClient.value && unref(my_theme) ? unref(moon) : unref(sun))}${ssrRenderAttr("alt", isClient.value && unref(my_theme) ? "moon" : "sun")} class="${ssrRenderClass([isClient.value && !unref(my_theme) && "white_moon", "w-[2.5rem] h-[2.5rem]"])}" data-v-48f76b5f></button><button type="button" class="capitalize bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] lg:hover:opacity-60 lg:dark:hover:opacity-100 lg:dark:hover:text-primary-1 lg:dark:transition-colors lg:transition-opacity" data-v-48f76b5f> request invite </button></div></div></nav><!--]-->`);
     };
   }
 });
@@ -162,7 +165,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("layouts/default.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const _default = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-46af29bc"]]);
+const _default = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-48f76b5f"]]);
 
 export { _default as default };
 //# sourceMappingURL=default.vue.mjs.map

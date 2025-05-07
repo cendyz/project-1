@@ -165,7 +165,7 @@ const errorStyles = 'mt-[.3rem] text-[1.2rem] text-[#EF4444]'
 }
 
 .dark_pattern {
-	background-image: url('../assets/images/low_contrast_linen.png');
+	background-image: url('../assets/images/vintage-wallpaper.png');
 }
 
 .my_shadow {

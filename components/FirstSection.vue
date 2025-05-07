@@ -164,16 +164,6 @@ const iconStyles = 'absolute opacity-[5%] w-[15rem] md:w-[20rem] z-[1] 2xl:w-[30
 	box-shadow: 0 -10px 20px -5px rgba(115, 115, 115, 0.75);
 }
 
-.v-enter-active,
-.v-leave-active {
-	transition: opacity 0.2s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-	opacity: 0;
-}
-
 .boxShadow {
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }

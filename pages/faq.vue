@@ -65,6 +65,13 @@ const new_faq_data = computed(() => {
 	return faq_data.value.filter(item => item.question.toLowerCase().includes(input_data.value.user_print.toLowerCase()))
 })
 
+onMounted(() => {
+	setTimeout(() => {
+		store.isLoaded = false
+		document.body.style.overflow = 'visible'
+	}, 50)
+})
+
 const faq_data = ref([
 	{
 		question: '1. Is mWallet free to use?',

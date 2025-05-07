@@ -1,6 +1,6 @@
-import { F as FirstSection_vue_vue_type_style_index_0_scoped_9c194635_lang } from './FirstSection-styles-1.mjs.mjs';
+import { F as FirstSection_vue_vue_type_style_index_0_scoped_8af2607a_lang } from './FirstSection-styles-1.mjs.mjs';
 
-const FirstSectionStyles_BjZL4ErH = [FirstSection_vue_vue_type_style_index_0_scoped_9c194635_lang];
+const FirstSectionStyles_BjZL4ErH = [FirstSection_vue_vue_type_style_index_0_scoped_8af2607a_lang];
 
 export { FirstSectionStyles_BjZL4ErH as default };
 //# sourceMappingURL=FirstSection-styles.BjZL4ErH.mjs.map

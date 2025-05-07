@@ -10,6 +10,7 @@ export const useBankStore = defineStore('bank', {
 	state: () => ({
 		isLight: false,
 		isOpenMenu: false,
+		isLoaded: true,
 		news: ['3531', '3241', '13167', '1367', '90131', '241', '125'],
 		articles_data: [
 			{

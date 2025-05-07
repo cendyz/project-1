@@ -22,9 +22,3 @@ onMounted(() => {
 	)
 })
 </script>
-
-<style lang="scss">
-* {
-	transition: all 0.15s;
-}
-</style>

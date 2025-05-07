@@ -15,6 +15,7 @@ import 'node:path';
 import 'node:crypto';
 import 'node:url';
 import 'ipx';
+import './_plugin-vue_export-helper.mjs';
 import 'pinia';
 import 'vue-router';
 
@@ -91,7 +92,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     return (_ctx, _push, _parent, _attrs) => {
       const _component_NuxtMarquee = _sfc_main$1;
       const _component_Footer = __nuxt_component_1;
-      _push(`<!--[--><header class="pb-[5rem] pt-[11rem] bg-neutral-3 dark:bg-neutral-21"><h1 class="uppercase text-primary-1 dark:text-primary-10 text-[5rem] px-[2rem] text-center font-w700">latest news</h1><div class="py-[1rem] border-t-[2px] border-b-[2px] border-primary-2 dark:bg-neutral-40 dark:text-primary-10 bg-neutral-4 overflow-hidden mt-[2rem]">`);
+      _push(`<!--[--><header class="pb-[5rem] pt-[11rem] bg-neutral-3 dark:bg-neutral-21"><h1 class="uppercase text-primary-1 dark:text-primary-10 text-[5rem] px-[2rem] text-center font-w700"> latest news </h1><div class="py-[1rem] border-t-[2px] border-b-[2px] border-primary-2 dark:bg-neutral-40 dark:text-primary-10 bg-neutral-4 overflow-hidden mt-[2rem]">`);
       _push(ssrRenderComponent(_component_NuxtMarquee, { class: "px-[3rem] flex items-center justify-between min-w-full select-none" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
