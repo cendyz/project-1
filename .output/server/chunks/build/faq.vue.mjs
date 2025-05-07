@@ -1,8 +1,7 @@
 import { _ as __nuxt_component_1 } from './Footer.vue.mjs';
 import { defineComponent, ref, computed, unref, useSSRContext } from 'vue';
 import { ssrRenderAttr, ssrRenderClass, ssrRenderList, ssrInterpolate, ssrRenderComponent } from 'vue/server-renderer';
-import { u as useBankStore } from './server.mjs';
-import { _ as _export_sfc } from './_plugin-vue_export-helper.mjs';
+import { u as useBankStore, _ as _export_sfc } from './server.mjs';
 import './icon-instagram.svg.mjs';
 import './nuxt-link.mjs';
 import '../nitro/nitro.mjs';

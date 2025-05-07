@@ -1,11 +1,10 @@
 import { _ as __nuxt_component_0 } from './nuxt-link.mjs';
 import { defineComponent, ref, watch, mergeProps, unref, withCtx, createVNode, createTextVNode, toDisplayString, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderAttr, ssrRenderClass, ssrRenderList, ssrInterpolate } from 'vue/server-renderer';
-import { u as useBankStore } from './server.mjs';
+import { u as useBankStore, _ as _export_sfc } from './server.mjs';
 import { u as useWindowSize, a as useStorage } from './index.mjs';
 import { f as fb, y as yt, x, p as pt, i as insta, l as logo } from './icon-instagram.svg.mjs';
 import { c as closeMenu } from './close_x.svg.mjs';
-import { _ as _export_sfc } from './_plugin-vue_export-helper.mjs';
 import '../nitro/nitro.mjs';
 import 'node:http';
 import 'node:https';

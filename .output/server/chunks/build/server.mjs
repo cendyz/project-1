@@ -2,7 +2,7 @@ import { shallowReactive, reactive, effectScope, getCurrentScope, hasInjectionCo
 import { i as createHooks, j as getContext, e as createError$1, t as toRouteMatcher, k as createRouter, l as defu, m as hasProtocol, n as joinURL, w as withQuery, s as sanitizeStatusCode, o as isScriptProtocol, q as executeAsync, p as publicAssetsURL } from '../nitro/nitro.mjs';
 import { shouldHydrate, defineStore, createPinia, setActivePinia } from 'pinia';
 import { START_LOCATION, createMemoryHistory, createRouter as createRouter$1, useRoute as useRoute$1, RouterView } from 'vue-router';
-import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSuspense, ssrRenderVNode } from 'vue/server-renderer';
+import { ssrRenderComponent, ssrRenderSuspense, ssrRenderVNode } from 'vue/server-renderer';
 
 const appLayoutTransition = false;
 const appPageTransition = false;
@@ -1113,25 +1113,30 @@ function normalizeSlot(slot, data) {
   return slotContent.length === 1 ? h(slotContent[0]) : h(Fragment, void 0, slotContent);
 }
 
-const _sfc_main$2 = /* @__PURE__ */ defineComponent({
-  __name: "app",
-  __ssrInlineRender: true,
-  setup(__props) {
-    const isReady = ref(false);
-    return (_ctx, _push, _parent, _attrs) => {
-      const _component_NuxtLayout = __nuxt_component_0;
-      const _component_NuxtPage = __nuxt_component_1;
-      if (unref(isReady)) {
-        _push(`<div${ssrRenderAttrs(_attrs)}>`);
-        _push(ssrRenderComponent(_component_NuxtLayout, null, null, _parent));
-        _push(ssrRenderComponent(_component_NuxtPage, null, null, _parent));
-        _push(`</div>`);
-      } else {
-        _push(`<!---->`);
-      }
-    };
+const _export_sfc = (sfc, props) => {
+  const target = sfc.__vccOpts || sfc;
+  for (const [key, val] of props) {
+    target[key] = val;
   }
-});
+  return target;
+};
+
+const _sfc_main$2 = {};
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
+  const _component_NuxtLayout = __nuxt_component_0;
+  const _component_NuxtPage = __nuxt_component_1;
+  _push(`<!--[-->`);
+  _push(ssrRenderComponent(_component_NuxtLayout, null, null, _parent));
+  _push(ssrRenderComponent(_component_NuxtPage, null, null, _parent));
+  _push(`<!--]-->`);
+}
+const _sfc_setup$2 = _sfc_main$2.setup;
+_sfc_main$2.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("app.vue");
+  return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
+};
+const AppComponent = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["ssrRender", _sfc_ssrRender]]);
 
 const _sfc_main$1 = {
   __name: "nuxt-error-page",
@@ -1203,7 +1208,7 @@ const _sfc_main = {
           } else if (unref(SingleRenderer)) {
             ssrRenderVNode(_push, createVNode(resolveDynamicComponent(unref(SingleRenderer)), null, null), _parent);
           } else {
-            _push(ssrRenderComponent(unref(_sfc_main$2), null, null, _parent));
+            _push(ssrRenderComponent(unref(AppComponent), null, null, _parent));
           }
         },
         _: 1
@@ -1244,5 +1249,5 @@ const server = /*#__PURE__*/Object.freeze({
   default: entry$1
 });
 
-export { useNuxtApp as a, useRuntimeConfig as b, useRouter as c, useRoute as d, nuxtLinkDefaults as e, navigateTo as n, resolveRouteObject as r, server as s, tryUseNuxtApp as t, useBankStore as u };
+export { _export_sfc as _, useNuxtApp as a, useRuntimeConfig as b, useRouter as c, useRoute as d, nuxtLinkDefaults as e, navigateTo as n, resolveRouteObject as r, server as s, tryUseNuxtApp as t, useBankStore as u };
 //# sourceMappingURL=server.mjs.map

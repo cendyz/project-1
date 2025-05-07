@@ -15,7 +15,6 @@ import 'node:path';
 import 'node:crypto';
 import 'node:url';
 import 'ipx';
-import './_plugin-vue_export-helper.mjs';
 import 'pinia';
 import 'vue-router';
 

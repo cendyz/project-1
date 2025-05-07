@@ -2,7 +2,7 @@ import { defineComponent, ref, mergeProps, unref, withCtx, createTextVNode, toDi
 import { ssrRenderAttrs, ssrRenderAttr, ssrRenderList, ssrRenderComponent, ssrInterpolate } from 'vue/server-renderer';
 import { f as fb, y as yt, x, p as pt, i as insta, l as logo } from './icon-instagram.svg.mjs';
 import { _ as __nuxt_component_0 } from './nuxt-link.mjs';
-import { _ as _export_sfc } from './_plugin-vue_export-helper.mjs';
+import { _ as _export_sfc } from './server.mjs';
 
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "Footer",
