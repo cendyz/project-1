@@ -1,0 +1,4 @@
+## aha05
+
+User-agent: *
+Disallow:

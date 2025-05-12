@@ -25,7 +25,7 @@
 						<h3 class="font-w700 mb-[2rem] text-[2rem]">{{ item.title }}</h3>
 						<p>{{ item.desc }}</p>
 					</div>
-					<img v-if="item.img" :src="item.img" alt="phone" class="block lg:h-[30rem]" />
+					<NuxtImg v-if="item.img" :src="item.img" alt="phone" class="block lg:h-[30rem] w-[30rem]"></NuxtImg>
 				</div>
 			</div>
 		</div>
@@ -33,10 +33,6 @@
 </template>
 
 <script lang="ts" setup>
-import second_img from 'assets/images/2.png'
-import third_img from 'assets/images/3.png'
-import six_img from 'assets/images/4.png'
-
 interface GridData {
 	title: string
 	desc: string
@@ -53,13 +49,13 @@ const grid_data = ref<GridData[]>([
 	{
 		title: 'Set Smart Budgets',
 		desc: 'Create personalized budgets and receive insights that help you stay on track with your financial goals.',
-		img: second_img,
+		img: '/img/2.png',
 		my_class: 'two dark:text-neutral-4  dark:bg-primary-1',
 	},
 	{
 		title: 'Analyze Your Finances',
 		desc: 'Visualize your income, expenses, and trends with intuitive graphs and detailed reports.',
-		img: third_img,
+		img: '/img/3.png',
 		my_class: 'three dark:text-neutral-4  dark:bg-primary-1',
 	},
 	{
@@ -75,7 +71,7 @@ const grid_data = ref<GridData[]>([
 	{
 		title: 'Stay Secure',
 		desc: 'Your data is protected with bank-level encryption and strict privacy controls — your security is our priority.',
-		img: six_img,
+		img: '/img/4.png',
 		my_class: 'six dark:text-neutral-4  dark:bg-primary-1',
 	},
 ])

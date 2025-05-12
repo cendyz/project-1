@@ -1,5 +1,5 @@
 <template>
-	<header class="pb-[5rem] pt-[11rem] bg-neutral-3 dark:bg-neutral-21">
+	<header class="pb-[5rem] pt-[11rem] bg-neutral-2 dark:bg-neutral-21">
 		<h1 class="uppercase text-primary-1 dark:text-primary-10 text-[5rem] px-[2rem] text-center font-w700">
 			latest news
 		</h1>
@@ -20,7 +20,7 @@
 			prefetch
 			:key="index"
 			class="rounded-lg overflow-hidden bg-neutral-2 dark:bg-neutral-40 dark:text-primary-10 max-w-[40rem] lg:flex lg:max-w-[110rem] lg:cursor-pointer border-[3px] border-transparent dark:border-neutral-4">
-			<img :src="item.img" :alt="item.alt" class="lg:w-[40rem] lg:h-[30rem]" />
+			<NuxtImg :src="item.img" :alt="item.alt" class="lg:w-[40rem] lg:h-[30rem]"></NuxtImg>
 			<div class="p-[2rem]">
 				<h2 class="font-w700 text-[2rem] lg:text-[3rem] lg:w-[40rem]">{{ item.title }}</h2>
 				<p class="text-[1.4rem] mt-[1rem] lg:text-[1.6rem]">{{ item.desc }}</p>

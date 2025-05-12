@@ -3,7 +3,7 @@
 		<div v-if="store.isLoaded" class="absolute top-0 left-0 w-full h-[1000vh] bg-neutral-4 z-[10000]"></div>
 	</Transition>
 	<nav
-		class="py-[2rem] dark:border-b-[2px] w-full z-[1000] fixed lg:w-full bg-neutral-4 dark:bg-neutral-40"
+		class="py-[2rem] dark:border-b-[2px] w-full z-[1000] fixed lg:w-full bg-neutral-4 dark:bg-neutral-40 border-b-[2px] border-b-primary-2"
 		ref="navMenu">
 		<div
 			class="px-[3rem] md:px-[5rem] flex justify-between lg:container relative lg:items-center lg:justify-between lg:px-[3.5rem] xl:px-[7rem]">

@@ -8,7 +8,7 @@
 					v-for="(item, index) in store.articles_data.slice(0, 4)"
 					@click="goToArticle(index)"
 					:key="index">
-					<NuxtImg :src="item.img" :alt="item.alt" class="block h-[27rem] w-full z-[10]" />
+					<NuxtImg :src="item.img" :alt="item.alt" class="block h-[27rem] w-[33rem] z-[10]" />
 					<div
 						class="p-[3rem] pb-[3.9rem mt-[-2.5rem] bg-neutral-4 dark:bg-primary-1 z-[20] relative text-neutral-1 text-left grid gap-y-[1rem]">
 						<p class="text-[1.1rem] xl:text-[1.2rem] dark:text-neutral-10">{{ item.quote }}</p>

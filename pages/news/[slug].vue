@@ -8,10 +8,10 @@
 		</h1>
 	</header>
 	<main class="dark:bg-neutral-21 bg-neutral-3">
-		<img
+		<NuxtImg
 			:src="store.articles_data[store.news.indexOf(route.params.slug)].img"
 			:alt="store.articles_data[store.news.indexOf(route.params.slug)].alt"
-			class="md:max-w-[70rem] md:mx-auto md:rounded-xl" />
+			class="md:max-w-[70rem] md:mx-auto md:rounded-xl"></NuxtImg>
 		<div class="px-[3rem] py-[6rem] grid gap-y-[4rem] md:max-w-[75rem] md:mx-auto dark:text-primary-10">
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus libero a arcu tincidunt, nec fermentum

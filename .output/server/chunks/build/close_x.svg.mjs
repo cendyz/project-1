@@ -1,0 +1,4 @@
+const closeMenu = "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%20viewBox='0%200%2024%2024'%3e%3c!--%20Icon%20from%20Material%20Symbols%20by%20Google%20-%20https://github.com/google/material-design-icons/blob/master/LICENSE%20--%3e%3cpath%20fill='currentColor'%20d='m12%2013.4l-4.9%204.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9%204.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4%2012l4.9%204.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z'/%3e%3c/svg%3e";
+
+export { closeMenu as c };
+//# sourceMappingURL=close_x.svg.mjs.map
