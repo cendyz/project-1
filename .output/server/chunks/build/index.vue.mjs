@@ -41,6 +41,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
       const _component_NuxtImg = _sfc_main$7;
       _push(`<header${ssrRenderAttrs(mergeProps({ class: "bg-neutral-3 lg:overflow-x-clip lg:pb-0 dark:bg-neutral-30" }, _attrs))}><div class="container relative text-center pt-[9rem] sm:pt-[9rem] lg:pt-[11rem] lg:h-[65rem] lg:flex lg:px-[3.5rem] xl:px-[7rem]"><picture><source${ssrRenderAttr("srcset", unref(desktopIntro))} media="(min-width: 640px)">`);
       _push(ssrRenderComponent(_component_NuxtImg, {
+        format: "webp",
         src: unref(mobileIntro),
         alt: "",
         "aria-hidden": "true",
@@ -49,6 +50,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
       _push(`</picture>`);
       _push(ssrRenderComponent(_component_NuxtImg, {
         src: unref(wallet),
+        format: "webp",
         alt: "phone and wallet",
         class: "block w-[calc(100%-3rem)] mx-auto lg:absolute top-0 z-[30] relative md:w-[70%] md:top-[5rem] lg:w-[47rem] xl:w-[55rem] lg:left-[80.5rem] xl:left-[99.5rem] lg:top-[55%] lg:translate-x-[-50%] lg:translate-y-[-50%] lg:z-[20] 2xl:left-[126rem]"
       }, null, _parent));
@@ -166,13 +168,13 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
       {
         title: "Set Smart Budgets",
         desc: "Create personalized budgets and receive insights that help you stay on track with your financial goals.",
-        img: "/img/2.webp",
+        img: "/img/2.png",
         my_class: "two dark:text-neutral-4  dark:bg-primary-1"
       },
       {
         title: "Analyze Your Finances",
         desc: "Visualize your income, expenses, and trends with intuitive graphs and detailed reports.",
-        img: "/img/3.webp",
+        img: "/img/3.png",
         my_class: "three dark:text-neutral-4  dark:bg-primary-1"
       },
       {
@@ -188,20 +190,21 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
       {
         title: "Stay Secure",
         desc: "Your data is protected with bank-level encryption and strict privacy controls — your security is our priority.",
-        img: "/img/4.webp",
+        img: "/img/4.png",
         my_class: "six dark:text-neutral-4  dark:bg-primary-1"
       }
     ]);
     return (_ctx, _push, _parent, _attrs) => {
       const _component_NuxtImg = _sfc_main$7;
-      _push(`<section${ssrRenderAttrs(mergeProps({ class: "grid py-[10rem] px-[3rem] pb-[10rem] bg-neutral-3 dark:bg-neutral-21" }, _attrs))} data-v-9dada7fb><div data-v-9dada7fb><div class="lg:w-[50rem] lg:mx-auto lg:text-center" data-v-9dada7fb><h2 class="capitalize text-[2.8rem] md:text-[3.5rem] mb-[2rem] text-primary-1 dark:text-neutral-10" data-v-9dada7fb> Over 20 Tools to Manage Your Finances. Unlimited Control. </h2><p class="leading-[1.7] text-primary-1 dark:text-neutral-10" data-v-9dada7fb> Track your expenses in real time. Set smart budgets with just a few taps. Plan your savings goals and manage your money anywhere, anytime. With mWallet, your financial future is in your hands. </p></div><div class="grid gap-[3rem] mt-[5rem] sm:block sm:columns-2 lg:grid lg:grid-cols-2 grid_cols lg:w-[100rem] lg:mx-auto" data-v-9dada7fb><!--[-->`);
+      _push(`<section${ssrRenderAttrs(mergeProps({ class: "grid py-[10rem] px-[3rem] pb-[10rem] bg-neutral-3 dark:bg-neutral-21" }, _attrs))} data-v-bb19ba74><div data-v-bb19ba74><div class="lg:w-[50rem] lg:mx-auto lg:text-center" data-v-bb19ba74><h2 class="capitalize text-[2.8rem] md:text-[3.5rem] mb-[2rem] text-primary-1 dark:text-neutral-10" data-v-bb19ba74> Over 20 Tools to Manage Your Finances. Unlimited Control. </h2><p class="leading-[1.7] text-primary-1 dark:text-neutral-10" data-v-bb19ba74> Track your expenses in real time. Set smart budgets with just a few taps. Plan your savings goals and manage your money anywhere, anytime. With mWallet, your financial future is in your hands. </p></div><div class="grid gap-[3rem] mt-[5rem] sm:block sm:columns-2 lg:grid lg:grid-cols-2 grid_cols lg:w-[100rem] lg:mx-auto" data-v-bb19ba74><!--[-->`);
       ssrRenderList(unref(grid_data), (item, index) => {
-        _push(`<div data-aos="zoom-in-up"${ssrRenderAttr("data-aos-once", true)}${ssrRenderAttr("delay", index * 200)} prefetch class="${ssrRenderClass([[item.my_class, item.img ? "lg:flex-row " : "lg:flex-col"], "border-[2px] border-primary-1 dark:border-primary-10 rounded-3xl lg:flex lg:items-center overflow-hidden mx-auto lg:max-w-[100%] lg:mx-0 max-w-[40rem] sm:mb-[3.5rem] lg:mb-0"])}" data-v-9dada7fb><div class="p-[2rem] lg:m-auto lg:text-left" data-v-9dada7fb><h3 class="font-w700 mb-[2rem] text-[2rem]" data-v-9dada7fb>${ssrInterpolate(item.title)}</h3><p data-v-9dada7fb>${ssrInterpolate(item.desc)}</p></div>`);
+        _push(`<div data-aos="zoom-in-up"${ssrRenderAttr("data-aos-once", true)}${ssrRenderAttr("delay", index * 200)} prefetch class="${ssrRenderClass([[item.my_class, item.img ? "lg:flex-row " : "lg:flex-col"], "border-[2px] border-primary-1 dark:border-primary-10 rounded-3xl lg:flex lg:items-center overflow-hidden mx-auto lg:max-w-[100%] lg:mx-0 max-w-[40rem] sm:mb-[3.5rem] lg:mb-0"])}" data-v-bb19ba74><div class="p-[2rem] lg:m-auto lg:text-left" data-v-bb19ba74><h3 class="font-w700 mb-[2rem] text-[2rem]" data-v-bb19ba74>${ssrInterpolate(item.title)}</h3><p data-v-bb19ba74>${ssrInterpolate(item.desc)}</p></div>`);
         if (item.img) {
           _push(ssrRenderComponent(_component_NuxtImg, {
             src: item.img,
             alt: "phone",
-            class: "block lg:h-[30rem] w-[30rem]"
+            class: "block lg:h-[30rem] w-[30rem]",
+            format: "webp"
           }, null, _parent));
         } else {
           _push(`<!---->`);
@@ -219,7 +222,7 @@ _sfc_main$4.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/SecondSection.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-const __nuxt_component_1 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-9dada7fb"]]);
+const __nuxt_component_1 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-bb19ba74"]]);
 
 const clientOnlySymbol = Symbol.for("nuxt:client-only");
 const __nuxt_component_0 = defineComponent({

@@ -1,6 +1,6 @@
-import { _ as _slug__vue_vue_type_style_index_0_scoped_8d0cc525_lang } from './_slug_-styles-1.mjs.mjs';
+import { _ as _slug__vue_vue_type_style_index_0_scoped_2989b96d_lang } from './_slug_-styles-1.mjs.mjs';
 
-const _slug_Styles_CRE9OwY_ = [_slug__vue_vue_type_style_index_0_scoped_8d0cc525_lang, _slug__vue_vue_type_style_index_0_scoped_8d0cc525_lang];
+const _slug_Styles_CRE9OwY_ = [_slug__vue_vue_type_style_index_0_scoped_2989b96d_lang, _slug__vue_vue_type_style_index_0_scoped_2989b96d_lang];
 
 export { _slug_Styles_CRE9OwY_ as default };
 //# sourceMappingURL=_slug_-styles.CRE9OwY-.mjs.map

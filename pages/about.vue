@@ -5,7 +5,11 @@
 		<div
 			class="container lg:bg-primary-1 lg:dark:dark:bg-primary-10 dark:text-primary-1 lg:bg-opacity-90 lg:dark:dark:bg-opacity-75 rounded-3xl lg:mt-[4rem] lg:w-[954px] xl:w-[1140px] lg:mx-auto 2xl:w-[1396px]">
 			<div class="md:w-[50rem] md:mx-auto lg:flex lg:items-center lg:justify-center lg:w-auto">
-				<img :src="dollar" alt="dollar" class="bounce w-[35rem] mx-auto lg:mx-0 lg:w-[43rem] xl:mr-[8rem]" />
+				<NuxtImg
+					src="/img/dollar.png"
+					alt="dollar"
+					class="bounce w-[35rem] mx-auto lg:mx-0 lg:w-[43rem] xl:mr-[8rem]"
+					format="webp"></NuxtImg>
 				<div class="lg:w-[50rem]">
 					<h1 class="font-w700 text-[3rem] text-center text-shadow-lg leading-[1.3] md:text-[3.3rem] lg:w-auto">
 						Transforming
@@ -62,7 +66,6 @@
 </template>
 
 <script setup lang="ts">
-import dollar from 'assets/images/dollar.png'
 import { useBankStore } from '~/store/bank'
 const store = useBankStore()
 

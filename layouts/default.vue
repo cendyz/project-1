@@ -11,7 +11,7 @@
 				to="/"
 				class="flex items-center gap-x-[1rem] select-none z-[50] hover:cursor-pointer"
 				@click="store.isOpenMenu = false">
-				<NuxtImg src="/img/logo.png" class="w-[5rem] h-[5rem]" alt="logo easybank"></NuxtImg>
+				<NuxtImg src="/img/logo.png" class="w-[5rem] h-[5rem]" alt="logo easybank" format="webp"></NuxtImg>
 				<p
 					class="font-w700 text-[2rem] hidden sm:block"
 					:class="store.isOpenMenu ? 'text-neutral-4' : 'text-primary-1 dark:text-neutral-4'">

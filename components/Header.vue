@@ -5,6 +5,7 @@
 			<picture>
 				<source :srcset="desktopIntro" media="(min-width: 640px)" />
 				<NuxtImg
+					format="webp"
 					:src="mobileIntro"
 					alt=""
 					aria-hidden="true"
@@ -12,6 +13,7 @@
 			</picture>
 			<NuxtImg
 				:src="wallet"
+				format="webp"
 				alt="phone and wallet"
 				class="block w-[calc(100%-3rem)] mx-auto lg:absolute top-0 z-[30] relative md:w-[70%] md:top-[5rem] lg:w-[47rem] xl:w-[55rem] lg:left-[80.5rem] xl:left-[99.5rem] lg:top-[55%] lg:translate-x-[-50%] lg:translate-y-[-50%] lg:z-[20] 2xl:left-[126rem]" />
 			<div

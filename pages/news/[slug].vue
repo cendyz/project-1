@@ -9,6 +9,7 @@
 	</header>
 	<main class="dark:bg-neutral-21 bg-neutral-3">
 		<NuxtImg
+			format="webp"
 			:src="store.articles_data[store.news.indexOf(route.params.slug)].img"
 			:alt="store.articles_data[store.news.indexOf(route.params.slug)].alt"
 			class="md:max-w-[70rem] md:mx-auto md:rounded-xl"></NuxtImg>

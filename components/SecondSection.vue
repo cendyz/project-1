@@ -25,7 +25,12 @@
 						<h3 class="font-w700 mb-[2rem] text-[2rem]">{{ item.title }}</h3>
 						<p>{{ item.desc }}</p>
 					</div>
-					<NuxtImg v-if="item.img" :src="item.img" alt="phone" class="block lg:h-[30rem] w-[30rem]"></NuxtImg>
+					<NuxtImg
+						v-if="item.img"
+						:src="item.img"
+						alt="phone"
+						class="block lg:h-[30rem] w-[30rem]"
+						format="webp"></NuxtImg>
 				</div>
 			</div>
 		</div>
@@ -49,13 +54,13 @@ const grid_data = ref<GridData[]>([
 	{
 		title: 'Set Smart Budgets',
 		desc: 'Create personalized budgets and receive insights that help you stay on track with your financial goals.',
-		img: '/img/2.webp',
+		img: '/img/2.png',
 		my_class: 'two dark:text-neutral-4  dark:bg-primary-1',
 	},
 	{
 		title: 'Analyze Your Finances',
 		desc: 'Visualize your income, expenses, and trends with intuitive graphs and detailed reports.',
-		img: '/img/3.webp',
+		img: '/img/3.png',
 		my_class: 'three dark:text-neutral-4  dark:bg-primary-1',
 	},
 	{
@@ -71,7 +76,7 @@ const grid_data = ref<GridData[]>([
 	{
 		title: 'Stay Secure',
 		desc: 'Your data is protected with bank-level encryption and strict privacy controls — your security is our priority.',
-		img: '/img/4.webp',
+		img: '/img/4.png',
 		my_class: 'six dark:text-neutral-4  dark:bg-primary-1',
 	},
 ])

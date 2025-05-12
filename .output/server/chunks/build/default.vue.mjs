@@ -88,11 +88,11 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       const _component_NuxtImg = _sfc_main$1;
       _push(`<!--[-->`);
       if (unref(store).isLoaded) {
-        _push(`<div class="absolute top-0 left-0 w-full h-[1000vh] bg-neutral-4 z-[10000]" data-v-b7359e0f></div>`);
+        _push(`<div class="absolute top-0 left-0 w-full h-[1000vh] bg-neutral-4 z-[10000]" data-v-bd2fc74e></div>`);
       } else {
         _push(`<!---->`);
       }
-      _push(`<nav class="py-[2rem] dark:border-b-[2px] w-full z-[1000] fixed lg:w-full bg-neutral-4 dark:bg-neutral-40 border-b-[2px] border-b-primary-2" data-v-b7359e0f><div class="px-[3rem] md:px-[5rem] flex justify-between lg:container relative lg:items-center lg:justify-between lg:px-[3.5rem] xl:px-[7rem]" data-v-b7359e0f>`);
+      _push(`<nav class="py-[2rem] dark:border-b-[2px] w-full z-[1000] fixed lg:w-full bg-neutral-4 dark:bg-neutral-40 border-b-[2px] border-b-primary-2" data-v-bd2fc74e><div class="px-[3rem] md:px-[5rem] flex justify-between lg:container relative lg:items-center lg:justify-between lg:px-[3.5rem] xl:px-[7rem]" data-v-bd2fc74e>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: "/",
         class: "flex items-center gap-x-[1rem] select-none z-[50] hover:cursor-pointer",
@@ -103,15 +103,17 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             _push2(ssrRenderComponent(_component_NuxtImg, {
               src: "/img/logo.png",
               class: "w-[5rem] h-[5rem]",
-              alt: "logo easybank"
+              alt: "logo easybank",
+              format: "webp"
             }, null, _parent2, _scopeId));
-            _push2(`<p class="${ssrRenderClass([unref(store).isOpenMenu ? "text-neutral-4" : "text-primary-1 dark:text-neutral-4", "font-w700 text-[2rem] hidden sm:block"])}" data-v-b7359e0f${_scopeId}> mWallet </p>`);
+            _push2(`<p class="${ssrRenderClass([unref(store).isOpenMenu ? "text-neutral-4" : "text-primary-1 dark:text-neutral-4", "font-w700 text-[2rem] hidden sm:block"])}" data-v-bd2fc74e${_scopeId}> mWallet </p>`);
           } else {
             return [
               createVNode(_component_NuxtImg, {
                 src: "/img/logo.png",
                 class: "w-[5rem] h-[5rem]",
-                alt: "logo easybank"
+                alt: "logo easybank",
+                format: "webp"
               }),
               createVNode("p", {
                 class: ["font-w700 text-[2rem] hidden sm:block", unref(store).isOpenMenu ? "text-neutral-4" : "text-primary-1 dark:text-neutral-4"]
@@ -121,9 +123,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         }),
         _: 1
       }, _parent));
-      _push(`<div class="flex items-center gap-x-[2rem] lg:hidden" data-v-b7359e0f><button aria-label="change theme" data-v-b7359e0f><img${ssrRenderAttr("src", isClient.value && unref(my_theme) ? unref(moon) : unref(sun))}${ssrRenderAttr("alt", isClient.value && unref(my_theme) ? "moon" : "sun")} class="${ssrRenderClass([isClient.value && !unref(my_theme) && "white_moon", "w-[2.5rem] h-[2.5rem]"])}" data-v-b7359e0f></button><button type="button" aria-label="open close nav menu" data-v-b7359e0f><img${ssrRenderAttr("src", unref(store).isOpenMenu ? unref(closeMenu) : unref(hamburger))}${ssrRenderAttr("alt", unref(store).isOpenMenu ? "close menu" : "open menu")} class="${ssrRenderClass([isClient.value && !unref(my_theme) && "light_burger", "h-[3rem] z-[100]"])}" data-v-b7359e0f></button></div>`);
+      _push(`<div class="flex items-center gap-x-[2rem] lg:hidden" data-v-bd2fc74e><button aria-label="change theme" data-v-bd2fc74e><img${ssrRenderAttr("src", isClient.value && unref(my_theme) ? unref(moon) : unref(sun))}${ssrRenderAttr("alt", isClient.value && unref(my_theme) ? "moon" : "sun")} class="${ssrRenderClass([isClient.value && !unref(my_theme) && "white_moon", "w-[2.5rem] h-[2.5rem]"])}" data-v-bd2fc74e></button><button type="button" aria-label="open close nav menu" data-v-bd2fc74e><img${ssrRenderAttr("src", unref(store).isOpenMenu ? unref(closeMenu) : unref(hamburger))}${ssrRenderAttr("alt", unref(store).isOpenMenu ? "close menu" : "open menu")} class="${ssrRenderClass([isClient.value && !unref(my_theme) && "light_burger", "h-[3rem] z-[100]"])}" data-v-bd2fc74e></button></div>`);
       if (unref(store).isOpenMenu) {
-        _push(`<div class="absolute top-[-3rem] md:px-[5rem] h-[103vh] w-full left-0 bg-primary-1 bg-opacity-90 p-[3rem] rounded-md lg:none text-white" data-v-b7359e0f><div class="flex items-center justify-between w-full" data-v-b7359e0f><button class="p-[1rem] pr-0 ml-auto" data-v-b7359e0f><img${ssrRenderAttr("src", unref(closeMenu))} alt="close menu" class="invert" data-v-b7359e0f></button></div><div class="mt-[5rem] grid gap-y-[1.5rem] justify-items-center max-w-[50rem] mx-auto" data-v-b7359e0f><!--[-->`);
+        _push(`<div class="absolute top-[-3rem] md:px-[5rem] h-[103vh] w-full left-0 bg-primary-1 bg-opacity-90 p-[3rem] rounded-md lg:none text-white" data-v-bd2fc74e><div class="flex items-center justify-between w-full" data-v-bd2fc74e><button class="p-[1rem] pr-0 ml-auto" data-v-bd2fc74e><img${ssrRenderAttr("src", unref(closeMenu))} alt="close menu" class="invert" data-v-bd2fc74e></button></div><div class="mt-[5rem] grid gap-y-[1.5rem] justify-items-center max-w-[50rem] mx-auto" data-v-bd2fc74e><!--[-->`);
         ssrRenderList(linksData.value, (item, index) => {
           _push(ssrRenderComponent(_component_NuxtLink, {
             to: unref(store).pages[index],
@@ -143,15 +145,15 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             _: 2
           }, _parent));
         });
-        _push(`<!--]--></div><div class="flex justify-center gap-x-[2rem] my-[3.5rem] mt-[7rem]" data-v-b7359e0f><!--[-->`);
+        _push(`<!--]--></div><div class="flex justify-center gap-x-[2rem] my-[3.5rem] mt-[7rem]" data-v-bd2fc74e><!--[-->`);
         ssrRenderList(socialsData.value, (item, index) => {
-          _push(`<a href="#" data-v-b7359e0f><img${ssrRenderAttr("src", item.img)}${ssrRenderAttr("alt", `${item.alt} icon`)} class="w-[3rem] lg:brightness-15" data-v-b7359e0f></a>`);
+          _push(`<a href="#" data-v-bd2fc74e><img${ssrRenderAttr("src", item.img)}${ssrRenderAttr("alt", `${item.alt} icon`)} class="w-[3rem] lg:brightness-15" data-v-bd2fc74e></a>`);
         });
         _push(`<!--]--></div></div>`);
       } else {
         _push(`<!---->`);
       }
-      _push(`<div class="hidden lg:flex gap-x-[3.5rem]" data-v-b7359e0f><!--[-->`);
+      _push(`<div class="hidden lg:flex gap-x-[3.5rem]" data-v-bd2fc74e><!--[-->`);
       ssrRenderList(linksData.value, (item, index) => {
         _push(ssrRenderComponent(_component_NuxtLink, {
           "active-class": unref(store).pages[index] ? "styleLink text-primary-1 dark:text-neutral-4" : "",
@@ -171,9 +173,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           _: 2
         }, _parent));
       });
-      _push(`<!--]--></div><div class="items-center gap-x-[2rem] hidden lg:flex" data-v-b7359e0f><button aria-label="change theme" data-v-b7359e0f><img${ssrRenderAttr("src", isClient.value && unref(my_theme) ? unref(moon) : unref(sun))}${ssrRenderAttr("alt", isClient.value && unref(my_theme) ? "moon" : "sun")} class="${ssrRenderClass([isClient.value && !unref(my_theme) && "white_moon", "w-[2.5rem] h-[2.5rem]"])}" data-v-b7359e0f></button><button type="button" class="capitalize bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] lg:hover:opacity-60 lg:dark:hover:opacity-100 lg:dark:hover:text-primary-1 lg:dark:transition-colors lg:transition-opacity" data-v-b7359e0f> request invite </button></div></div></nav>`);
+      _push(`<!--]--></div><div class="items-center gap-x-[2rem] hidden lg:flex" data-v-bd2fc74e><button aria-label="change theme" data-v-bd2fc74e><img${ssrRenderAttr("src", isClient.value && unref(my_theme) ? unref(moon) : unref(sun))}${ssrRenderAttr("alt", isClient.value && unref(my_theme) ? "moon" : "sun")} class="${ssrRenderClass([isClient.value && !unref(my_theme) && "white_moon", "w-[2.5rem] h-[2.5rem]"])}" data-v-bd2fc74e></button><button type="button" class="capitalize bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] lg:hover:opacity-60 lg:dark:hover:opacity-100 lg:dark:hover:text-primary-1 lg:dark:transition-colors lg:transition-opacity" data-v-bd2fc74e> request invite </button></div></div></nav>`);
       if (isClient.value && unref(cookies) && rejected_cookie.value) {
-        _push(`<div class="${ssrRenderClass([unref(cookies) && rejected_cookie.value ? "z-[100]" : "z-[-100]", "fixed p-[2rem] bottom-[5%] left-[5%] bg-white w-[90%] max-w-[40rem] rounded-lg"])}" data-v-b7359e0f><h5 class="text-[2rem]" data-v-b7359e0f>🍪 Cookie Notice</h5><p class="my-[2rem]" data-v-b7359e0f> We use our own cookies so that we can show you this website and understand how you use them to improve the services we offer. </p><div class="flex justify-center gap-x-[3rem]" data-v-b7359e0f><button class="${ssrRenderClass([btnStyles, "border-[#dc2626] lg:hover:bg-primary-red"])}" data-v-b7359e0f> Reject </button><button class="${ssrRenderClass([btnStyles, "border-[#126ca7] lg:hover:bg-primary-2"])}" data-v-b7359e0f>Accept</button></div></div>`);
+        _push(`<div class="${ssrRenderClass([unref(cookies) && rejected_cookie.value ? "z-[100]" : "z-[-100]", "fixed p-[2rem] bottom-[5%] left-[5%] bg-white w-[90%] max-w-[40rem] rounded-lg"])}" data-v-bd2fc74e><h5 class="text-[2rem]" data-v-bd2fc74e>🍪 Cookie Notice</h5><p class="my-[2rem]" data-v-bd2fc74e> We use our own cookies so that we can show you this website and understand how you use them to improve the services we offer. </p><div class="flex justify-center gap-x-[3rem]" data-v-bd2fc74e><button class="${ssrRenderClass([btnStyles, "border-[#dc2626] lg:hover:bg-primary-red"])}" data-v-bd2fc74e> Reject </button><button class="${ssrRenderClass([btnStyles, "border-[#126ca7] lg:hover:bg-primary-2"])}" data-v-bd2fc74e>Accept</button></div></div>`);
       } else {
         _push(`<!---->`);
       }
@@ -188,7 +190,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("layouts/default.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const _default = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-b7359e0f"]]);
+const _default = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-bd2fc74e"]]);
 
 export { _default as default };
 //# sourceMappingURL=default.vue.mjs.map

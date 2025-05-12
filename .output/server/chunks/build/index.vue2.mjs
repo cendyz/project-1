@@ -132,7 +132,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         _push(ssrRenderComponent(_component_NuxtImg, {
           src: item.img,
           alt: item.alt,
-          class: "lg:w-[40rem] lg:h-[30rem]"
+          class: "lg:w-[40rem] lg:h-[30rem]",
+          format: "webp"
         }, null, _parent));
         _push(`<div class="p-[2rem]"><h2 class="font-w700 text-[2rem] lg:text-[3rem] lg:w-[40rem]">${ssrInterpolate(item.title)}</h2><p class="text-[1.4rem] mt-[1rem] lg:text-[1.6rem]">${ssrInterpolate(item.desc)}</p></div></div>`);
       });
