@@ -1,5 +1,5 @@
 <template>
-	<footer class="py-[4rem] bg-primary-1 xl:py-[6rem]">
+	<footer class="py-[4rem] bg-primary-1 xl:py-[6rem] lg:px-[3.5rem]">
 		<div class="text-center lg:grid lg:grid-cols-3 lg:items-center container xl:px-[7rem]">
 			<div class="flex flex-col items-center lg:items-start">
 				<div class="flex items-center gap-x-[2rem]">
@@ -26,7 +26,7 @@
 				>
 			</div>
 			<div class="xl:flex xl:flex-col xl:justify-between">
-				<p class="text-neutral-1 text-[1.4rem] mt-[3rem] xl:ml-auto">
+				<p class="text-neutral-1 text-[1.4rem] mt-[3rem] text-right">
 					© mWallet. All Rights Reserved {{ new Date().getFullYear() }}
 				</p>
 			</div>

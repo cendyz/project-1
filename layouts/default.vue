@@ -87,7 +87,7 @@
 		</div>
 	</nav>
 	<div
-			v-if="cookies && rejected_cookie" :class="cookies && rejected_cookie ? 'z-[100]' : 'z-[-100]'"
+			v-if="isClient && cookies && rejected_cookie" :class="cookies && rejected_cookie ? 'z-[100]' : 'z-[-100]'"
 			class="fixed p-[2rem] bottom-[5%] left-[5%] bg-white w-[90%]  max-w-[40rem] rounded-lg">
 			<h5 class="text-[2rem]">🍪 Cookie Notice</h5>
 			<p class="my-[2rem]">

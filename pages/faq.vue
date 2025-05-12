@@ -4,7 +4,7 @@
 			class="container pt-[15rem] py-[7rem] lg:pt-[11rem] lg:h-[50rem] p-[3rem] lg:px-[3.5rem] xl:px-[7rem] lg:text-center lg:flex lg:justify-center lg:items-center">
 			<p class="px-[1.2rem] lg:mt-[5rem] py-[.5rem] border-primary-3 border rounded-3xl w-fit lg:hidden">FAQs</p>
 			<div class="mt-[2rem]">
-				<label for="question" class="text-[4rem] text-primary-1 dark:text-primary-10 lg:text-[5rem] z-[100] relative"
+				<label for="question" class="text-[4rem] text-primary-1  dark:text-primary-10 lg:text-[5rem] z-[100] relative"
 					>What can we help you find?</label
 				>
 				<input
@@ -16,7 +16,7 @@
 		</div>
 		<div class="bg" :class="store.isLight ? 'dark_bg' : 'light_bg'"></div>
 	</header>
-	<main class="px-[3rem] py-[10rem] sm:w-[70rem] lg:w-auto lg:px-[3.5rem] xl:px-[7rem] dark:bg-neutral-21">
+	<main class="px-[3rem] py-[10rem] sm:w-[70rem] lg:w-auto lg:px-[3.5rem] xl:px-[7rem] bg-neutral-3 dark:bg-neutral-21">
 		<div
 			class="pt-[2rem] mt-[2.8rem] border-t container border-primary-2 text-primary-1 lg:first:mt-0 lg:w-[50%] lg:mx-auto dark:text-primary-11"
 			v-for="(item, index) in new_faq_data"
@@ -143,7 +143,7 @@ const faq_data = ref([
 }
 
 .light_bg {
-	background-image: url('../assets//images/brushed-alum-dark.png');
+	background-image: url('../assets/images/brushed_alu.webp');
 }
 
 .dark_bg {
