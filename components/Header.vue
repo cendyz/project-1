@@ -13,7 +13,7 @@
 			<NuxtImg
 				:src="wallet"
 				alt="phone and wallet"
-				class="block w-[calc(100%-3rem)] mx-auto lg:absolute top-0 z-[30] relative md:w-[70%] md:top-[5rem] lg:w-[47rem] xl:w-[55rem] lg:left-[80.5rem] xl:left-[99.5rem] lg:top-[55%] lg:translate-x-[-50%] lg:translate-y-[-50%] lg:z-[20] 2xl:left-[126rem]" />
+				class="block w-[calc(100%-3rem)] h-[90%] mx-auto lg:absolute top-0 z-[30] relative md:w-[70%] md:top-[5rem] lg:w-[47rem] xl:w-[55rem] lg:left-[80.5rem] xl:left-[99.5rem] lg:top-[55%] lg:translate-x-[-50%] lg:translate-y-[-50%] lg:z-[20] 2xl:left-[126rem]" />
 			<div
 				class="lg:py-[12rem] lg:text-left px-[2rem] lg:px-0 sm:w-[50rem] sm:mx-auto lg:mx-0 flex flex-col justify-center items-center h-[40rem] md:h-[70rem] lg:h-auto lg:items-start xl:px-0">
 				<h1
@@ -36,7 +36,7 @@
 </template>
 
 <script setup lang="ts">
-import mobileIntro from '/img/bg-intro-mobile.svg'
-import desktopIntro from '/img/bg-intro-desktop.svg'
+import mobileIntro from '/img/bg-intro-mobile.png'
+import desktopIntro from '/img/bg-intro-desktop.png'
 import wallet from '/img/mockup.png'
 </script>

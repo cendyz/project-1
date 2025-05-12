@@ -11,7 +11,7 @@
 				to="/"
 				class="flex items-center gap-x-[1rem] select-none z-[50] hover:cursor-pointer"
 				@click="store.isOpenMenu = false">
-				<img :src="logo" class="w-[5rem] h-[5rem]" alt="logo easybank" />
+				<NuxtImg src="/img/logo.png" class="w-[5rem] h-[5rem]" alt="logo easybank"></NuxtImg>
 				<p
 					class="font-w700 text-[2rem] hidden sm:block"
 					:class="store.isOpenMenu ? 'text-neutral-4' : 'text-primary-1 dark:text-neutral-4'">
@@ -87,29 +87,27 @@
 		</div>
 	</nav>
 	<div
-			v-if="isClient && cookies && rejected_cookie" :class="cookies && rejected_cookie ? 'z-[100]' : 'z-[-100]'"
-			class="fixed p-[2rem] bottom-[5%] left-[5%] bg-white w-[90%]  max-w-[40rem] rounded-lg">
-			<h5 class="text-[2rem]">🍪 Cookie Notice</h5>
-			<p class="my-[2rem]">
-				We use our own cookies so that we can show you this website and understand how you use them to improve the
-				services we offer.
-			</p>
-			<div class="flex justify-center gap-x-[3rem]">
-				<button :class="btnStyles" class="border-[#dc2626] lg:hover:bg-primary-red" @click="rejected_cookie = false">
-					Reject
-				</button>
-				<button :class="btnStyles" class="border-[#126ca7] lg:hover:bg-primary-2" @click="cookies = false">
-					Accept
-				</button>
-			</div>
+		v-if="isClient && cookies && rejected_cookie"
+		:class="cookies && rejected_cookie ? 'z-[100]' : 'z-[-100]'"
+		class="fixed p-[2rem] bottom-[5%] left-[5%] bg-white w-[90%] max-w-[40rem] rounded-lg">
+		<h5 class="text-[2rem]">🍪 Cookie Notice</h5>
+		<p class="my-[2rem]">
+			We use our own cookies so that we can show you this website and understand how you use them to improve the
+			services we offer.
+		</p>
+		<div class="flex justify-center gap-x-[3rem]">
+			<button :class="btnStyles" class="border-[#dc2626] lg:hover:bg-primary-red" @click="rejected_cookie = false">
+				Reject
+			</button>
+			<button :class="btnStyles" class="border-[#126ca7] lg:hover:bg-primary-2" @click="cookies = false">Accept</button>
 		</div>
+	</div>
 </template>
 
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useBankStore } from '~/store/bank'
 import { useStorage } from '@vueuse/core'
-import logo from '~/assets/images/logo.png'
 import hamburger from '~/assets/images/icon-hamburger.svg'
 import closeMenu from '~/assets/images/close_x.svg'
 const { width } = useWindowSize()
