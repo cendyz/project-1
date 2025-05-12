@@ -64,7 +64,7 @@
 			</div>
 		</Transition>
 	</main>
-	<Footer class="z-[100] relative" />
+	<Footer class="z-[99] relative" />
 </template>
 
 <script setup lang="ts">

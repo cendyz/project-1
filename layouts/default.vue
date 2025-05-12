@@ -1,6 +1,6 @@
 <template>
 	<Transition>
-		<div v-if="store.isLoaded" class="absolute top-0 left-0 w-full h-full bg-neutral-4 z-[10000]"></div>
+		<div v-if="store.isLoaded" class="absolute top-0 left-0 w-full h-[1000vh] bg-neutral-4 z-[10000]"></div>
 	</Transition>
 	<nav
 		class="py-[2rem] dark:border-b-[2px] w-full z-[1000] fixed lg:w-full bg-neutral-4 dark:bg-neutral-40"
@@ -86,6 +86,23 @@
 			</div>
 		</div>
 	</nav>
+	<div
+			v-if="cookies && rejected_cookie" :class="cookies && rejected_cookie ? 'z-[100]' : 'z-[-100]'"
+			class="fixed p-[2rem] bottom-[5%] left-[5%] bg-white w-[90%]  max-w-[40rem] rounded-lg">
+			<h5 class="text-[2rem]">🍪 Cookie Notice</h5>
+			<p class="my-[2rem]">
+				We use our own cookies so that we can show you this website and understand how you use them to improve the
+				services we offer.
+			</p>
+			<div class="flex justify-center gap-x-[3rem]">
+				<button :class="btnStyles" class="border-[#dc2626] lg:hover:bg-primary-red" @click="rejected_cookie = false">
+					Reject
+				</button>
+				<button :class="btnStyles" class="border-[#126ca7] lg:hover:bg-primary-2" @click="cookies = false">
+					Accept
+				</button>
+			</div>
+		</div>
 </template>
 
 <script setup lang="ts">
@@ -109,6 +126,10 @@ const navMenu = ref()
 
 const my_theme = useStorage('my-theme', false)
 const isClient = ref(false)
+
+const cookies = useStorage('cookie', true)
+const rejected_cookie = ref<boolean>(true)
+const btnStyles = 'px-[3rem] py-[.5rem] border-[2px] transition-colors lg:hover:text-neutral-4 duration-300'
 
 const change_theme = (): void => {
 	my_theme.value = !my_theme.value
