@@ -50,7 +50,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
       _push(ssrRenderComponent(_component_NuxtImg, {
         src: unref(wallet),
         alt: "phone and wallet",
-        class: "block w-[calc(100%-3rem)] h-[90%] mx-auto lg:absolute top-0 z-[30] relative md:w-[70%] md:top-[5rem] lg:w-[47rem] xl:w-[55rem] lg:left-[80.5rem] xl:left-[99.5rem] lg:top-[55%] lg:translate-x-[-50%] lg:translate-y-[-50%] lg:z-[20] 2xl:left-[126rem]"
+        class: "block w-[calc(100%-3rem)] mx-auto lg:absolute top-0 z-[30] relative md:w-[70%] md:top-[5rem] lg:w-[47rem] xl:w-[55rem] lg:left-[80.5rem] xl:left-[99.5rem] lg:top-[55%] lg:translate-x-[-50%] lg:translate-y-[-50%] lg:z-[20] 2xl:left-[126rem]"
       }, null, _parent));
       _push(`<div class="lg:py-[12rem] lg:text-left px-[2rem] lg:px-0 sm:w-[50rem] sm:mx-auto lg:mx-0 flex flex-col justify-center items-center h-[40rem] md:h-[70rem] lg:h-auto lg:items-start xl:px-0"><h1 class="text-[4rem] leading-[1.1] mt-[-3rem] sm:mt-0 mb-[3rem] text-primary-1 md:text-[5rem] md:mx-auto lg:mt-0 lg:mx-0 lg:text-[6.5rem] lg:w-[50rem] sm:px-[2rem] md:w-auto md:px-0 dark:text-neutral-10"> Next generation digital wallet </h1><p class="text-[1.5rem] px-[1rem] text-neutral-1 md:text-[1.7rem] md:w-[47rem] md:mx-auto lg:mx-0 lg:px-0 lg:text-[1.82rem] md:px-0 lg:w-[43rem] dark:text-neutral-10"> Take your finances to the next level. Your mWallet account is your all-in-one solution for managing payments, saving, tracking expenses, investing, and more. </p><button type="button" class="mt-[4rem] bg-gradient-to-r from-primary-2 to-primary-3 text-neutral-4 px-[2.8rem] py-[1.1rem] rounded-full font-w700 text-[1.4rem] md:text-[1.6rem] lg:hover:opacity-60 lg:transition-opacity lg:dark:hover:opacity-100 lg:dark:hover:text-primary-1 lg:dark:transition-colors"> Request Invite </button></div></div></header>`);
     };
@@ -166,13 +166,13 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
       {
         title: "Set Smart Budgets",
         desc: "Create personalized budgets and receive insights that help you stay on track with your financial goals.",
-        img: "/img/2.png",
+        img: "/img/2.webp",
         my_class: "two dark:text-neutral-4  dark:bg-primary-1"
       },
       {
         title: "Analyze Your Finances",
         desc: "Visualize your income, expenses, and trends with intuitive graphs and detailed reports.",
-        img: "/img/3.png",
+        img: "/img/3.webp",
         my_class: "three dark:text-neutral-4  dark:bg-primary-1"
       },
       {
@@ -188,15 +188,15 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
       {
         title: "Stay Secure",
         desc: "Your data is protected with bank-level encryption and strict privacy controls — your security is our priority.",
-        img: "/img/4.png",
+        img: "/img/4.webp",
         my_class: "six dark:text-neutral-4  dark:bg-primary-1"
       }
     ]);
     return (_ctx, _push, _parent, _attrs) => {
       const _component_NuxtImg = _sfc_main$7;
-      _push(`<section${ssrRenderAttrs(mergeProps({ class: "grid py-[10rem] px-[3rem] pb-[10rem] bg-neutral-3 dark:bg-neutral-21" }, _attrs))} data-v-85739ab7><div data-v-85739ab7><div class="lg:w-[50rem] lg:mx-auto lg:text-center" data-v-85739ab7><h2 class="capitalize text-[2.8rem] md:text-[3.5rem] mb-[2rem] text-primary-1 dark:text-neutral-10" data-v-85739ab7> Over 20 Tools to Manage Your Finances. Unlimited Control. </h2><p class="leading-[1.7] text-primary-1 dark:text-neutral-10" data-v-85739ab7> Track your expenses in real time. Set smart budgets with just a few taps. Plan your savings goals and manage your money anywhere, anytime. With mWallet, your financial future is in your hands. </p></div><div class="grid gap-[3rem] mt-[5rem] sm:block sm:columns-2 lg:grid lg:grid-cols-2 grid_cols lg:w-[100rem] lg:mx-auto" data-v-85739ab7><!--[-->`);
+      _push(`<section${ssrRenderAttrs(mergeProps({ class: "grid py-[10rem] px-[3rem] pb-[10rem] bg-neutral-3 dark:bg-neutral-21" }, _attrs))} data-v-9dada7fb><div data-v-9dada7fb><div class="lg:w-[50rem] lg:mx-auto lg:text-center" data-v-9dada7fb><h2 class="capitalize text-[2.8rem] md:text-[3.5rem] mb-[2rem] text-primary-1 dark:text-neutral-10" data-v-9dada7fb> Over 20 Tools to Manage Your Finances. Unlimited Control. </h2><p class="leading-[1.7] text-primary-1 dark:text-neutral-10" data-v-9dada7fb> Track your expenses in real time. Set smart budgets with just a few taps. Plan your savings goals and manage your money anywhere, anytime. With mWallet, your financial future is in your hands. </p></div><div class="grid gap-[3rem] mt-[5rem] sm:block sm:columns-2 lg:grid lg:grid-cols-2 grid_cols lg:w-[100rem] lg:mx-auto" data-v-9dada7fb><!--[-->`);
       ssrRenderList(unref(grid_data), (item, index) => {
-        _push(`<div data-aos="zoom-in-up"${ssrRenderAttr("data-aos-once", true)}${ssrRenderAttr("delay", index * 200)} prefetch class="${ssrRenderClass([[item.my_class, item.img ? "lg:flex-row " : "lg:flex-col"], "border-[2px] border-primary-1 dark:border-primary-10 rounded-3xl lg:flex lg:items-center overflow-hidden mx-auto lg:max-w-[100%] lg:mx-0 max-w-[40rem] sm:mb-[3.5rem] lg:mb-0"])}" data-v-85739ab7><div class="p-[2rem] lg:m-auto lg:text-left" data-v-85739ab7><h3 class="font-w700 mb-[2rem] text-[2rem]" data-v-85739ab7>${ssrInterpolate(item.title)}</h3><p data-v-85739ab7>${ssrInterpolate(item.desc)}</p></div>`);
+        _push(`<div data-aos="zoom-in-up"${ssrRenderAttr("data-aos-once", true)}${ssrRenderAttr("delay", index * 200)} prefetch class="${ssrRenderClass([[item.my_class, item.img ? "lg:flex-row " : "lg:flex-col"], "border-[2px] border-primary-1 dark:border-primary-10 rounded-3xl lg:flex lg:items-center overflow-hidden mx-auto lg:max-w-[100%] lg:mx-0 max-w-[40rem] sm:mb-[3.5rem] lg:mb-0"])}" data-v-9dada7fb><div class="p-[2rem] lg:m-auto lg:text-left" data-v-9dada7fb><h3 class="font-w700 mb-[2rem] text-[2rem]" data-v-9dada7fb>${ssrInterpolate(item.title)}</h3><p data-v-9dada7fb>${ssrInterpolate(item.desc)}</p></div>`);
         if (item.img) {
           _push(ssrRenderComponent(_component_NuxtImg, {
             src: item.img,
@@ -219,7 +219,7 @@ _sfc_main$4.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/SecondSection.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-const __nuxt_component_1 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-85739ab7"]]);
+const __nuxt_component_1 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-9dada7fb"]]);
 
 const clientOnlySymbol = Symbol.for("nuxt:client-only");
 const __nuxt_component_0 = defineComponent({
