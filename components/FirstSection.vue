@@ -43,7 +43,7 @@
 								@click="is_law = index">
 								law note
 							</button>
-							<Transition>
+							<Transition name="law">
 								<div
 									:ref="el => law_refs[index] = el as HTMLDivElement"
 									v-if="is_law == index"
@@ -55,7 +55,7 @@
 									</p>
 								</div>
 							</Transition>
-							<Transition>
+							<Transition name="law">
 								<div
 									class="absolute bottom-[3rem] right-[.5rem] md:right-7 md:bottom-[4rem] z-[11]"
 									v-if="is_law == index">

@@ -20,7 +20,7 @@ import 'pinia';
 import 'vue-router';
 
 const labelStyles = "block font-w700 mb-[.3rem]";
-const inputStyles = "border rounded-md p-[.5rem] w-full text-[1.3rem] lg:text-[1.4rem]";
+const inputStyles = "border rounded-md p-[.5rem] w-full text-[1.3rem] text-primary-1 lg:text-[1.4rem]";
 const errorStyles = "mt-[.3rem] text-[1.2rem] text-[#EF4444]";
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "contact",

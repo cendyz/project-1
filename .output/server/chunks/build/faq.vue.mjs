@@ -86,11 +86,11 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     ]);
     return (_ctx, _push, _parent, _attrs) => {
       const _component_Footer = __nuxt_component_2;
-      _push(`<!--[--><header class="relative" data-v-10cac0a9><div class="container pt-[15rem] py-[7rem] lg:pt-[11rem] lg:h-[50rem] p-[3rem] lg:px-[3.5rem] xl:px-[7rem] lg:text-center lg:flex lg:justify-center lg:items-center" data-v-10cac0a9><p class="px-[1.2rem] lg:mt-[5rem] py-[.5rem] border-primary-3 border rounded-3xl w-fit lg:hidden" data-v-10cac0a9>FAQs</p><div class="mt-[2rem]" data-v-10cac0a9><label for="question" class="text-[4rem] text-primary-1 dark:text-primary-10 lg:text-[5rem] z-[100] relative" data-v-10cac0a9>What can we help you find?</label><input type="text" id="question" class="block mt-[3rem] w-full p-[1rem] rounded-md border border-primary-3 bg-neutral-4 z-[100] relative lg:w-[40rem] lg:mx-auto"${ssrRenderAttr("value", unref(input_data).user_print)} data-v-10cac0a9></div></div><div class="${ssrRenderClass([unref(store).isLight ? "dark_bg" : "light_bg", "bg"])}" data-v-10cac0a9></div></header><main class="px-[3rem] py-[10rem] sm:w-[70rem] lg:w-auto lg:px-[3.5rem] xl:px-[7rem] bg-neutral-3 dark:bg-neutral-21" data-v-10cac0a9><!--[-->`);
+      _push(`<!--[--><header class="relative" data-v-f6144477><div class="container pt-[15rem] py-[7rem] lg:pt-[11rem] lg:h-[50rem] p-[3rem] lg:px-[3.5rem] xl:px-[7rem] lg:text-center lg:flex lg:justify-center lg:items-center" data-v-f6144477><p class="px-[1.2rem] lg:mt-[5rem] py-[.5rem] border-primary-3 border rounded-3xl w-fit lg:hidden" data-v-f6144477>FAQs</p><div class="mt-[2rem]" data-v-f6144477><label for="question" class="text-[4rem] text-primary-1 dark:text-primary-10 lg:text-[5rem] z-[100] relative" data-v-f6144477>What can we help you find?</label><input type="text" id="question" class="block mt-[3rem] w-full p-[1rem] rounded-md border border-primary-3 bg-neutral-4 z-[100] relative lg:w-[40rem] lg:mx-auto"${ssrRenderAttr("value", unref(input_data).user_print)} data-v-f6144477></div></div><div class="${ssrRenderClass([unref(store).isLight ? "dark_bg" : "light_bg", "bg"])}" data-v-f6144477></div></header><main class="px-[3rem] py-[10rem] lg:px-[3.5rem] xl:px-[7rem] bg-neutral-3 dark:bg-neutral-21" data-v-f6144477><!--[-->`);
       ssrRenderList(unref(new_faq_data), (item, index) => {
-        _push(`<div class="pt-[2rem] mt-[2.8rem] border-t container border-primary-2 text-primary-1 lg:first:mt-0 lg:w-[50%] lg:mx-auto dark:text-primary-11" data-v-10cac0a9><div class="flex justify-between items-center" data-v-10cac0a9><p data-v-10cac0a9>${ssrInterpolate(item.question)}</p><button aria-label="show question" data-v-10cac0a9><img${ssrRenderAttr("src", unref(is_hidden) == index ? unref(minus) : unref(plus))}${ssrRenderAttr("alt", unref(is_hidden) == index ? "hide answer" : "show answer")} class="${ssrRenderClass(unref(store).isLight && "dark_img")}" data-v-10cac0a9></button></div>`);
+        _push(`<div class="pt-[2rem] mt-[2.8rem] border-t container border-primary-2 text-primary-1 lg:first:mt-0 lg:w-[40%] lg:mx-auto dark:text-primary-11 sm:w-[70rem] mx-auto" data-v-f6144477><div class="flex justify-between items-center" data-v-f6144477><p data-v-f6144477>${ssrInterpolate(item.question)}</p><button aria-label="show question" data-v-f6144477><img${ssrRenderAttr("src", unref(is_hidden) == index ? unref(minus) : unref(plus))}${ssrRenderAttr("alt", unref(is_hidden) == index ? "hide answer" : "show answer")} class="${ssrRenderClass(unref(store).isLight && "dark_img")}" data-v-f6144477></button></div>`);
         if (unref(is_hidden) == index) {
-          _push(`<p class="text-primary-2 dark:text-primary-3 mt-[2rem]" data-v-10cac0a9>${ssrInterpolate(item.answer)}</p>`);
+          _push(`<p class="text-primary-2 dark:text-primary-3 mt-[2rem]" data-v-f6144477>${ssrInterpolate(item.answer)}</p>`);
         } else {
           _push(`<!---->`);
         }
@@ -109,7 +109,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/faq.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const faq = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-10cac0a9"]]);
+const faq = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-f6144477"]]);
 
 export { faq as default };
 //# sourceMappingURL=faq.vue.mjs.map

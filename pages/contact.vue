@@ -139,7 +139,7 @@ const handle_submit = (): void => {
 
 		const my_interval = setInterval(() => {
 			document.documentElement.style.setProperty('--line-width', `${line_width.value--}%`)
-		}, 27)
+		}, 26.7)
 
 		scroll(0, 0)
 
@@ -152,7 +152,7 @@ const handle_submit = (): void => {
 }
 
 const labelStyles = 'block font-w700 mb-[.3rem]'
-const inputStyles = 'border rounded-md p-[.5rem] w-full text-[1.3rem] lg:text-[1.4rem]'
+const inputStyles = 'border rounded-md p-[.5rem] w-full text-[1.3rem] text-primary-1 lg:text-[1.4rem]'
 const errorStyles = 'mt-[.3rem] text-[1.2rem] text-[#EF4444]'
 </script>
 
